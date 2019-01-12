@@ -14,10 +14,10 @@ const Hero = () => (
             a11yTitle="Calendar events title"
             align="center"
             flex="grow"
-            height="100vh"
             justify="center"
-            pad="medium"
-            animation="slideDown"
+            pad="small"
+            height="100vh"
+            elevation="small"
           >
             <StaticQuery
               query={graphql`
@@ -43,43 +43,17 @@ const Hero = () => (
               }}
             />
 
-            <Heading size="large" align="center" a11yTitle="Application title">
+            <Heading size="large" textAlign="center" a11yTitle="Application title">
               {appConfig.title}
             </Heading>
 
             {appConfig.subTitle && (
-              <Heading align="center" a11yTitle="Application sub title">
+              <Heading textAlign="center" a11yTitle="Application sub title">
                 {appConfig.subTitle}
               </Heading>
             )}
 
-            <Box
-              direction={size === 'small' ? 'column' : 'row'}
-              margin={{ top: 'large' }}
-              gap="medium"
-            >
-              <Button
-                href="#calendars"
-                label={
-                  <Text size="large" margin="small">
-                    See all the events
-                  </Text>
-                }
-                a11yTitle="See all the events"
-                primary
-              />
-              <Button
-                href={appConfig.formLink}
-                label={
-                  <Text size="large" margin="small">
-                    Add your event!
-                  </Text>
-                }
-                a11yTitle="Click to add your event"
-                color="secondary"
-                target="_blank"
-              />
-            </Box>
+
           </Box>
         )}
       </ResponsiveContext.Consumer>

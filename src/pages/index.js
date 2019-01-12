@@ -24,10 +24,12 @@ const HOMEPAGE_QUERY = graphql`
 const IndexPage = ({data}) => (
 
       <Layout>
+       <Box>
         <Hero />
-        <Box id="faqs" animation="fadeIn" basis="large">
+        <Box id="faqs" alignSelf="end" >
         <ResponsiveContext.Consumer>
-          {size => (              <StaticQuery
+          {size => (
+            <StaticQuery
                 query={HOMEPAGE_QUERY}
                 render={data => (
                   <Concertina data={data}  />
@@ -35,6 +37,7 @@ const IndexPage = ({data}) => (
               />
             )}
             </ResponsiveContext.Consumer>
+        </Box>
         </Box>
         </Layout>
     )

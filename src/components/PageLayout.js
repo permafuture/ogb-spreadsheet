@@ -39,7 +39,6 @@ const Layout = ({ children }) => (
           full
           css={css`
             scroll-behavior: smooth;
-            overflow-y: scroll;
           `}
         >
           <Helmet />
