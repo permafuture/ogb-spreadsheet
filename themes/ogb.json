@@ -1,0 +1,42 @@
+{
+  "background": "antiquewhite",
+  "brand": "yellowgreen",
+  "secondary": "palegreen",
+  "focus": "chartreuse",
+  "text": "black",
+
+  "calendar": {
+    "today": {
+      "background": "chartreuse",
+      "text": "midnightblue",
+      "border": "grey"
+    },
+    "day": {
+      "background": "antiquewhite",
+      "text": "black",
+      "border": "grey"
+    },
+    "past": {
+      "background": "yellowgreen",
+      "text": "black",
+      "border": "grey"
+    },
+    "empty": {
+      "background": "bisque",
+      "border": "grey"
+    },
+    "weekdays": {
+      "background": "antiquewhite",
+      "text": "black",
+      "border": "grey"
+    },
+    "event": {
+      "background": "antiquewhite",
+      "text": "black"
+    },
+    "modal": {
+      "background": "antiquewhite",
+      "text": "black"
+    }
+  }
+}
