@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import appConfig from '../../appConfig'
 
 const DEFAULT_CONFIG = {
-  title: 'Gatsby Starter Event Calendar',
+  title: 'Organic Books in Albuquerque',
   subTitle: '',
   formLink: 'https://goo.gl/forms/u00WBxeK1kQco0uQ2',
   maxAmountEvents: 2,

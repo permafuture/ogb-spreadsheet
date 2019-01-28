@@ -9,34 +9,34 @@
     "today": {
       "background": "chartreuse",
       "text": "midnightblue",
-      "border": "grey"
+      "border": "transparent"
     },
     "day": {
       "background": "antiquewhite",
       "text": "black",
-      "border": "grey"
+      "border": "transparent"
     },
     "past": {
       "background": "yellowgreen",
       "text": "black",
-      "border": "grey"
+      "border": "transparent"
     },
     "empty": {
       "background": "bisque",
-      "border": "grey"
+      "border": "transparent"
     },
     "weekdays": {
       "background": "antiquewhite",
       "text": "black",
-      "border": "grey"
+      "border": "transparent"
     },
     "event": {
       "background": "antiquewhite",
-      "text": "black"
+      "text": "transparent"
     },
     "modal": {
       "background": "antiquewhite",
-      "text": "black"
+      "text": "transparent"
     }
   }
 }

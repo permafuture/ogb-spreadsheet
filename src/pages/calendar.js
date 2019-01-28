@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box } from 'grommet'
+import { Box, Tabs, Tab } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
+import Faqs from '../components/Faqs'
 
 // override this query with your own questions!
 const SPREADSHEET_QUERY = graphql`
@@ -48,20 +49,34 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Hero />
-        <Box id="calendars" animation="fadeIn" margin="medium" width="medium">
-          <ConfigContext.Consumer>
-            {({ limitMonthInTheFuture }) => (
-              <StaticQuery
-                query={SPREADSHEET_QUERY}
-                render={data => (
-                  <Calendar
-                    showModal={this.showModal}
-                    events={groupEventsByMonth(data, limitMonthInTheFuture)}
-                  />
-                )}
-              />
-            )}
-          </ConfigContext.Consumer>
+          <Box >
+            <Tabs margin="large">
+              <Tab title="Home" ></Tab>
+              <Tab title="Books"></Tab>
+              <Tab title="Events">
+                <Box id="calendars" animation="fadeIn" elevation="small" >
+                  <ConfigContext.Consumer>
+                    {({ limitMonthInTheFuture }) => (
+                      <StaticQuery
+                        query={SPREADSHEET_QUERY}
+                        render={data => (
+                          <Calendar
+                            showModal={this.showModal}
+                            events={groupEventsByMonth(data, limitMonthInTheFuture)}
+                          />
+                        )}
+                      />
+                    )}
+                  </ConfigContext.Consumer>
+                </Box>
+              </Tab>
+            <Tab title="Contact"></Tab>
+            <Tab title="Answers">
+              <Box id="faqs" animation="fadeIn">
+                <Faqs />
+              </Box>
+            </Tab>
+          </Tabs>
         </Box>
 
         {showModal && (
@@ -71,6 +86,7 @@ class CalendarPage extends PureComponent {
             events={eventsOfTheDay}
           />
         )}
+
       </Layout>
     )
   }

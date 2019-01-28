@@ -1,14 +1,12 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext } from 'grommet'
+import { Box } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
-import Hero from '../components/Hero'
-import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 
 // override this query with your own questions!
-const HOMEPAGE_QUERY = graphql`
-  query homeQuery {
+const MAINPAGE_QUERY = graphql`
+  query mainQuery {
     allGoogleSheetFaqsRow {
       edges {
         node {
@@ -22,20 +20,14 @@ const HOMEPAGE_QUERY = graphql`
   }
 `
 const IndexPage = ({data}) => (
-
-      <Layout>
-       <Box>
-        <Hero />
-        <Box id="faqs" alignSelf="middle" >
+        <Box id="faqs" animation="fadeIn">
             <StaticQuery
-                query={HOMEPAGE_QUERY}
+                query={MAINPAGE_QUERY}
                 render={data => (
                   <Concertina data={data}  />
                 )}
               />
         </Box>
-        </Box>
-        </Layout>
     )
 
 export default IndexPage
