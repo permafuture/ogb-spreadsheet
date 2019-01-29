@@ -72,7 +72,7 @@ class CalendarPage extends PureComponent {
               </Tab>
             <Tab title="Contact"></Tab>
             <Tab title="Answers">
-              <Box id="faqs" animation="fadeIn">
+              <Box id="faqs" animation="fadeIn" overflow="visible">
                 <Faqs />
               </Box>
             </Tab>
