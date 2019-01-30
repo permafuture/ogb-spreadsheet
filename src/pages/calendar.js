@@ -49,12 +49,12 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Hero />
-          <Box >
+          <Box>
             <Tabs margin="large">
               <Tab title="Home" ></Tab>
               <Tab title="Books"></Tab>
               <Tab title="Events">
-                <Box id="calendars" animation="fadeIn" elevation="small" >
+                <Box id="calendars" animation="fadeIn" elevation="small" pad="medium">
                   <ConfigContext.Consumer>
                     {({ limitMonthInTheFuture }) => (
                       <StaticQuery

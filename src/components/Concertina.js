@@ -13,7 +13,7 @@ const Concertina = ({ data }) => {
               {node.answer}
             </Box>
           </AccordionPanel>
-                      ))}
+            ))}
         </Accordion>
       </Box>
   );

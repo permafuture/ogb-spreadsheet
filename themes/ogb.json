@@ -32,11 +32,11 @@
     },
     "event": {
       "background": "antiquewhite",
-      "text": "transparent"
+      "text": "black"
     },
     "modal": {
       "background": "antiquewhite",
-      "text": "transparent"
+      "text": "black"
     }
   }
 }

@@ -36,7 +36,7 @@ const Layout = ({ children }) => (
       {appConfig => (
         <Grommet
           theme={enhancedTheme(grommet, appConfig.theme)}
-          full
+          full="false"
           css={css`
             scroll-behavior: smooth;
           `}
