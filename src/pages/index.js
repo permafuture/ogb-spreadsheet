@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext } from 'grommet'
+import { Grid, Box, ResponsiveContext, Text, Heading, Stack } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
@@ -15,7 +15,6 @@ const IndexPage = ({data}) => (
  nav probably here
 */}
        <Box>
-        <Hero />
 {/*
   SECOND PAGE
 
@@ -24,14 +23,28 @@ const IndexPage = ({data}) => (
 picture or video of store
 
  location and hours*/}
-      <Box height="100vh" background="white">
-        <Box height="40vh" width="40vh" margin="small" background="green"alignSelf="center">
-        This is an event box
-        </Box>
-        <Box height="20vh" width="100vw" margin="none" background="red">
+  <Grid
+    fill
+    rows={["70vh", "30vh"]}
+    columns={["1fr","minmax(36ch,80%)","1fr"]}
+    areas={[
+        { name: "video", start: [1,0], end: [1,0] },
+        { name: "location", start: [1,1], end: [1,1] },
+        ]}
+        >
+      <Stack anchor="bottom-right" gridArea="video">
+        <Box height="70vh" width="100%"  background="red">
         This is a video or image
         </Box>
-      </Box>
+        <Box elevation="large" pad="large" margin="large" background="green" >
+        <Text size="large">This is an event box</Text>
+        </Box>
+      </Stack>
+        <Box elevation="small" direction="row-responsive" gridArea="location" background="yellow">
+          <Box basis="1/2">this is hours</Box>
+          <Box>this is location</Box>
+        </Box>
+      </Grid>
     {/*  THIRD PAGE
 our story
 nav again?
