@@ -5,8 +5,8 @@ import { Box, Accordion, AccordionPanel} from 'grommet'
 const Concertina = ({ data }) => {
 
   return (
-     <Box elevation="none" alignSelf="stretch">
-        <Accordion animate={true} multiple={false}>
+     <Box elevation="none" alignSelf="stretch" overflow="hidden" >
+        <Accordion animate={true} multiple={false} alignSelf="stretch" >
            {data.allGoogleSheetFaqsRow.edges.map(({ node }, index) => (
             <AccordionPanel key={node.id} label={node.question}>
             <Box height="auto" pad="medium" elevation="xsmall" wrap="true">

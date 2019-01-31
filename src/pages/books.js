@@ -6,21 +6,6 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 
-// override this query with your own questions!
-const HOMEPAGE_QUERY = graphql`
-  query homeQuery {
-    allGoogleSheetFaqsRow {
-      edges {
-        node {
-          id
-          category
-          question
-          answer
-        }
-      }
-    }
-  }
-`
 const IndexPage = ({data}) => (
 
       <Layout>
@@ -35,12 +20,7 @@ const IndexPage = ({data}) => (
             alignSelf="end"
             >
             <Heading margin="small" background="transparent">Answers</Heading>
-            <StaticQuery
-                query={HOMEPAGE_QUERY}
-                render={data => (
-                  <Concertina data={data}  />
-                )}
-              />
+            
         </Box>
         </Box>
         </Layout>

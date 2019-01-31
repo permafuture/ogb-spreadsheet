@@ -14,6 +14,11 @@
 
 ## Make the UX easy to traverse
 * navigation should be simple and re-usable. tabs are not doing the right effect for sub-pages, how does that work?
+ - layers? bottom vs top? maybe vertical words?
+* nav and footer as components in layout
+* custom heroes for each page but with standard structure
+  * convert to data eventually
+
 
 ## Style the whole thing according to our standards
 * make a proper palette

@@ -17,7 +17,7 @@ const Hero = () => (
             justify="center"
             pad="small"
             height="100vh"
-            elevation="none"
+            elevation="none"d
           >
             <StaticQuery
               query={graphql`
