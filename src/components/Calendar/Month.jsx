@@ -26,18 +26,15 @@ const Month = ({ monthlyCalendar, showModal }) => {
         <b>{`${format(currentMonth, 'MMMM')} `}</b>
         {format(currentMonth, 'YYYY')}
       </Heading>
-      <Query sizes={['small']} inverse>
-        <Weekdays />
-      </Query>
+
       <Box direction="row" wrap>
-        {currentMonthIsoDay !== 7 && <EmptyDays days={currentMonthIsoDay} />}
         <Days
           days={currentMonthDays}
           month={currentMonth}
           events={monthlyCalendar.events}
           showModal={showModal}
         />
-        {emptyDaysAtEnd !== 7 && <EmptyDays days={emptyDaysAtEnd} />}
+
       </Box>
     </Box>
   )

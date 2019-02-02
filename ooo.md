@@ -11,7 +11,8 @@
 * calendar only showing the days we have events?
  * logic is in groupEventsByMonth I think. and in calendar.js
 * single event on homepage is next event
-
+* do own logic for this. events only. not calendar.
+  * can I just iterate through all the items, compare them to todays date, and only print the ones after that? is that reasonable?
 ## Make the UX easy to traverse
 * navigation should be simple and re-usable. tabs are not doing the right effect for sub-pages, how does that work?
  - layers? bottom vs top? maybe vertical words?

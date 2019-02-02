@@ -3,7 +3,7 @@ import isSameDay from 'date-fns/is_same_day'
 import format from 'date-fns/format'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Text, Box } from 'grommet'
+import { Text, Box, Heading  } from 'grommet'
 import { css } from 'styled-components'
 import Events from './Events'
 import Query from '../Query'
@@ -44,9 +44,10 @@ const Day = ({ day, events, onClick }) => {
             width="xsmall"
             alignSelf="end"
           >
-            <Text
+            <Heading
               color={`calendar-${dayType}-text`}
-              size="large"
+              size="medium"
+              margin="none"
               a11yTitle="Day number"
               textAlign="end"
               css={css`
@@ -54,7 +55,7 @@ const Day = ({ day, events, onClick }) => {
               `}
             >
               {format(day, 'DD')}
-            </Text>
+            </Heading>
           </Box>
         </Box>
       </CalendarBox>
@@ -76,9 +77,10 @@ const Day = ({ day, events, onClick }) => {
               width="xsmall"
               alignSelf="end"
             >
-              <Text
+              <Heading
                 color={`calendar-${dayType}-text`}
                 size="large"
+                margin="none"
                 textAlign="start"
                 css={css`
                   text-decoration: ${getStrike(day, today) && 'line-through'};
@@ -86,7 +88,7 @@ const Day = ({ day, events, onClick }) => {
                 a11yTitle="Day number"
               >
                 {format(day, 'DD')}
-              </Text>
+              </Heading>
 
               <Text
                 color={`calendar-${dayType}-text`}
@@ -105,6 +107,15 @@ const Day = ({ day, events, onClick }) => {
   ]
 }
 
+const isEmpty = (obj) => {
+  for(var key in obj) {
+    if(obj.hasOwnProperty(key))
+    return false;
+  }
+  return true;
+  }
+
+
 const Days = ({ days, events, month, showModal }) =>
   Array(days)
     .fill(null)
@@ -114,14 +125,18 @@ const Days = ({ days, events, month, showModal }) =>
         isSameDay(event.date, currentDay),
       )
       const onClick = () => showModal(eventsOfTheDay, currentDay)
+      const hasEvents = !isEmpty(eventsOfTheDay)
+
 
       return (
+        (hasEvents &&
         <Day
           key={format(currentDay, 'DD-MM-YYYY')}
           day={currentDay}
           events={eventsOfTheDay}
           onClick={onClick}
         />
+      )
       )
     })
 

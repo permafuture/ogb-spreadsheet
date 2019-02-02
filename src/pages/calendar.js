@@ -19,6 +19,9 @@ const SPREADSHEET_QUERY = graphql`
           eventName: eventtitle
           date: day
           eventLink: link
+          host: authorhost
+          start
+          end
         }
       }
     }
@@ -50,10 +53,7 @@ class CalendarPage extends PureComponent {
       <Layout>
         <Hero />
           <Box>
-            <Tabs margin="large">
-              <Tab title="Home" ></Tab>
-              <Tab title="Books"></Tab>
-              <Tab title="Events">
+
                 <Box id="calendars" animation="fadeIn" elevation="small" pad="medium">
                   <ConfigContext.Consumer>
                     {({ limitMonthInTheFuture }) => (
@@ -69,14 +69,7 @@ class CalendarPage extends PureComponent {
                     )}
                   </ConfigContext.Consumer>
                 </Box>
-              </Tab>
-            <Tab title="Contact"></Tab>
-            <Tab title="Answers">
-              <Box id="faqs" animation="fadeIn" overflow="visible">
-                <Faqs />
-              </Box>
-            </Tab>
-          </Tabs>
+
         </Box>
 
         {showModal && (
