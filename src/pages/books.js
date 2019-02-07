@@ -7,13 +7,13 @@ import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
 
-import styled from 'styled-components'
+import { css }from 'styled-components'
 
 
 const CONTENT=`
 # BOOKS
 
-## We sell books, and things that bookstores might sell.
+## We sell books, and things that bookstores sell.
 
 Our specialty is brand-new books by local authors. We also have a wide variety of used books: fiction, poetry, Southwest writers, and more.
 
@@ -21,7 +21,7 @@ We take books for trade or donation, and buy books directly from local authors. 
 
 Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $5 for select hardbacks. Or, donate your books and we'll put your credit toward our 20% Teachers Discount!
 
-### That's right, bring a faculty ID and you get 20% off any book in the store. We appreciate you!
+**That's right, bring a faculty ID and you get 20% off any book in the store. We appreciate you!**
 
 We can order books for you! We buy books from an international network of independent bookstores. Contact Max for more information.
 
@@ -40,19 +40,20 @@ const IndexPage = ({data}) => (
        <Hero />
        <Nav />
        </Stack>
-         <Box>
+         <Box alignSelf="center" width="large" pad="medium">
             <Markdown components={{
               p: {
                 component: Paragraph,
                 props: {
-                  size: 'xlarge'
-                }
+                  size: 'xlarge',
+                  extend: "text-align: justify"              },
               },
               strong: {
                 component: Text,
                 props: {
-                  size: 'xxlarge',
-                  weight: 800
+                  size: 'xlarge',
+                  weight: 800,
+                  alignSelf: 'stretch'
                 }
               },
             }}>{CONTENT}</Markdown>

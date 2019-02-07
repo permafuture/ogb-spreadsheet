@@ -15,7 +15,7 @@ export const grog = deepMerge({
     },
     font: {
       family: '"Alegreya","serif"',
-      fontWeight: 600,
+      fontWeight: 800,
       size: "large",
     },
   },
@@ -46,10 +46,10 @@ export const grog = deepMerge({
       family: '"Picture House One Bold", "sans-serif"',
       size: "200px",
     },
-    size: "200px",
     extend: css`
       ${props => !props.plain && 'text-transform: uppercase;'};
-    `,    level: {
+    `,
+    level: {
       1: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
@@ -71,10 +71,8 @@ export const grog = deepMerge({
         font: {
           family: '"Alegreya", "serif"',
         },
-        extend: css`
-          ${props => !props.plain && 'text-transform: uppercase;'};
-        `,
-      },
+        extend: "text-transform: uppercase"
+        },
       4: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
@@ -95,14 +93,12 @@ export const grog = deepMerge({
         font: {
           family: '"Picture House One Bold", "sans-serif"',
         },
-        extend: css`
-          ${props => !props.plain && 'text-transform: uppercase;'};
-        `,
+        extend: "text-transform: uppercase"
       }
     }
   },
 
   paragraph: {
-    size: "large",
-  }
+    extend: "text-align: justify; "
+    }
 });

@@ -52,7 +52,7 @@ const IndexPage = ({data}) => (
        <Nav />
        </Stack>       {/*contact hero*/}
 
-       <Box elevation="large" width="large" pad="medium" alignSelf="center" background="brand">
+       <Box elevation="none" width="large" pad="large" alignSelf="center" >
 
        <Markdown
           components={{

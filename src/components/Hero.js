@@ -33,9 +33,9 @@ const Hero = () => (
                 const { src } = data.imageSharp.original
                 return (
                   <Box
-                    width={size === 'small' ? 'xsmall' : 'small'}
-                    height={size === 'small' ? 'xsmall' : 'small'}
-                    margin={{ bottom: 'medium' }}
+                    width={size === 'small' ? 'small' : 'medium'}
+                    height={size === 'small' ? 'small' : 'medium'}
+                    margin="small"
                   >
                     <Image fit="contain" src={src} a11yTitle="logo" />
                   </Box>
@@ -48,12 +48,12 @@ const Hero = () => (
               <Anchor href="/">{appConfig.title}</Anchor>
             </Heading>
 
-            {appConfig.subTitle && (
+
               <Heading
               color="secondary" textAlign="center" a11yTitle="Application sub title">
-                {appConfig.subTitle}
+              The new used bookstore <br /> in Nob Hill
               </Heading>
-            )}
+
 
 
           </Box>
