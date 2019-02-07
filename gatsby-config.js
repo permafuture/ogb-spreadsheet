@@ -58,6 +58,14 @@ module.exports = {
         credentials: buildCredentials(process.env),
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+       custom: {
+       families: ['Picture House One Bold', 'Picture House One Regular']},
+       },
+
+     },
     'gatsby-plugin-offline',
   ],
 }

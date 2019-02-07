@@ -1,4 +1,4 @@
-const theme = require('./themes/ogb.json')
+const theme = require('./themes/organic.json')
 
 module.exports = {
   title: 'ORGANIC BOOKS',

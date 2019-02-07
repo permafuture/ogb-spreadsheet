@@ -5,17 +5,21 @@ import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
+import Nav from '../components/Nav'
 
 
 const IndexPage = ({data}) => (
 
-      <Layout>
+    <Layout>
 {/*
         FIRST PAGE
  nav probably here
 */}
-       <Box>
+     <Box>
+       <Stack anchor="bottom-right">
        <Hero />
+       <Nav />
+       </Stack>
 {/*
   SECOND PAGE
 
@@ -38,14 +42,14 @@ picture or video of store
         ]}
         >
       <Stack anchor="bottom-right" gridArea="video">
-        <Box elevation="small" height="70vh" width="100%"  background="red">
+        <Box elevation="small" height="70vh" width="100%"  background="neutral-1">
         This is a video or image
         </Box>
-        <Box elevation="large" pad="large" margin="large" background="green" >
+        <Box elevation="large" pad="large" margin="large" background="neutral-2" >
         <Text size="large">This is an event box</Text>
         </Box>
       </Stack>
-        <Box elevation="small" direction="row-responsive" gridArea="location" background="yellow"
+        <Box elevation="small" direction="row-responsive" gridArea="location" background="brand"
         justify="evenly" pad="medium">
           <Box basis="1/2">
           <Heading size="medium">OPEN 10AM TO 7PM</Heading>
@@ -60,10 +64,10 @@ our story
 nav again?
 */}
         <Box elevation="small" gridArea="story" background="black" direction="row-responsive">
-        <Box  background="blue" >
+        <Box  background="accent-1" >
         This is a cute image
         </Box>
-        <Box background="grey"  pad="large">
+        <Box background="accent-2"  pad="large">
 
         <Paragraph size="large">We're the Brewer family: Steve, Kelly, Max, Seth and Jalila. We love books. We've been writing, reading, designing and editing for over a hundred years.</Paragraph>
         <Paragraph size="large">We think that books are more important than ever. In a busy, distracted world, a real book is an oasis. Books change the way we think. They stretch our attention spans, challenge our opinions, transport us to other worlds. People who read books are more curious, more rational, and more kind.</Paragraph>

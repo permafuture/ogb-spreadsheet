@@ -3,7 +3,6 @@ import { getDaysInMonth, getISODay, format } from 'date-fns'
 import { Heading, Box } from 'grommet'
 import PropTypes from 'prop-types'
 import Days from './Days'
-import EmptyDays from './EmptyDays'
 import Events from './Events'
 import Weekdays from './Weekdays'
 import Query from '../Query'
@@ -27,7 +26,7 @@ const Month = ({ monthlyCalendar, showModal }) => {
         {format(currentMonth, 'YYYY')}
       </Heading>
 
-      <Box direction="row" wrap>
+      <Box direction="row-responsive" wrap>
         <Days
           days={currentMonthDays}
           month={currentMonth}

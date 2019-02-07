@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
 import { Grommet } from 'grommet'
-import { grommet } from 'grommet/themes'
+import { grog } from './Grog'
 import Helmet from './Helmet'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 const enhancedTheme = (baseTheme, customTheme) => {
   const flatTheme = flatObject(customTheme)
   const colors = {
-    ...grommet.global.colors,
+    ...grog.global.colors,
     ...flatTheme,
   }
 
@@ -35,8 +35,8 @@ const Layout = ({ children }) => (
     <ConfigContext.Consumer>
       {appConfig => (
         <Grommet
-          theme={enhancedTheme(grommet, appConfig.theme)}
-          full="false"
+          theme={enhancedTheme(grog, appConfig.theme)}
+          full="true"
           css={css`
             scroll-behavior: smooth;
           `}

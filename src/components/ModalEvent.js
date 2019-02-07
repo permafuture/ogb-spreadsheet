@@ -9,13 +9,14 @@ const sortyByDate = (eventA, eventB) =>
   new Date(eventA.date) - new Date(eventB.date)
 
 const ModalEvent = ({ hideModal, currentDay, events }) => (
-  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal>
+  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="antiquewhite">
     <Box
       direction="row"
       align="center"
       tag="header"
       elevation="small"
       justify="between"
+      background="calendar-modal-background"
     >
       <Text
         margin={{ left: 'small' }}
@@ -36,7 +37,8 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
       tag="section"
       margin="medium"
       gap="small"
-    >
+      background="#555555"
+        >
       {events.sort(sortyByDate).map(event => (
         <Box
           elevation="small"
@@ -49,7 +51,7 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
             margin="small"
             color="calendar-modal-text"
           >
-            {format(new Date(event.date).setUTCMinutes(180), 'HH:mm')}
+            {format(new Date(event.date).setUTCMinutes(180), 'H:MM')}
           </Text>
           <Box margin="small">
             <Text
@@ -61,9 +63,15 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
               {event.eventName}
             </Text>
 
-            {event.place && (
-              <Text a11yTitle="Event place" color="calendar-modal-text">
-                {event.place}
+            {event.host && (
+              <Text a11yTitle="Event host" size="xsmall" margin="xsmall" color="calendar-modal-text">
+                with {event.host}
+              </Text>
+            )}
+
+            {event.eventDesc && (
+              <Text a11yTitle="Event description" size="large" color="calendar-modal-text">
+                {event.eventDesc}
               </Text>
             )}
 

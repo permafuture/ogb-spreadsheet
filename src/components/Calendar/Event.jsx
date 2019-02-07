@@ -22,6 +22,9 @@ const Event = ({ name, host, start, end }) => (
       truncate
       color="calendar-event-text"
       a11yTitle="Event host"
+      css={css`
+        text-transform: uppercase;
+      `}
     >
       {host}
     </Text>

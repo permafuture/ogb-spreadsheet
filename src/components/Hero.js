@@ -43,12 +43,14 @@ const Hero = () => (
               }}
             />
 
-            <Heading size="large" textAlign="center" a11yTitle="Application title">
+            <Heading color="brand" size="xlarge"
+            level="1" textAlign="center" a11yTitle="Application title">
               {appConfig.title}
             </Heading>
 
             {appConfig.subTitle && (
-              <Heading textAlign="center" a11yTitle="Application sub title">
+              <Heading
+              color="secondary" textAlign="center" a11yTitle="Application sub title">
                 {appConfig.subTitle}
               </Heading>
             )}
@@ -56,6 +58,7 @@ const Hero = () => (
 
           </Box>
         )}
+
       </ResponsiveContext.Consumer>
     )}
   </ConfigContext.Consumer>
