@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Heading, Markdown, Stack} from 'grommet'
+import { Box, ResponsiveContext, Heading, Markdown, Stack, Paragraph, Text} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
@@ -31,12 +31,6 @@ If you're a local author, we want to carry your books! Contact Steve, or come to
 
 If you're a local artisan, bring us things that bookstores might sell! We want to carry your gift cards, calendars, stickers, and other crafts. Talk to Kelly, or drop a sample by the store any day.`
 
-const StyledP=styled.p`{
-  "p": {
-    "component": "Paragraph",
-    "props": {"size": 40px"}
-  }
-}`
 
 const IndexPage = ({data}) => (
 
@@ -47,7 +41,21 @@ const IndexPage = ({data}) => (
        <Nav />
        </Stack>
          <Box>
-            <Markdown components={{ p: StyledP }}>{CONTENT}</Markdown>
+            <Markdown components={{
+              p: {
+                component: Paragraph,
+                props: {
+                  size: 'xlarge'
+                }
+              },
+              strong: {
+                component: Text,
+                props: {
+                  size: 'xxlarge',
+                  weight: 800
+                }
+              },
+            }}>{CONTENT}</Markdown>
         </Box>
         </Box>
         </Layout>

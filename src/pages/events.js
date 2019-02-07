@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, Markdown, Stack } from 'grommet'
+import { Box, Markdown, Stack, Paragraph, Text } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
@@ -7,9 +7,8 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
-import Faqs from '../components/Faqs'
 import Nav from '../components/Nav'
-
+import styled from 'styled-components'
 
 const CONTENT=`
 # EVENTS
@@ -40,6 +39,12 @@ const SPREADSHEET_QUERY = graphql`
     }
   }
 `
+const StyledP=styled.p`{
+  "p": {
+    "component": "Paragraph",
+    "props": {"size": "large"}
+  }
+}`
 
 class CalendarPage extends PureComponent {
   initialState = {
@@ -71,7 +76,21 @@ class CalendarPage extends PureComponent {
       </Stack>
           <Box>
           <Box>
-          <Markdown>{CONTENT}</Markdown>
+          <Markdown components={{
+            p: {
+              component: Paragraph,
+              props: {
+                size: 'xlarge'
+              }
+            },
+            strong: {
+              component: Text,
+              props: {
+                size: 'xxlarge',
+                weight: 800
+              }
+            },
+          }}>{CONTENT}</Markdown>
           </Box>
                 <Box id="calendars" animation="fadeIn" elevation="small" pad="medium">
                   <ConfigContext.Consumer>

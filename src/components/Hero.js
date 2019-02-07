@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 
 import React from 'react'
-import { Box, Heading, Button, Text, Image, ResponsiveContext } from 'grommet'
+import { Box, Heading, Button, Text, Image, ResponsiveContext, Anchor } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
 import ConfigContext from './ConfigContext'
 
@@ -45,7 +45,7 @@ const Hero = () => (
 
             <Heading color="brand" size="xlarge"
             level="1" textAlign="center" a11yTitle="Application title">
-              {appConfig.title}
+              <Anchor href="/">{appConfig.title}</Anchor>
             </Heading>
 
             {appConfig.subTitle && (

@@ -1,8 +1,8 @@
 import { css } from 'styled-components';
 import Grommet from 'grommet';
-import { deepFreeze } from 'grommet/utils/object';
+import { deepFreeze, deepMerge } from 'grommet/utils/object';
 
-export const grog = deepFreeze({
+export const grog = deepMerge({
   global: {
     animation: {
     duration: '0.5s',
@@ -24,7 +24,7 @@ export const grog = deepFreeze({
       ${props => !props.plain && 'text-transform: uppercase;'};
     `,
       textDecoration: 'none',
-      fontWeight: 800,
+      fontWeight: 600,
       color: {
         dark: 'accent-1',
         light: 'brand',
@@ -43,16 +43,61 @@ export const grog = deepFreeze({
   },
   heading: {
     font: {
-      family: '"Picture House One Regular", "sans-serif"',
+      family: '"Picture House One Bold", "sans-serif"',
+      size: "200px",
     },
+    size: "200px",
     extend: css`
       ${props => !props.plain && 'text-transform: uppercase;'};
-    `,
-    level: {
+    `,    level: {
       1: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
-        }
+          size: " 200px",
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
+      },
+      2: {
+        font: {
+          family: '"Picture House One Bold", "sans-serif"',
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
+      },
+      3: {
+        font: {
+          family: '"Alegreya", "serif"',
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
+      },
+      4: {
+        font: {
+          family: '"Picture House One Bold", "sans-serif"',
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
+      },
+      5: {
+        font: {
+          family: '"Picture House One Bold", "sans-serif"',
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
+      },
+      6: {
+        font: {
+          family: '"Picture House One Bold", "sans-serif"',
+        },
+        extend: css`
+          ${props => !props.plain && 'text-transform: uppercase;'};
+        `,
       }
     }
   },
