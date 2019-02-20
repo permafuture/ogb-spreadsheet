@@ -10,7 +10,7 @@ const sortyByDate = (eventA, eventB) =>
   new Date(eventA.date) - new Date(eventB.date)
 
 const ModalEvent = ({ hideModal, currentDay, events }) => (
-  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="transparent"
+  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="#00000000" responsive="false"
   >
   <Slice border={{
     "color": "accent-3",

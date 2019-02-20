@@ -26,7 +26,7 @@ picture or video of store
 
  location and hours*/}
 
-        <Box elevation="small" height="70vh" width="100%"              background="black"
+        <Box height="70vh" width="100%"              background="black"
         justify="center"
         border={{
           side: "horizontal",

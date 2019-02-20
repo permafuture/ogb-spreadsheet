@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text} from 'grommet'
+import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text, Image, Heading} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
@@ -11,20 +11,6 @@ import styled from 'styled-components'
 import Slice from '../components/Slice'
 
 const CONTENT=`
-
-# CONTACT
-
-**We're the Brewer family.**
-
-Steve - Events
-
-Kelly - Business
-
-Max - Orders
-
-Seth - Donations
-
-Jalila - Social
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
 
@@ -55,21 +41,26 @@ const IndexPage = ({data}) => (
             alignSelf="center"
             alignContent="start"
             margin={{ "top": "xlarge", "bottom": "xlarge"}}
-            width="auto"
+            width="large"
             pad="large"
             background="accent-2"
             border={{
               "color": "accent-4",
               "size": "medium"
             }}>
-       <Markdown
+
+        <Heading level="1">Contact</Heading>
+        <Text textAlign="center" size="xxlarge" weight="800">We're the Brewer family.</Text>
+        <Box width="100%" height="auto" pad="none" margin="none">
+          <Image fit="cover" src="animated.gif" />
+        </Box>
+        <Markdown
           components={{
             p: {
               component: Paragraph,
               props: {
                 size: 'xlarge',
                 alignSelf: 'center',
-                margin: "large"
               }
             },
             strong: {
@@ -79,6 +70,12 @@ const IndexPage = ({data}) => (
                 weight: 800,
               }
             },
+            img: {
+              component: Image,
+              props: {
+                fit: 'contain',
+              }
+            }
           }}
         >{CONTENT}</Markdown>
        </Slice>
