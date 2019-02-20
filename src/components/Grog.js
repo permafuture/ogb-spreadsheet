@@ -41,17 +41,6 @@ export const grog = deepMerge({
       // fontWeight: undefined,
       // extend: undefined,
     },
-    textDecoration: 'none',
-    fontWeight: 600,
-    color: {
-      dark: 'accent-1',
-      light: 'brand',
-    },
-    hover: {
-      textDecoration: 'wavy underline',
-      // fontWeight: undefined,
-      // extend: undefined,
-    },
       // extend: undefined,
   },
 
@@ -74,6 +63,7 @@ export const grog = deepMerge({
       dark: 'accent-2',
       light: 'brand',
     },
+
     extend: css`
       ${props => !props.plain && `
         font-weight: bold;
@@ -144,6 +134,9 @@ export const grog = deepMerge({
     }
     },
   paragraph: {
-    extend: "text-align: justify; "
+    extend: `text-align: justify;
+  -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+  hyphens: auto; `
     }
 });

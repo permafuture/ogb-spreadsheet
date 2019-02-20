@@ -71,10 +71,8 @@ class CalendarPage extends PureComponent {
 
     return (
       <Layout>
-      <Stack anchor="bottom-right">
       <Hero />
       <Nav />
-      </Stack>
           <Slice alignSelf="center"
                alignContent="stretch"
                width="large"

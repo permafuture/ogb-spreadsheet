@@ -48,15 +48,14 @@ const IndexPage = ({data}) => (
 
       <Layout>
        <Box>
-       <Stack anchor="bottom-right">
        <Hero />
        <Nav />
-       </Stack>       {/*contact hero*/}
 
-       <Slice alignSelf="center"
-            alignContent="stretch"
+       <Slice
+            alignSelf="center"
+            alignContent="start"
             margin={{ "top": "xlarge", "bottom": "xlarge"}}
-            width="large"
+            width="auto"
             pad="large"
             background="accent-2"
             border={{
@@ -68,7 +67,9 @@ const IndexPage = ({data}) => (
             p: {
               component: Paragraph,
               props: {
-                size: 'xlarge'
+                size: 'xlarge',
+                alignSelf: 'center',
+                margin: "large"
               }
             },
             strong: {
@@ -76,9 +77,6 @@ const IndexPage = ({data}) => (
               props: {
                 size: 'xxlarge',
                 weight: 800,
-                alignSelf: 'center',
-                textAlign: 'center',
-                pad: 'xxlarge'
               }
             },
           }}

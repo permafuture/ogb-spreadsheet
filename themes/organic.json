@@ -20,11 +20,11 @@
       "light-5": "#b3b7ae",
       "light-6": "#b3b7ae",
       "neutral-1": "#4c934c",
-      "neutral-2": "#ffca3a",
-      "neutral-3": "#427da1",
+      "neutral-2": "#edc871",
+      "neutral-3": "#3b7bad",
       "neutral-4": "#bf3100",
       "status-critical": "#bf3100",
       "status-error": "#bf3100",
-      "status-warning": "#ffca3a",
+      "status-warning": "#edc871",
       "status-ok": "#brand"
 }

@@ -5,7 +5,6 @@ import Slice from './Slice'
 const Nav =() => (
 <Box
   direction="row-responsive"
-  elevation="medium"
   background="brand"
   width="auto"
   align="center"
@@ -21,9 +20,9 @@ const Nav =() => (
   >
   <Button margin="small" align="center"  href="/books"
   label="Books" />
-  <Button margin="small" align="center"  href="/books"
+  <Button margin="small" align="center"  href="/events"
   label="Events" />
-  <Button margin="small" align="center"  href="/books"
+  <Button margin="small" align="center"  href="/contact"
   label="Contact" />
 
 </Box>

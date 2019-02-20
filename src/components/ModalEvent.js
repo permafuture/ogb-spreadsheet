@@ -4,23 +4,28 @@ import { FormClose } from 'grommet-icons'
 import format from 'date-fns/format'
 import PropTypes from 'prop-types'
 import Events from './Calendar/Events'
+import Slice from './Slice'
 
 const sortyByDate = (eventA, eventB) =>
   new Date(eventA.date) - new Date(eventB.date)
 
 const ModalEvent = ({ hideModal, currentDay, events }) => (
-  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="antiquewhite">
+  <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="transparent"
+  >
+  <Slice border={{
+    "color": "accent-3",
+    "size": "medium"
+  }}>
     <Box
       direction="row"
       align="center"
       tag="header"
-      elevation="small"
       justify="between"
-      background="calendar-modal-background"
+
     >
       <Text
         margin={{ left: 'small' }}
-        color="calendar-modal-text"
+        color="black"
         a11yTitle="Selected day"
       >
         <b>{format(new Date(currentDay), 'dddd D, MMMM')}</b>
@@ -36,20 +41,18 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
       align="center"
       tag="section"
       margin="medium"
-      gap="small"
-      background="#555555"
+      gap="none"
         >
       {events.sort(sortyByDate).map(event => (
         <Box
-          elevation="small"
           direction="row"
           fill="horizontal"
-          background="calendar-modal-background"
         >
           <Text
             a11yTitle="Event time"
             margin="small"
             color="calendar-modal-text"
+            weight="bold"
           >
             {format(new Date(event.date).setUTCMinutes(180), 'H:MM')}
           </Text>
@@ -75,19 +78,19 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
               </Text>
             )}
 
-            <Box margin={{ top: 'medium' }} width="xsmall">
+            <Box margin={{ top: 'medium' }} width="xsmall" alignSelf="end">
               <Button
                 href={event.eventLink}
-                label="Link"
+                label="learn more"
                 a11yTitle="Event link"
                 target="_blank"
-                primary
               />
             </Box>
           </Box>
         </Box>
       ))}
     </Box>
+    </Slice>
   </Layer>
 )
 
