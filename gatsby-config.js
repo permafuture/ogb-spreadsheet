@@ -16,7 +16,7 @@ const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Organic Books',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
