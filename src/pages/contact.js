@@ -8,12 +8,13 @@ import ConfigContext from '../components/ConfigContext'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
 import styled from 'styled-components'
+import Slice from '../components/Slice'
 
 const CONTENT=`
 
 # CONTACT
 
-## We're the Brewer family.
+**We're the Brewer family.**
 
 Steve - Events
 
@@ -52,8 +53,16 @@ const IndexPage = ({data}) => (
        <Nav />
        </Stack>       {/*contact hero*/}
 
-       <Box elevation="none" width="large" pad="large" alignSelf="center" >
-
+       <Slice alignSelf="center"
+            alignContent="stretch"
+            margin={{ "top": "xlarge", "bottom": "xlarge"}}
+            width="large"
+            pad="large"
+            background="accent-2"
+            border={{
+              "color": "accent-4",
+              "size": "medium"
+            }}>
        <Markdown
           components={{
             p: {
@@ -66,12 +75,15 @@ const IndexPage = ({data}) => (
               component: Text,
               props: {
                 size: 'xxlarge',
-                weight: 800
+                weight: 800,
+                alignSelf: 'center',
+                textAlign: 'center',
+                pad: 'xxlarge'
               }
             },
           }}
         >{CONTENT}</Markdown>
-       </Box>
+       </Slice>
         </Box>
         </Layout>
     )

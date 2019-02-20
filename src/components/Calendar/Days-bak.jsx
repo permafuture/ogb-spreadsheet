@@ -21,12 +21,48 @@ const Day = ({ day, events, onClick }) => {
   const dayType = (isToday && 'today') || (hasPast && 'past') || 'day'
 
   const eventsSection = (
-    <Box direction="column" fill="true" alignContent="end">
+    <Box direction="column" fill="horizontal" alignContent="stretch">
       <Events events={events} />
     </Box>
   )
 
   return [
+    <Query sizes={['small']} inverse>
+      <CalendarBox
+        key={day.getTime()}
+        background={`calendar-${dayType}-background`}
+        border={{ color: `calendar-${dayType}-border` }}
+        pad="xsmall"
+        {...events.length && { onClick }}
+        square
+      >
+        <Box direction="column" fill="vertical">
+          {eventsSection}
+          <Box
+            direction="column"
+            margin={{ top: 'auto' }}
+            width="xsmall"
+            alignSelf="end"
+          >
+            <Heading
+              color={`calendar-${dayType}-text`}
+              size="medium"
+              alignSelf="start"
+              margin="none"
+              a11yTitle="Day number"
+              textAlign="end"
+              css={css`
+                text-decoration: ${hasPast && !isToday && 'line-through'};
+              `}
+            >
+              {format(day, 'DD')}
+            </Heading>
+          </Box>
+        </Box>
+      </CalendarBox>
+    </Query>,
+    <Query sizes={['small']}>
+      {(!hasPast || isToday) && (
         <CalendarBox
           key={day.getTime()}
           background={`calendar-${dayType}-background`}
@@ -35,15 +71,15 @@ const Day = ({ day, events, onClick }) => {
           {...events.length && { onClick }}
           square
         >
-          <Box direction="row-responsive" fill="vertical">
+          <Box direction="row" fill="vertical">
             <Box
               direction="column"
               margin={{ top: 'auto' }}
               width="xsmall"
-              alignSelf="start"
+              alignSelf="end"
             >
               <Heading
-                color={`brand`}
+                color={`calendar-${dayType}-text`}
                 size="large"
                 margin="none"
                 textAlign="start"
@@ -67,7 +103,8 @@ const Day = ({ day, events, onClick }) => {
             {eventsSection}
           </Box>
         </CalendarBox>
-
+      )}
+    </Query>,
   ]
 }
 

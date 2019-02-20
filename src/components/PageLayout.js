@@ -1,15 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
-import { Grommet } from 'grommet'
+import { Grommet, Box } from 'grommet'
 import { grog } from './Grog'
 import Helmet from './Helmet'
+import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
+
   }
 `
 
@@ -25,6 +27,7 @@ const enhancedTheme = (baseTheme, customTheme) => {
     global: {
       ...baseTheme.global,
       colors,
+
     },
   }
 }
@@ -42,7 +45,26 @@ const Layout = ({ children }) => (
           `}
         >
           <Helmet />
+          <Slice css={css`
+           background-attachment: fixed;
+           `}
+          >
+          <Box
+           animation={{
+            "type": "fadeIn",
+            "delay": 100,
+            "duration": 2000,
+            "size": "xsmall"
+            }}
+           css={css`
+            background-image: url(lots-of-flowers.svg);
+            background-size: cover;
+            background-attachment: fixed;
+            `}
+          >
           {children}
+          </Box>
+          </Slice>
         </Grommet>
       )}
     </ConfigContext.Consumer>

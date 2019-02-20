@@ -6,6 +6,8 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
+import Slice from '../components/Slice'
+
 
 import { css }from 'styled-components'
 
@@ -15,50 +17,59 @@ const CONTENT=`
 
 ## We sell books, and things that bookstores sell.
 
-Our specialty is brand-new books by local authors. We also have a wide variety of used books: fiction, poetry, Southwest writers, and more.
+**Our specialty is brand-new books by local authors.** We also have a wide variety of used books: fiction, poetry, Southwest writers, and more.
 
 We take books for trade or donation, and buy books directly from local authors. Bring used books any time we're open.
 
-Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $5 for select hardbacks. Or, donate your books and we'll put your credit toward our 20% Teachers Discount!
+Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $5 for select hardbacks. Or, donate your books and we'll put your credit toward our 20% Educator Discount!
 
-**That's right, bring a faculty ID and you get 20% off any book in the store. We appreciate you!**
+**That's right: teachers, faculty, adjuncts, bring ID and get 20% off any book in the store. We appreciate you!**
 
 We can order books for you! We buy books from an international network of independent bookstores. Contact Max for more information.
 
 ## We buy local!
 
-If you're a local author, we want to carry your books! Contact Steve, or come to the store during buying hours, 10am to 12 noon.
+**If you're a local author, we want to carry your books!** Contact Steve, or come to the store during buying hours, 10am to 12 noon.
 
-If you're a local artisan, bring us things that bookstores might sell! We want to carry your gift cards, calendars, stickers, and other crafts. Talk to Kelly, or drop a sample by the store any day.`
+**If you're a local artisan, bring us things that bookstores might sell!** We want to carry your gift cards, calendars, stickers, and other crafts. Talk to Kelly, or drop a sample by the store any day.`
 
+const EXTEND=`background-attachment: fixed;`
 
 const IndexPage = ({data}) => (
 
       <Layout>
-       <Box>
-       <Stack anchor="bottom-right">
-       <Hero />
-       <Nav />
-       </Stack>
-         <Box alignSelf="center" width="large" pad="medium">
-            <Markdown components={{
-              p: {
-                component: Paragraph,
-                props: {
-                  size: 'xlarge',
-                  extend: "text-align: justify"              },
-              },
-              strong: {
-                component: Text,
-                props: {
-                  size: 'xlarge',
-                  weight: 800,
-                  alignSelf: 'stretch'
-                }
-              },
-            }}>{CONTENT}</Markdown>
-        </Box>
-        </Box>
+
+           <Hero />
+           <Nav />
+             <Slice alignSelf="center"
+                  alignContent="stretch"
+                  margin={{ "bottom": "xlarge"}}
+                  width="large"
+                  pad="large"
+                  background="accent-2"
+                  border={{
+                    "color": "accent-4",
+                    "size": "medium"
+                  }}>
+                <Markdown components={{
+                  p: {
+                    component: Paragraph,
+                    props: {
+                      size: 'large',
+                      extend: "text-align: justify",
+                      alignSelf: 'stretch'
+                      },
+                  },
+                  strong: {
+                    component: Text,
+                    props: {
+                      size: 'xlarge',
+                      weight: 800,
+                      alignSelf: 'stretch'
+                    }
+                  },
+                }}>{CONTENT}</Markdown>
+            </Slice>
         </Layout>
     )
 

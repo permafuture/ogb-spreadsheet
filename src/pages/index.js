@@ -42,7 +42,8 @@ picture or video of store
         ]}
         >
       <Stack anchor="bottom-right" gridArea="video">
-        <Box elevation="small" height="70vh" width="100%"  background="neutral-1">
+        <Box elevation="small" height="70vh" width="100%"              background="url(lots-of-flowers.svg)"
+>
         This is a video or image
         </Box>
         <Box elevation="large" pad="large" margin="large" background="neutral-2" >
@@ -50,7 +51,7 @@ picture or video of store
         </Box>
       </Stack>
         <Box elevation="small" direction="row-responsive" gridArea="location" background="brand"
-        justify="evenly" pad="medium">
+        justify="between" pad="medium">
           <Box basis="1/2">
           <Heading size="medium">OPEN 10AM TO 7PM</Heading>
           <Text size="large">Every day except Monday</Text>

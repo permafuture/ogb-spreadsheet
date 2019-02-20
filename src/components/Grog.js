@@ -12,42 +12,88 @@ export const grog = deepMerge({
     },
     colors: {
       background: 'accent-2',
+      text: 'black',
     },
     font: {
       family: '"Alegreya","serif"',
       fontWeight: 800,
       size: "large",
     },
+    selected: {
+      background: 'accent-3',
+      color: 'white',
+    },
   },
+
+
   anchor: {
     extend: css`
       ${props => !props.plain && 'text-transform: uppercase;'};
     `,
-      textDecoration: 'none',
-      fontWeight: 600,
-      color: {
-        dark: 'accent-1',
-        light: 'brand',
-      },
-      hover: {
-        textDecoration: 'wavy underline',
-        // fontWeight: undefined,
-        // extend: undefined,
-      },
+    textDecoration: 'none',
+    fontWeight: 600,
+    color: {
+      dark: 'accent-1',
+      light: 'brand',
+    },
+    hover: {
+      textDecoration: 'wavy underline',
+      // fontWeight: undefined,
+      // extend: undefined,
+    },
+    textDecoration: 'none',
+    fontWeight: 600,
+    color: {
+      dark: 'accent-1',
+      light: 'brand',
+    },
+    hover: {
+      textDecoration: 'wavy underline',
+      // fontWeight: undefined,
+      // extend: undefined,
+    },
       // extend: undefined,
   },
+
   button: {
+    border: {
+      // color: { dark: undefined, light: undefined }
+      width: "4px",
+      radius: 0,
+      color: {
+        dark: 'accent-2',
+        light: 'brand',
+      },
+    },
+    padding: {
+      horizontal: '2rem',
+      vertical: '.5rem'
+    },
+    fontWeight: 600,
+    color: {
+      dark: 'accent-2',
+      light: 'brand',
+    },
     extend: css`
-      ${props => !props.plain && 'font-weight: bold;'};
+      ${props => !props.plain && `
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-height: 30px;`};
     `,
   },
+
   heading: {
     font: {
       family: '"Picture House One Bold", "sans-serif"',
       size: "200px",
+
     },
     extend: css`
-      ${props => !props.plain && 'text-transform: uppercase;'};
+      ${props => !props.plain && `
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px rGBA(255, 255, 255, .4), -1px -1px 1px rGBA(0, 0, 0, .1);
+      text-align: center; `};
     `,
     level: {
       1: {
@@ -96,8 +142,7 @@ export const grog = deepMerge({
         extend: "text-transform: uppercase"
       }
     }
-  },
-
+    },
   paragraph: {
     extend: "text-align: justify; "
     }

@@ -9,6 +9,7 @@ import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
 import styled from 'styled-components'
+import Slice from '../components/Slice'
 
 const CONTENT=`
 # EVENTS
@@ -74,25 +75,34 @@ class CalendarPage extends PureComponent {
       <Hero />
       <Nav />
       </Stack>
-          <Box>
-          <Box>
-          <Markdown components={{
-            p: {
-              component: Paragraph,
-              props: {
-                size: 'xlarge'
-              }
-            },
-            strong: {
-              component: Text,
-              props: {
-                size: 'xxlarge',
-                weight: 800
-              }
-            },
-          }}>{CONTENT}</Markdown>
+          <Slice alignSelf="center"
+               alignContent="stretch"
+               width="large"
+               pad="large"
+               margin={{ "bottom": "xlarge"}}
+               background="accent-2"
+               border={{
+             "color": "accent-4",
+             "size": "medium"
+           }}>
+           <Box>
+             <Markdown components={{
+              p: {
+                component: Paragraph,
+                props: {
+                  size: 'xlarge'
+                }
+              },
+              strong: {
+                component: Text,
+                props: {
+                  size: 'xxlarge',
+                  weight: 800
+                }
+              },
+            }}>{CONTENT}</Markdown>
           </Box>
-                <Box id="calendars" animation="fadeIn" elevation="small" pad="medium">
+                <Box id="calendars" animation="fadeIn" >
                   <ConfigContext.Consumer>
                     {({ limitMonthInTheFuture }) => (
                       <StaticQuery
@@ -108,7 +118,7 @@ class CalendarPage extends PureComponent {
                   </ConfigContext.Consumer>
                 </Box>
 
-        </Box>
+        </Slice>
 
         {showModal && (
           <ModalEvent

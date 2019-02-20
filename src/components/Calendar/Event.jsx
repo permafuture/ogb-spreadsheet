@@ -8,29 +8,35 @@ import format from 'date-fns/format'
 const Event = ({ name, host, start, end }) => (
 
 
-  <Box round="xsmall" background="calendar-event-background" pad="2px">
+  <Box background="calendar-event-background" fill="horizontal" pad="2px">
     <Text
-      size="medium"
-      truncate
+      size="large"
+      alignSelf="end"
+      textAlign="end"
       color="calendar-event-text"
       a11yTitle="Event name"
+      css={css`
+        font-style: italic;
+      `}
     >
       {name}
     </Text>
     <Text
-      size="large"
-      truncate
+      size="xxlarge"
+      alignSelf="end"
+      textAlign="end"
       color="calendar-event-text"
       a11yTitle="Event host"
       css={css`
         text-transform: uppercase;
+        font-weight: bold;
       `}
     >
       {host}
     </Text>
     <Text
       size="small"
-      truncate
+      alignSelf="end"
       color="calendar-event-text"
       a11yTitle="Event time"
     >
