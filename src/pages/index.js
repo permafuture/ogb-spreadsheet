@@ -38,7 +38,7 @@ picture or video of store
         }}
         >
         <Video controls="over" fit="cover">
-          <source key="video" src="/nob-hill-feat-organic-books.mp4" type="video/mp4" />
+          <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
         </Video>
         </Box>
         <Box  pad="large" margin="large" background="neutral-2" border={{
