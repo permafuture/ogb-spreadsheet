@@ -57,7 +57,7 @@ picture or video of store
         >
           <Box basis="1/2" alignContent="center " align="start" justify="start">
           <Heading level="2" size="large" margin="none">OPEN 10AM TO 7PM</Heading>
-          <Heading  level="3" margin="none">every day but Monday</Heading>
+          <Heading  level="3" margin="none">closed Mondays</Heading>
           </Box>
           <Box align="end" justify="end" margin="small">
           <Heading level="2" size="medium" textAlign="end" margin="small">111 Carlisle Blvd SE  Albuquerque, NM</Heading>

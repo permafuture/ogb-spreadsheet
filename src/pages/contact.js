@@ -52,7 +52,7 @@ const IndexPage = ({data}) => (
         <Heading level="1">Contact</Heading>
         <Text textAlign="center" size="xxlarge" weight="800">We're the Brewer family.</Text>
         <Box width="100%" height="auto" pad="none" margin="none">
-          <Image fit="cover" src="animated.gif" />
+          <Image fit="cover" src="/animated.gif" />
         </Box>
         <Markdown
           components={{
