@@ -51,7 +51,7 @@ export const grog = deepMerge({
       radius: 0,
       color: {
         dark: 'accent-2',
-        light: 'brand',
+        light: 'accent-2',
       },
     },
     padding: {
@@ -61,7 +61,7 @@ export const grog = deepMerge({
     fontWeight: 600,
     color: {
       dark: 'accent-2',
-      light: 'brand',
+      light: 'accent-2',
     },
 
     extend: css`

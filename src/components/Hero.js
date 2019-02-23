@@ -58,7 +58,7 @@ const Hero = () => (
             level="1"
             textAlign="center"
             a11yTitle="Application title"
-
+            margin="small"
             >
               <Anchor href="/">{appConfig.title}</Anchor>
             </Heading>

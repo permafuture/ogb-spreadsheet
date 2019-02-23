@@ -54,7 +54,7 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
             color="calendar-modal-text"
             weight="bold"
           >
-            {format(new Date(event.date).setUTCMinutes(180), 'H:MM')}
+            {format(new Date(event.date).setUTCMinutes(180), 'H:mm')}
           </Text>
           <Box margin="small">
             <Text

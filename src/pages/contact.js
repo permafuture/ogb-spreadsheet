@@ -14,7 +14,7 @@ const CONTENT=`
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
 
-We think that books are more important than ever. In a busy, distracted world, a real book is an oasis. Books change the way we think. They stretch our attention spans, challenge our opinions, transport us to other worlds. People who read books are more curious, more rational, and more kind.
+Books are more important than ever. In a busy, distracted world, a real book is an oasis. Books change the way we think. They stretch our attention spans, challenge our opinions, transport us to other worlds. People who read books are more curious, more rational, and more kind.
 
 **We're building a place for books and the people who love them.**
 

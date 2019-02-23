@@ -11,7 +11,7 @@ const Nav =() => (
   alignSelf="center"
   margin="medium"
   border={{
-    "color": "neutral-3",
+    "color": "accent-2",
     "size": "medium"
   }}
   css={css`

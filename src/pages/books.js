@@ -15,7 +15,7 @@ import { css }from 'styled-components'
 const CONTENT=`
 # BOOKS
 
-## We sell books, and things that bookstores sell.
+## We sell books<br /> and things that bookstores sell.
 
 **Our specialty is brand-new books by local authors.** We also have a wide variety of used books: fiction, poetry, Southwest writers, and more.
 

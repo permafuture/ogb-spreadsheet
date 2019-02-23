@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Grid, Box, ResponsiveContext, Text, Heading, Stack, Paragraph} from 'grommet'
+import { Grid, Box, ResponsiveContext, Text, Heading, Stack, Paragraph, Video} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
@@ -26,7 +26,10 @@ picture or video of store
 
  location and hours*/}
 
-        <Box height="70vh" width="100%"              background="black"
+        <Box
+        height="100vh"
+        width="100%"
+        background="black"
         justify="center"
         border={{
           side: "horizontal",
@@ -34,9 +37,9 @@ picture or video of store
           "size": "medium"
         }}
         >
-        <Text color="white" size="xlarge" alignSelf="center">
-        A film by Gus Pedrotty
-          </Text>
+        <Video controls="over" fit="cover">
+          <source key="video" src="/nob-hill-feat-organic-books.mp4" type="video/mp4" />
+        </Video>
         </Box>
         <Box  pad="large" margin="large" background="neutral-2" border={{
           side: "all",

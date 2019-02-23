@@ -57,7 +57,7 @@ const Layout = ({ children }) => (
             "size": "xsmall"
             }}
            css={css`
-            background-image: url(lots-of-flowers.svg);
+            background-image: url(/lots-of-flowers.svg);
             background-size: cover;
             background-attachment: fixed;
             `}
