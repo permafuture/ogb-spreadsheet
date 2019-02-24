@@ -1,46 +1,34 @@
 import { format } from 'date-fns'
+import isFuture from 'date-fns/is_future'
+import closestTo from 'date-fns/closest_to'
 
-const isGreaterInMonth = monthsDifference => (date, dateToCompare) => {
-  const totalMonth = dateProp =>
-    parseInt(format(dateProp, 'MM'), 10) +
-    parseInt(format(dateProp, 'YY'), 10) * 12
-
-  const monthsDate = totalMonth(date)
-  const monthsDateToCompare = totalMonth(dateToCompare)
-  const difference = monthsDateToCompare - monthsDate
-
-  return difference >= 0 && difference <= monthsDifference
-}
-
-const groupEventsByMonth = (data, monthsDifference) => {
+const groupEvents = (data) => {
   const today = new Date()
-  const isEventValid = isGreaterInMonth(monthsDifference)
 
-  const eventsByMonthKey = data.allGoogleSheetEventsRow.edges.reduce(
+  const eventsByDateKey = data.allGoogleSheetEventsRow.edges.reduce(
     (acc, { node }) => {
-      const eventDate = new Date(node.date)
-      if (!isEventValid(today, eventDate)) return acc
+      const eventDate = format(new Date(node.date))
 
-      const monthYear = format(eventDate, 'MM-YYYY')
-      if (!acc[monthYear]) {
+      if (!acc[eventDate]) {
         return {
           ...acc,
-          [monthYear]: [node],
+          [eventDate]: [node],
         }
       }
 
       return {
         ...acc,
-        [monthYear]: acc[monthYear].concat(node),
+        [eventDate]: acc[eventDate].concat(node),
       }
     },
     {},
   )
-  const result = Object.keys(eventsByMonthKey).map(monthKey => ({
-    events: eventsByMonthKey[monthKey],
-    date: monthKey,
+  const result = Object.keys(eventsByDateKey).map(dateKey => ({
+    events: eventsByDateKey[dateKey],
+    date: dateKey,
   }))
+  console.log("groupEvents day out = " + result)
   return result
 }
 
-export default groupEventsByMonth
+export default groupEvents

@@ -1,11 +1,33 @@
 import React, { PureComponent } from 'react'
-import { Grid, Box, ResponsiveContext, Text, Heading, Stack, Paragraph, Video} from 'grommet'
+import { Anchor, Grid, Box, ResponsiveContext, Text, Heading, Stack, Paragraph, Video} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
+import groupEvents from '../utils/groupEvents'
+import DayOfToday from '../components/Calendar/DayOfToday'
+import Slice from '../components/Slice'
+
+const SPREADSHEET_QUERY = graphql`
+  query todayQuery {
+    allGoogleSheetEventsRow {
+      edges {
+        node {
+          id
+          eventName: eventorbooktitle
+          date: day
+          eventLink: link
+          host: authorhost
+          start
+          end
+          eventDesc: eventdescription
+        }
+      }
+    }
+  }
+`
 
 
 const IndexPage = ({data}) => (
@@ -41,13 +63,28 @@ picture or video of store
           <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
         </Video>
         </Box>
-        <Box  pad="large" margin="large" background="neutral-2" border={{
-          side: "all",
-          "color": "accent-3",
-          "size": "medium"
+        <Slice
+          width="auto"
+          alignSelf="center"
+          margin="large"
+          pad="large"
+          background="neutral-2"
+          border={{
+            side: "all",
+            "color": "accent-3",
+            "size": "large"
         }}>
-        <Text size="xlarge" alignSelf="center" >NEXT EVENT</Text>
-        </Box>
+          <Heading level="3">Upcoming Event</Heading>
+          <StaticQuery
+            query={SPREADSHEET_QUERY}
+            render={data => (
+              <DayOfToday
+                events={groupEvents(data)}
+              />
+            )}
+          />
+        </Slice>
+
         <Box minHeight="100vh"
         margin={{bottom: "small"}}
         border={{

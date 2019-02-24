@@ -1,6 +1,5 @@
 import isBefore from 'date-fns/is_before'
 import isSameDay from 'date-fns/is_same_day'
-import isPast from 'date-fns/is_past'
 import format from 'date-fns/format'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -13,7 +12,8 @@ import CalendarBox from './CalendarBox'
 const getStrike = (currentDay, today) =>
   isBefore(currentDay, today) && !isSameDay(currentDay, today)
 
-const Day = ({ day, events, onClick }) => {
+const Day = ({ day, events }) => {
+  console.log("Day events pass = ", {events})
   const today = new Date()
 
   const isToday = isSameDay(day, today)
@@ -23,7 +23,7 @@ const Day = ({ day, events, onClick }) => {
 
   const eventsSection = (
     <Box direction="column" fill="true" alignContent="end">
-      <Events events={events} />
+      <Events events={events[0].events} />
     </Box>
   )
 
@@ -33,7 +33,7 @@ const Day = ({ day, events, onClick }) => {
           background={`calendar-${dayType}-background`}
           border={{ color: `calendar-${dayType}-border` }}
           pad="small"
-          {...events.length && { onClick }}
+          {...events.length }
           square
         >
           <Box direction="row-responsive" fill="vertical">
@@ -81,38 +81,24 @@ const isEmpty = (obj) => {
   }
 
 
-const Days = ({ days, events, month, showModal }) =>
-  Array(days)
-    .fill(null)
-    .map((x, i) => {
-      const currentDay = new Date(month.getFullYear(), month.getMonth(), i + 1)
+const DayOfToday = ({ events }) => {
+      const currentDay = new Date()
       const eventsOfTheDay = events.filter(event =>
         isSameDay(event.date, currentDay),
       )
-      const onClick = () => showModal(eventsOfTheDay, currentDay)
-      const hasEvents = !isEmpty(eventsOfTheDay)
-      const today = new Date()
-      const isNowDay = isPast(currentDay)
-
-
+      console.log("eventsOfTheDay = ")
+      console.log(eventsOfTheDay)
 
       return (
-        (hasEvents &&
         <Day
           key={format(currentDay, 'DD-MM-YYYY')}
           day={currentDay}
           events={eventsOfTheDay}
-          onClick={onClick}
         />
-      )
-      )
-    })
 
-Days.propTypes = {
-  days: PropTypes.number.isRequired,
-  events: PropTypes.array,
-  month: PropTypes.instanceOf(Date).isRequired,
-  showModal: PropTypes.func.isRequired,
-}
+      )
+    }
 
-export default Days
+
+
+export default DayOfToday

@@ -56,7 +56,6 @@ const IndexPage = ({data}) => (
                     component: Paragraph,
                     props: {
                       size: 'large',
-                      extend: "text-align: justify",
                       alignSelf: 'stretch'
                       },
                   },

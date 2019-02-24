@@ -1,6 +1,5 @@
 import isBefore from 'date-fns/is_before'
 import isSameDay from 'date-fns/is_same_day'
-import isPast from 'date-fns/is_past'
 import format from 'date-fns/format'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -68,51 +67,22 @@ const Day = ({ day, events, onClick }) => {
             {eventsSection}
           </Box>
         </CalendarBox>
-
-  ]
-}
-
-const isEmpty = (obj) => {
-  for(var key in obj) {
-    if(obj.hasOwnProperty(key))
-    return false;
-  }
-  return true;
-  }
+      ]
+    }
 
 
-const Days = ({ days, events, month, showModal }) =>
-  Array(days)
-    .fill(null)
-    .map((x, i) => {
-      const currentDay = new Date(month.getFullYear(), month.getMonth(), i + 1)
-      const eventsOfTheDay = events.filter(event =>
-        isSameDay(event.date, currentDay),
-      )
-      const onClick = () => showModal(eventsOfTheDay, currentDay)
-      const hasEvents = !isEmpty(eventsOfTheDay)
-      const today = new Date()
-      const isNowDay = isPast(currentDay)
 
-
+const Today = ({ events }) =>
+    events.map(dailyCalendar => (
 
       return (
-        (hasEvents &&
         <Day
-          key={format(currentDay, 'DD-MM-YYYY')}
-          day={currentDay}
+          day={nextEvent}
           events={eventsOfTheDay}
-          onClick={onClick}
         />
       )
-      )
-    })
+    )
 
-Days.propTypes = {
-  days: PropTypes.number.isRequired,
-  events: PropTypes.array,
-  month: PropTypes.instanceOf(Date).isRequired,
-  showModal: PropTypes.func.isRequired,
-}
 
-export default Days
+
+export default Today
