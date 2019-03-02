@@ -4,6 +4,7 @@ import Slice from './Slice'
 
 const Nav =() => (
 <Box
+  elevation="small"
   direction="row-responsive"
   background="brand"
   width="auto"
