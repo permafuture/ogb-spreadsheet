@@ -27,7 +27,8 @@ const groupEvents = (data) => {
     events: eventsByDateKey[dateKey],
     date: dateKey,
   }))
-  console.log("groupEvents day out = " + result)
+  console.log("groupEvents day out = " )
+  console.log( result)
   return result
 }
 
