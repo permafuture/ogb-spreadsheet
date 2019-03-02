@@ -64,7 +64,7 @@ picture or video of store
         </Video>
         </Box>
         <Slice
-          width="auto"
+          width="large"
           alignSelf="center"
           margin="large"
           pad="large"
@@ -74,7 +74,7 @@ picture or video of store
             "color": "accent-3",
             "size": "large"
         }}>
-          <Heading level="3">Upcoming Event</Heading>
+          <Heading alignSelf="center" level="3">Next Event</Heading>
           <StaticQuery
             query={SPREADSHEET_QUERY}
             render={data => (
@@ -107,7 +107,7 @@ picture or video of store
 our story
 nav again?
 */}
-        <Box  background={{ image: "url(us-canvas.png)", position: "top left"}} height="70vh"/>
+        <Box  background={{ image: "url(/us-canvas.webp)", position: "top left"}} height="70vh"/>
           </Box>
                 </Layout>
             )

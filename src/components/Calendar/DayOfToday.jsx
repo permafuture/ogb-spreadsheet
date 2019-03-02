@@ -24,9 +24,19 @@ const Day = ({ day, events }) => {
   const dayType = (isToday && 'today') || (hasPast && 'past') || 'day'
 
   const eventsSection = (
-    <Box direction="column" fill="true" alignContent="end">
-      <Events events={events[0].events} />
-    </Box>
+
+      <Box direction="column" fill="true" alignSelf="end" alignContent="end">
+      <Anchor href="/events" color="black" css={css`
+        decoration: none;
+        a:hover: {
+          text-decoration: none;
+        }
+      `}>
+        <Events events={events[0].events} />
+        </Anchor>
+
+      </Box>
+
   )
 
   return [
@@ -37,8 +47,7 @@ const Day = ({ day, events }) => {
           border={{ color: `calendar-${dayType}-border` }}
           pad="small"
           {...events.length }
-          square
-        >
+          >
           <Box direction="row-responsive" fill="vertical">
             <Box
               direction="column"
@@ -68,14 +77,8 @@ const Day = ({ day, events }) => {
                 {format(day, 'dddd')}
               </Text>
             </Box>
-            <Anchor href="/events" color="black" css={css`
-              decoration: none;
-              a:hover: {
-                text-decoration: none;
-              }
-            `}>
+
             {eventsSection}
-                    </Anchor>
           </Box>
         </CalendarBox>
 

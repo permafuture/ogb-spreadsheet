@@ -11,8 +11,8 @@ const Events = ({ events }) =>
         <ConfigContext.Consumer>
           {({ maxAmountEvents }) => (
             <Box
-              gap={size === 'small' ? 'small' : 'xsmall'}
-              pad="none"
+              gap={size === 'small' ? 'medium' : 'small'}
+              pad="2px"
               tag="ul"
               overflow="auto"
               css={css`
@@ -23,7 +23,7 @@ const Events = ({ events }) =>
                 <Box tag="li" key={event.id}>
                   {i < maxAmountEvents && <Event name={event.eventName} host={event.host} start={event.start} end={event.end} />}
                   {i === maxAmountEvents && (
-                    <Text size="small" truncate>
+                    <Text alignSelf="start" size="small" weight="bold" truncate>
                       {`And ${events.length - maxAmountEvents} more ...`}
                     </Text>
                   )}

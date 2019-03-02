@@ -7,7 +7,10 @@ import Events from './Calendar/Events'
 import Slice from './Slice'
 
 const sortyByDate = (eventA, eventB) =>
-  new Date(eventA.date) - new Date(eventB.date)
+  new Date(eventA.date).setHours(eventA.start.slice(0,1)) - new Date(eventB.date).setHours(eventB.start.slice(0,1))
+
+const sortyByTime = (eventA, eventB) =>
+  eventA.start - eventB.start
 
 const ModalEvent = ({ hideModal, currentDay, events }) => (
   <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="#00000000" responsive="false"
@@ -54,7 +57,7 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
             color="calendar-modal-text"
             weight="bold"
           >
-            {format(new Date(event.date).setUTCMinutes(180), 'H:mm')}
+          {event.start.slice(0,4)}{event.start.slice(-2)}
           </Text>
           <Box margin="small">
             <Text

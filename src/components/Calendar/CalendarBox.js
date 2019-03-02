@@ -7,8 +7,8 @@ const CalendarBox = ({ square, children, onClick, ...rest }) => (
     {size => (
       <Box
         onClick={onClick}
-        height={square && size !== 'small' && '8rem'}
-        width="100"
+        height={size !== 'small' && '8rem'}
+        width="auto"
         fill={'horizontal'}
         css={css`
           cursor: ${onClick && 'pointer'};
