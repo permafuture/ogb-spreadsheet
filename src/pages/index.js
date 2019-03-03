@@ -18,11 +18,8 @@ const SPREADSHEET_QUERY = graphql`
           id
           eventName: eventorbooktitle
           date: day
-          eventLink: link
           host: authorhost
           start
-          end
-          eventDesc: eventdescription
         }
       }
     }
@@ -49,7 +46,7 @@ picture or video of store
  location and hours*/}
 
         <Box
-        height="100vh"
+        height="105vh"
         width="100%"
         background="black"
         justify="center"
@@ -109,6 +106,7 @@ nav again?
 */}
         <Box  background={{ image: "url(/us-canvas.webp)", position: "top left"}} height="70vh"/>
           </Box>
+
                 </Layout>
             )
 

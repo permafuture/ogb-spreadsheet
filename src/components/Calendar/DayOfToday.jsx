@@ -27,11 +27,9 @@ const Day = ({ day, events }) => {
 
       <Box direction="column" fill="true" alignSelf="end" alignContent="end">
       <Anchor href="/events" color="black" css={css`
-        decoration: none;
-        a:hover: {
-          text-decoration: none;
-        }
-      `}>
+        text-transform: none;
+        font-weight: normal;
+        `}>
         <Events events={events[0].events} />
         </Anchor>
 

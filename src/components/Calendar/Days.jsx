@@ -10,6 +10,9 @@ import Events from './Events'
 import Query from '../Query'
 import CalendarBox from './CalendarBox'
 
+const sortyByTime = (eventA, eventB) =>
+  new Date(eventA.date).setHours(eventA.start.slice(0,1)) - new Date(eventB.date).setHours(eventB.start.slice(0,1))
+
 const getStrike = (currentDay, today) =>
   isBefore(currentDay, today) && !isSameDay(currentDay, today)
 
@@ -23,7 +26,7 @@ const Day = ({ day, events, onClick }) => {
 
   const eventsSection = (
     <Box direction="column" fill="true" alignContent="end">
-      <Events events={events} />
+      <Events events={events.sort(sortyByTime)} />
     </Box>
   )
 

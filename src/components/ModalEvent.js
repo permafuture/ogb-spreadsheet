@@ -9,9 +9,6 @@ import Slice from './Slice'
 const sortyByDate = (eventA, eventB) =>
   new Date(eventA.date).setHours(eventA.start.slice(0,1)) - new Date(eventB.date).setHours(eventB.start.slice(0,1))
 
-const sortyByTime = (eventA, eventB) =>
-  eventA.start - eventB.start
-
 const ModalEvent = ({ hideModal, currentDay, events }) => (
   <Layer position="center" onClickOutside={hideModal} onEsc={hideModal} modal background="#00000000" responsive="false"
   >
@@ -80,15 +77,18 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
                 {event.eventDesc}
               </Text>
             )}
-
+            {event.eventLink && (
             <Box margin={{ top: 'medium' }} width="xsmall" alignSelf="end">
               <Button
+                primary="true"
+                color="brand"
                 href={event.eventLink}
                 label="learn more"
                 a11yTitle="Event link"
                 target="_blank"
               />
             </Box>
+          )}
           </Box>
         </Box>
       ))}

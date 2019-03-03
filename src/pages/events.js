@@ -33,7 +33,6 @@ const SPREADSHEET_QUERY = graphql`
           eventLink: link
           host: authorhost
           start
-          end
           eventDesc: eventdescription
         }
       }
