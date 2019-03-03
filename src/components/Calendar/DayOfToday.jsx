@@ -96,6 +96,7 @@ const isEmpty = (obj) => {
 const DayOfToday = ({ events }) => {
       // figure out what day it is (when built, i guess)
       const currentDay = new Date()
+      console.log("currentDay = n" + currentDay)
 
       // find all the events that are in the future */}
       const futureEvents = events.filter(event =>
