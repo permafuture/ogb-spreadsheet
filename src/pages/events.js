@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, Markdown, Stack, Paragraph, Text } from 'grommet'
+import { Box, Markdown, Stack, Paragraph, Text, Anchor } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
@@ -9,16 +9,19 @@ import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
 import styled from 'styled-components'
+import SimpleForm from '../components/Subscribe'
 import Slice from '../components/Slice'
 
 const CONTENT=`
 # EVENTS
 
-We host readings, signings, book clubs and other events. Contact Steve to learn more.
+We host readings, signings, book clubs and other events. Contact [Steve](mailto:organicbooksellers+steve@gmail.com) to learn more.
+
+You can also keep updated on social media: <br /> [facebook](https://facebook.com/OrganicBooks) | [twitter](https://twitter.com/OrganicBooksABQ) | [instagram](https://instagram.com/OrganicBooks)
 
 Sign up for the mailing list! We'll send you info on upcoming sales and events, plus the occasional thank-you for being our customer. Put your email here. We'll never do anything weird with it.
 
-You can also keep updated on social profiling media: LINKS
+
 `
 
 // override this query with your own questions!
@@ -97,7 +100,11 @@ class CalendarPage extends PureComponent {
                   weight: 800
                 }
               },
+              a: {
+                component: Anchor,
+              },
             }}>{CONTENT}</Markdown>
+            <SimpleForm />
           </Box>
                 <Box id="calendars" animation="fadeIn" >
                   <ConfigContext.Consumer>

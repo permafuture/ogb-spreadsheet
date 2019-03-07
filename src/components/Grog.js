@@ -134,9 +134,12 @@ export const grog = deepMerge({
     }
     },
   paragraph: {
-    extend: `text-align: justify;
-  -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-  hyphens: auto; `
+    extend: `
+        text-align: justify;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+        max-width: 100%;
+        `
     }
 });

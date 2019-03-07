@@ -41,7 +41,6 @@ const Day = ({ day, events }) => {
 
         <CalendarBox
           key={day.getTime()}
-          background={`calendar-${dayType}-background`}
           border={{ color: `calendar-${dayType}-border` }}
           pad="small"
           {...events.length }
@@ -100,14 +99,14 @@ const DayOfToday = ({ events }) => {
 
       // find all the events that are in the future */}
       const futureEvents = events.filter(event =>
-        isFuture(event.date, currentDay),)
+        isFuture(event.date, currentDay) || isSameDay(event.date, currentDay),)
 
       console.log("futureEvents = ")
       console.log(futureEvents)
 
       // make an array of dates to compare, instead of event day objects
       const futureEventDates =[]
-      const ripDates = events.filter(event =>
+      const ripDates = futureEvents.filter(event =>
         futureEventDates.push(event.date),
       )
 

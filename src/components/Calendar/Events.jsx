@@ -14,7 +14,7 @@ const Events = ({ events }) =>
               gap={size === 'small' ? 'medium' : 'small'}
               pad="2px"
               tag="ul"
-              overflow="auto"
+              overflow="hidden"
               css={css`
                 list-style: none;
               `}

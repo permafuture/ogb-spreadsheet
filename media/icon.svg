@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="415.29688mm"
-   height="242.07642mm"
-   viewBox="0 0 415.29688 242.07642"
+   width="416mm"
+   height="415mm"
+   viewBox="0 0 416.00001 415.00001"
    version="1.1"
    id="svg1065"
-   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
    sodipodi:docname="icon.svg">
   <defs
      id="defs1059" />
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="1149.0987"
+     inkscape:cx="734.81299"
      inkscape:cy="723.18155"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -52,11 +52,11 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(211.4282,-98.098699)">
+     transform="translate(211.4282,74.824885)">
     <g
        style="display:inline;opacity:1;fill:#4c934c;fill-opacity:1;enable-background:new"
        id="g1117"
-       transform="matrix(1.0213208,-0.00915893,0.00915893,1.0213208,246.35319,290.4834)"
+       transform="matrix(1.0213208,-0.00915893,0.00915893,1.0213208,246.35319,205.81668)"
        inkscape:export-xdpi="27.950607"
        inkscape:export-ydpi="27.950607">
       <path

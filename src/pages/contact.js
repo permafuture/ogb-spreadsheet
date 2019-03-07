@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text, Image, Heading} from 'grommet'
+import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text, Image, Heading, Anchor} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
@@ -25,6 +25,8 @@ A place away from the distractions of home and work.
 A gateway to other lands, a secret portal to the world of the book people.
 
 **We're on a journey. Come with us.**
+
+[f](https://facebook.com/OrganicBooks) | [t](https://twitter.com/OrganicBooksABQ) | [i](https://instagram.com/OrganicBooks)
 `
 const StyledP=styled.p`
 background-color: "black";
@@ -75,7 +77,10 @@ const IndexPage = ({data}) => (
               props: {
                 fit: 'contain',
               }
-            }
+            },
+            a: {
+              component: Anchor,
+            },
           }}
         >{CONTENT}</Markdown>
        </Slice>
