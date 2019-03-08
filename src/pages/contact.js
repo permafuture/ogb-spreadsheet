@@ -8,6 +8,7 @@ import ConfigContext from '../components/ConfigContext'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
 import styled from 'styled-components'
+import css from 'styled-components'
 import Slice from '../components/Slice'
 
 const CONTENT=`
@@ -27,6 +28,31 @@ A gateway to other lands, a secret portal to the world of the book people.
 **We're on a journey. Come with us.**
 
 [f](https://facebook.com/OrganicBooks) | [t](https://twitter.com/OrganicBooksABQ) | [i](https://instagram.com/OrganicBooks)
+`
+
+const CREDITS=`
+  ## Credits
+
+  We couldn't have done this alone. Our community donated books, thoughts and labor through the whole process.
+
+  Some of the people who helped, in no particular order:
+`
+
+const LIST=`
+  * Jen Barol
+  * J. Mark Dyke
+  * Margaret Pedrotty
+  * Margaret Tessler
+  * Laura Mudd
+  * Anne Browne
+  * Jay Rosenblum
+  * Stacy Comacho
+  * Kathy Caffrey
+  * Laurie Mouy
+  * Patricia Wood Smith
+  * Vivia Sparkler
+  * Phyllis Hoge Thompson
+  * Marla Hart Clark
 `
 const StyledP=styled.p`
 background-color: "black";
@@ -101,6 +127,69 @@ const IndexPage = ({data}) => (
           }}
         >{CONTENT}</Markdown>
        </Slice>
+       <Slice
+            alignSelf="center"
+            alignContent="start"
+            margin={{ "bottom": "xlarge"}}
+            width="large"
+            pad="large"
+            background="accent-2"
+            border={{
+              "color": "accent-4",
+              "size": "medium"
+            }}>
+       <Markdown
+         components={{
+           p: {
+             component: Paragraph,
+             props: {
+               size: 'xlarge',
+               alignSelf: 'center',
+             }
+           },
+           strong: {
+             component: Text,
+             props: {
+               size: 'xxlarge',
+               weight: 800,
+             }
+           },
+           img: {
+             component: Image,
+             props: {
+               fit: 'contain',
+             }
+           },
+           a: {
+             component: Anchor,
+           },
+           ul: {
+             component: Text,
+             props: {
+               size: "large"
+               }
+             }
+           }}
+       >{CREDITS}</Markdown>
+       <Box
+       css={css`
+         text-transform: none;
+         -webkit-column-count: 2; /* Chrome, Safari, Opera */
+         -moz-column-count: 2; /* Firefox */
+         column-count: 2;
+       `}
+       >
+       <Markdown
+         components={{
+           ul: {
+             component: Text,
+             props: {
+               size: "large"
+               }
+             }
+           }}
+       >{LIST}</Markdown>       </Box>
+      </Slice>
         </Box>
         </Layout>
     )
