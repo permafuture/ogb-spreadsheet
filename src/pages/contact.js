@@ -57,6 +57,7 @@ const IndexPage = ({data}) => (
           <Image fit="cover" src="/animated.gif" />
         </Box>
         <Grid
+            alignSelf="center"
             fill="horizontal"
             margin="small"
             columns={{
