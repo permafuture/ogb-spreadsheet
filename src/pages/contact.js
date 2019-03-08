@@ -42,7 +42,7 @@ const IndexPage = ({data}) => (
        <Slice
             alignSelf="center"
             alignContent="start"
-            margin={{ "top": "xlarge", "bottom": "xlarge"}}
+            margin={{ "bottom": "xlarge"}}
             width="large"
             pad="large"
             background="accent-2"
@@ -56,6 +56,22 @@ const IndexPage = ({data}) => (
         <Box width="100%" height="auto" pad="none" margin="none">
           <Image fit="cover" src="/animated.gif" />
         </Box>
+        <Grid
+            fill="horizontal"
+            margin="small"
+            columns={{
+              count: 3,
+              size: "auto"
+            }}
+            gap="small"
+          >
+            <Bio name="Steve" />
+            <Bio name="Kelly" />
+            <Bio name="Max" />
+            <Bio name="Seth" />
+            <Bio name="Jalila" />
+            <Bio name="Molly" />
+        </Grid>
         <Markdown
           components={{
             p: {
