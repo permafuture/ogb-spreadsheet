@@ -69,7 +69,6 @@ picture or video of store
         </Slice>
 
         <Box minHeight="100vh"
-        margin={{bottom: "small"}}
         border={{
           side: "horizontal",
           "color": "accent-4",

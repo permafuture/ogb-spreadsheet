@@ -28,7 +28,7 @@ export const grog = deepMerge({
 
   anchor: {
     extend: css`
-      ${props => !props.plain && 'text-transform: uppercase;'};
+      ${props => !props.plain && 'text-transform: uppercase; text-decoration-skip-ink: none'};
     `,
     textDecoration: 'none',
     fontWeight: 600,
@@ -38,6 +38,9 @@ export const grog = deepMerge({
     },
     hover: {
       textDecoration: 'wavy underline',
+      extend: css`
+        ${props => !props.plain && 'text-decoration-skip: ink;'};
+      `,
       // fontWeight: undefined,
       // extend: undefined,
     },
@@ -96,6 +99,7 @@ export const grog = deepMerge({
         font: {
           family: '"Picture House One Bold", "sans-serif"',
           size: " 200px",
+          weight: "600",
         },
         extend: css`
           ${props => !props.plain && 'text-transform: uppercase;'};

@@ -54,7 +54,7 @@ module.exports = {
       resolve: 'gatsby-source-google-sheets',
       options: {
         spreadsheetId: '1ugMl2mhKTko21DhD-cTB18kMZw5qZ-_qsPO0_Bto6cE',
-        worksheetTitle: 'Faqs',
+        worksheetTitle: 'Credits',
         credentials: buildCredentials(process.env),
       },
     },

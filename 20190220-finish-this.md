@@ -10,6 +10,9 @@ still got to:
 [x] edit images
 [x] (made colors match on bg)
 [x] fixed hyphenation
+[x] add icons where fun
+[x] spreadsheet Credits
+[x] style Credits
 
 [] (later) make ink bleed to page texture
 [] easter eggs?
@@ -17,10 +20,7 @@ still got to:
 [] style mailchimp transform
 [] polish Video
 [] polish contact images
-[] spreadsheet Credits
-[] style Credits
-[] add icons where fun
-
+[] cleanup codebase
 
 
 * Can I make the credits list go to a spreadsheet query? It would make it easier to keep track of, and add to. I could also make it so the list is alphabetical automatically!

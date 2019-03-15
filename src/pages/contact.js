@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text, Image, Heading, Anchor} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import Concertina from '../components/Concertina'
+import Credits from '../components/Credits'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
@@ -11,6 +11,20 @@ import styled from 'styled-components'
 import css from 'styled-components'
 import Slice from '../components/Slice'
 import { ChatOption  } from 'grommet-icons'
+
+const HOMEPAGE_QUERY = graphql`
+  query credQuery {
+    allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
+      edges {
+        node {
+          firstname
+          lastname
+        }
+      }
+    }
+  }
+`
+
 const CONTENT=`
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
@@ -34,25 +48,9 @@ const CREDITS=`
 
   We couldn't have done this alone. Our community donated books, thoughts and labor through the whole process.
 
-  Some of the people who helped, in no particular order:
+  Some who helped:
 `
 
-const LIST=`
-  * Jen Barol
-  * J. Mark Dyke
-  * Margaret Pedrotty
-  * Margaret Tessler
-  * Laura Mudd
-  * Anne Browne
-  * Jay Rosenblum
-  * Stacy Comacho
-  * Kathy Caffrey
-  * Laurie Mouy
-  * Patricia Wood Smith
-  * Vivia Sparkler
-  * Phyllis Hoge Thompson
-  * Marla Hart Clark
-`
 const StyledP=styled.p`
 background-color: "black";
 `
@@ -254,25 +252,14 @@ const IndexPage = ({data}) => (
              }
            }}
        >{CREDITS}</Markdown>
-       <Box
-       css={css`
-         text-transform: none;
-         -webkit-column-count: 2; /* Chrome, Safari, Opera */
-         -moz-column-count: 2; /* Firefox */
-         column-count: 2;
-       `}
-       >
-       <Markdown
-         components={{
-           ul: {
-             component: Text,
-             props: {
-               size: "large"
-               }
-             }
-           }}
-       >{LIST}</Markdown>       </Box>
-      </Slice>
+
+       <StaticQuery
+           query={HOMEPAGE_QUERY}
+           render={data => (
+             <Credits data={data}  />
+           )}
+         />
+     </Slice>
 
       <Slice alignSelf="center"
       alignContent="start"
