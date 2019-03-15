@@ -22,7 +22,7 @@ still got to:
 [] polish Video
 [] polish contact images
 [] cleanup codebase
-[] make everythign accessible
-
+[] make everythign accessible`
+[] simplify icon borders
 
 * Can I make the credits list go to a spreadsheet query? It would make it easier to keep track of, and add to. I could also make it so the list is alphabetical automatically!

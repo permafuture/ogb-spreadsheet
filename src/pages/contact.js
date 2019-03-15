@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Grid, Markdown, Stack, Paragraph, Text, Image, Heading, Anchor} from 'grommet'
+import { Box, Grid, Markdown, Paragraph, Text, Image, Heading, Anchor} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Credits from '../components/Credits'
 import Hero from '../components/Hero'
@@ -158,7 +158,7 @@ const IndexPage = ({data}) => (
         <ChatBanner />
         <Text textAlign="center" size="xxlarge" weight="800">We're the Brewer family.</Text>
         <Box width="100%" height="auto" pad="none" margin="none">
-          <Image fit="cover" src="/animated.gif" />
+          <Image fit="cover" src="/animated.gif" alt=""/>
         </Box>
         <Grid
             alignSelf="center"

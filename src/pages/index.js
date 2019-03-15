@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
-import { Anchor, Grid, Box, ResponsiveContext, Text, Heading, Stack, Paragraph, Video} from 'grommet'
+import { Box, Heading, Video} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
@@ -102,7 +101,7 @@ nav again?
             "size": "medium"
           }}
           >
-          <Video controls="over" fit="cover">
+          <Video controls="over" fit="cover" a11yTitle="a video featuring Organic Books">
             <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
             <source key="video" src="/nob-hill-ft-organic-books.webm" type="video/webm" />
           </Video>

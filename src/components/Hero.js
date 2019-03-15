@@ -46,7 +46,7 @@ const Hero = () => (
                     height={size === 'small' ? 'small' : 'medium'}
                     margin="small"
                   >
-                    <Image fit="contain" src={src} a11yTitle="logo" />
+                    <Image fit="contain" src={src} alt="" a11yTitle="logo" />
                   </Box>
                 )
               }}

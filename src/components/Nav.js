@@ -21,11 +21,11 @@ const Nav =() => (
     `}>
   <Box
     direction="row-responsive" >
-    <Button icon=<Catalog color="accent-2" size="large"/> margin="small" align="center"  href="/books"
+    <Button a11yTitle="Books" icon=<Catalog color="accent-2" size="large"/> margin="small" align="center"  href="/books"
     label="Books"  />
-    <Button icon=<ScheduleNew color="accent-2" size="large"/> margin="small" align="center"  href="/events"
+    <Button a11yTitle="Events" icon=<ScheduleNew color="accent-2" size="large"/> margin="small" align="center"  href="/events"
     label="Events"  />
-    <Button icon=<ChatOption color="accent-2" size="large"/> margin="small" align="center"  href="/contact"
+    <Button a11yTitle="Contact" icon=<ChatOption color="accent-2" size="large"/> margin="small" align="center"  href="/contact"
     label="Contact"  />
   </Box>
 

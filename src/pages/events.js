@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, Markdown, Stack, Paragraph, Text, Anchor, Heading } from 'grommet'
+import { Box, Markdown, Paragraph, Text, Anchor, Heading } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'

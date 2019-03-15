@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Heading, Markdown, Stack, Paragraph, Text, Anchor} from 'grommet'
+import { Box, ResponsiveContext, Heading, Markdown } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import Concertina from '../components/Concertina'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
