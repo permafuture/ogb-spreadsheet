@@ -54,6 +54,10 @@ const Layout = ({ children }) => (
   <ConfigContext.Provider>
     <GlobalStyle />
     <style type="text/css">{FONT}</style>
+    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2" as="font">
+    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff" as="font">
+    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Bold-webfont.woff2" as="font">
+    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Bold-webfont.woff" as="font">
 
     <ConfigContext.Consumer>
       {appConfig => (
