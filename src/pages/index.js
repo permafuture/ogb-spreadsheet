@@ -105,6 +105,7 @@ nav again?
           >
           <Video controls="over" fit="cover">
             <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
+            <source key="video" src="/nob-hill-ft-organic-books.webm" type="video/webm" />
           </Video>
           </Box>
                 </Layout>
