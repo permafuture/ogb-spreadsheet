@@ -36,7 +36,7 @@ module.exports = {
         name: 'gatsby-starter-event-calendar',
         short_name: 'starter-calendar',
         start_url: '/',
-        background_color: appConfig.theme.background,
+        background_color: appConfig.theme.accent-2,
         theme_color: appConfig.theme.brand,
         display: 'minimal-ui',
         icon: 'media/icon.svg',
