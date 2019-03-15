@@ -10,7 +10,7 @@ import Nav from '../components/Nav'
 import styled from 'styled-components'
 import css from 'styled-components'
 import Slice from '../components/Slice'
-import { ChatOption  } from 'grommet-icons'
+import { ChatOption, Java  } from 'grommet-icons'
 
 const HOMEPAGE_QUERY = graphql`
   query credQuery {
@@ -271,7 +271,7 @@ const IndexPage = ({data}) => (
         "color": "accent-4",
         "size": "medium"
       }}>
-      <Text textAlign="center">This website made by Max</Text>
+      <Text textAlign="center">This website made with <Java color="brand"/> by <Anchor href="http://permafuture.net">Max</Anchor></Text>
       </Slice>
         </Box>
         </Layout>

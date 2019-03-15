@@ -7,12 +7,28 @@ import Helmet from './Helmet'
 import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
+require("typeface-alegreya")
 
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
 
   }
+`
+const FONT=`
+
+@font-face {
+font-family: 'Picture House One Bold';
+src:  url('/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff2') format('woff2'),
+      url('mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Picture House One Regular';
+src:  url('/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2') format('woff2'),
+      url('mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff') format('woff');
+}
+
 `
 
 const enhancedTheme = (baseTheme, customTheme) => {
@@ -35,6 +51,8 @@ const enhancedTheme = (baseTheme, customTheme) => {
 const Layout = ({ children }) => (
   <ConfigContext.Provider>
     <GlobalStyle />
+    <style type="text/css">{FONT}</style>
+
     <ConfigContext.Consumer>
       {appConfig => (
         <Grommet

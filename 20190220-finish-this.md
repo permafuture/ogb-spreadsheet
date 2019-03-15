@@ -13,10 +13,11 @@ still got to:
 [x] add icons where fun
 [x] spreadsheet Credits
 [x] style Credits
+[x] footer with madeBy
+
 
 [] (later) make ink bleed to page texture
 [] easter eggs?
-[] footer with madeBy
 [] style mailchimp transform
 [] polish Video
 [] polish contact images
