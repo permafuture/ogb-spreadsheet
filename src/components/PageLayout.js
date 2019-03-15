@@ -56,8 +56,8 @@ const Layout = ({ children }) => (
     <style type="text/css">{FONT}</style>
     <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff" as="font" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Bold-webfont.woff" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff" as="font" type="font/woff2" crossorigin="anonymous"/>
 
     <ConfigContext.Consumer>
       {appConfig => (
