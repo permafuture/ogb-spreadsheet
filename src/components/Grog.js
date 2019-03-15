@@ -69,11 +69,17 @@ export const grog = deepMerge({
         font-weight: bold;
         text-transform: uppercase;
         font-size: 24px;
-        font-height: 30px;`};
+        font-height: 30px;
+        div {
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        `};
     `,
   },
 
   heading: {
+    alignSelf: 'center',
     font: {
       family: '"Picture House One Bold", "sans-serif"',
       size: "200px",
@@ -98,6 +104,7 @@ export const grog = deepMerge({
       2: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
+          size: "200px",
         },
         extend: css`
           ${props => !props.plain && 'text-transform: uppercase;'};

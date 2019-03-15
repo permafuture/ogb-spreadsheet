@@ -45,21 +45,7 @@ picture or video of store
 
  location and hours*/}
 
-        <Box
-        height="105vh"
-        width="100%"
-        background="black"
-        justify="center"
-        border={{
-          side: "horizontal",
-          "color": "accent-4",
-          "size": "medium"
-        }}
-        >
-        <Video controls="over" fit="cover">
-          <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
-        </Video>
-        </Box>
+
         <Slice
           width="large"
           alignSelf="center"
@@ -106,7 +92,21 @@ nav again?
 */}
         <Box  background={{ image: "url(/us-canvas.webp)", position: "top left"}} height="70vh"/>
           </Box>
-
+          <Box
+          height="105vh"
+          width="100%"
+          background="black"
+          justify="center"
+          border={{
+            side: "horizontal",
+            "color": "accent-4",
+            "size": "medium"
+          }}
+          >
+          <Video controls="over" fit="cover">
+            <source key="video" src="/nob-hill-ft-organic-books.mp4" type="video/mp4" />
+          </Video>
+          </Box>
                 </Layout>
             )
 

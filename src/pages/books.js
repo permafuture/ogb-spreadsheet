@@ -7,13 +7,13 @@ import Layout from '../components/PageLayout'
 import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
+import { Catalog } from 'grommet-icons'
 
 
 import { css }from 'styled-components'
 
 
 const CONTENT=`
-# BOOKS
 
 ## We sell books<br /> and things that bookstores sell.
 
@@ -35,6 +35,72 @@ We can order books for you! We buy books from an international network of indepe
 
 const EXTEND=`background-attachment: fixed;`
 
+const CatalogBanner = () => {
+  return [
+    <Box direction="row" alignSelf="center" alignContent="center" overflow="hidden" margin={{ "top": "-1em", "bottom": "1em" }}>
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />
+    <Catalog color="accent-4" size="small" />      <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />
+          <Catalog color="accent-4" size="small" />      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+      <Catalog color="accent-4" size="small" />
+    </Box>
+  ]
+}
+
 const IndexPage = ({data}) => (
 
       <Layout>
@@ -51,6 +117,10 @@ const IndexPage = ({data}) => (
                     "color": "accent-4",
                     "size": "medium"
                   }}>
+
+                  <Heading level="1">Books</Heading>
+                  <CatalogBanner />
+
                 <Markdown components={{
                   p: {
                     component: Paragraph,

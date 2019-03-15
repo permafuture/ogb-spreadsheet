@@ -10,7 +10,7 @@ import Nav from '../components/Nav'
 import styled from 'styled-components'
 import css from 'styled-components'
 import Slice from '../components/Slice'
-
+import { ChatOption  } from 'grommet-icons'
 const CONTENT=`
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
@@ -27,7 +27,6 @@ A gateway to other lands, a secret portal to the world of the book people.
 
 **We're on a journey. Come with us.**
 
-[f](https://facebook.com/OrganicBooks) | [t](https://twitter.com/OrganicBooksABQ) | [i](https://instagram.com/OrganicBooks)
 `
 
 const CREDITS=`
@@ -57,6 +56,86 @@ const LIST=`
 const StyledP=styled.p`
 background-color: "black";
 `
+const ChatBanner = () => {
+  return [
+    <Box direction="row" alignSelf="center" alignContent="center" overflow="hidden" margin={{ "top": "-1em", "bottom": "1em"}}>
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+      <ChatOption size="small" color="accent-4" />
+    </Box>
+  ]
+}
 
 const IndexPage = ({data}) => (
 
@@ -78,6 +157,7 @@ const IndexPage = ({data}) => (
             }}>
 
         <Heading level="1">Contact</Heading>
+        <ChatBanner />
         <Text textAlign="center" size="xxlarge" weight="800">We're the Brewer family.</Text>
         <Box width="100%" height="auto" pad="none" margin="none">
           <Image fit="cover" src="/animated.gif" />
@@ -99,6 +179,7 @@ const IndexPage = ({data}) => (
             <Bio name="Jalila" />
             <Bio name="Molly" />
         </Grid>
+
         <Markdown
           components={{
             p: {
@@ -124,8 +205,10 @@ const IndexPage = ({data}) => (
             a: {
               component: Anchor,
             },
+
           }}
         >{CONTENT}</Markdown>
+
        </Slice>
        <Slice
             alignSelf="center"
@@ -189,6 +272,19 @@ const IndexPage = ({data}) => (
              }
            }}
        >{LIST}</Markdown>       </Box>
+      </Slice>
+
+      <Slice alignSelf="center"
+      alignContent="start"
+      margin={{ "bottom": "xlarge"}}
+      width="large"
+      pad="large"
+      background="accent-2"
+      border={{
+        "color": "accent-4",
+        "size": "medium"
+      }}>
+      <Text textAlign="center">This website made by Max</Text>
       </Slice>
         </Box>
         </Layout>
