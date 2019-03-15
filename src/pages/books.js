@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box, ResponsiveContext, Heading, Markdown } from 'grommet'
+import { Box, ResponsiveContext, Heading, Markdown, Paragraph, Text, Anchor} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
