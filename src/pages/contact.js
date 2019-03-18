@@ -163,8 +163,7 @@ const IndexPage = ({data}) => (
         <Grid
             alignSelf="center"
             fill="horizontal"
-            margin="small"
-            columns={{
+            margin={{ "top": "large", "bottom": "small"}}            columns={{
               count: 3,
               size: "auto"
             }}
