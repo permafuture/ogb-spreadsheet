@@ -24,7 +24,7 @@ Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $5 for select
 
 **That's right: teachers, faculty, adjuncts, bring ID and get 20% off any book in the store. We appreciate you!**
 
-We can order books for you! We buy books from an international network of independent bookstores. Contact Max for more information.
+We can order books for you! We buy books from an international network of independent bookstores. Contact [Max](mailto:organicbooksellers+max@gmail.com) for more information.
 
 ## We buy local!
 

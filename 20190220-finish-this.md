@@ -14,15 +14,15 @@ still got to:
 [x] spreadsheet Credits
 [x] style Credits
 [x] footer with madeBy
+[x] polish contact images
+[x] make everythign accessible`
 
 
 [] (later) make ink bleed to page texture
 [] easter eggs?
 [] style mailchimp transform
 [] polish Video
-[] polish contact images
-[] cleanup codebase
-[] make everythign accessible`
+[] cleanup codebase (incl remove console logging)
 [] simplify icon borders
 
 * Can I make the credits list go to a spreadsheet query? It would make it easier to keep track of, and add to. I could also make it so the list is alphabetical automatically!

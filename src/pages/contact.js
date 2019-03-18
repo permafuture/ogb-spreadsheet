@@ -168,6 +168,9 @@ const IndexPage = ({data}) => (
               count: 3,
               size: "auto"
             }}
+            rows={{
+              size: "213px"
+            }}
             gap="small"
           >
             <Bio name="Steve" />

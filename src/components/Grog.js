@@ -152,5 +152,7 @@ export const grog = deepMerge({
         hyphens: auto;
         max-width: 100%;
         `
-    }
+    },
+
+
 });

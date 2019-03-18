@@ -28,7 +28,7 @@ const Credits = ({ data }) => {
             size="large"
             weight="600"
             textAlign="end"
-            
+            truncate
             >
             {node.firstname} {node.lastname}
             </Text>
@@ -36,6 +36,8 @@ const Credits = ({ data }) => {
             <Text
             size="large"
             weight="600"
+            truncate
+            textAlign="start"
             >
             {node.firstname} {node.lastname}
             </Text>
