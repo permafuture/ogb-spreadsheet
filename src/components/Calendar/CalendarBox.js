@@ -9,7 +9,7 @@ const CalendarBox = ({ square, children, onClick, ...rest }) => (
         onClick={onClick}
         height={size !== 'small' && '8rem'}
         width="auto"
-        fill={'horizontal'}
+        fill='horizontal'
         css={css`
           cursor: ${onClick && 'pointer'};
         `}

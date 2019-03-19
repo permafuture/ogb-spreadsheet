@@ -7,6 +7,7 @@ import Helmet from './Helmet'
 import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
+
 require("typeface-alegreya")
 
 const GlobalStyle = createGlobalStyle`
@@ -54,10 +55,30 @@ const Layout = ({ children }) => (
   <ConfigContext.Provider>
     <GlobalStyle />
     <style type="text/css">{FONT}</style>
-    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff" as="font" type="font/woff" crossorigin="anonymous"/>
-    <link rel="preload" href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+    <link
+      rel="preload"
+      href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous" />
+    <link
+      rel="preload"
+      href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff"
+      as="font"
+      type="font/woff"
+      crossOrigin="anonymous" />
+    <link
+      rel="preload" 
+      href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous" />
+    <link
+      rel="preload"
+      href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff"
+      as="font"
+      type="font/woff"
+      crossOrigin="anonymous" />
 
     <ConfigContext.Consumer>
       {appConfig => (
@@ -73,21 +94,21 @@ const Layout = ({ children }) => (
            background-attachment: fixed;
            `}
           >
-          <Box
-           animation={{
-            "type": "fadeIn",
-            "delay": 100,
-            "duration": 2000,
-            "size": "xsmall"
-            }}
-           css={css`
-            background-image: url(/lots-of-flowers.svg);
-            background-size: cover;
-            background-attachment: fixed;
-            `}
-          >
-          {children}
-          </Box>
+            <Box
+              animation={{
+                "type": "fadeIn",
+                "delay": 100,
+                "duration": 2000,
+                "size": "xsmall"
+                }}
+              css={css`
+                background-image: url(/lots-of-flowers.svg);
+                background-size: cover;
+                background-attachment: fixed;
+              `}
+            >
+              {children}
+            </Box>
           </Slice>
         </Grommet>
       )}

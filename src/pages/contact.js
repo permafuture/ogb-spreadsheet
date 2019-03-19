@@ -135,7 +135,7 @@ const ChatBanner = () => {
   ]
 }
 
-const IndexPage = ({data}) => (
+const ContactPage = ({data}) => (
 
       <Layout>
        <Box>
@@ -279,4 +279,4 @@ const IndexPage = ({data}) => (
         </Layout>
     )
 
-export default IndexPage
+export default ContactPage

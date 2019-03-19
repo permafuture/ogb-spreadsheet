@@ -1,4 +1,4 @@
-FINISHED STYLING MAIN PAGES
+# FINISHED STYLING MAIN PAGES
 
 still got to:
 
@@ -22,7 +22,9 @@ still got to:
 [] easter eggs?
 [] style mailchimp transform
 [] polish Video
+
 [] cleanup codebase (incl remove console logging)
 [] simplify icon borders
+[] fix pricing in copy
 
 * Can I make the credits list go to a spreadsheet query? It would make it easier to keep track of, and add to. I could also make it so the list is alphabetical automatically!

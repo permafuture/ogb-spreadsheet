@@ -100,7 +100,7 @@ const CatalogBanner = () => {
   ]
 }
 
-const IndexPage = ({data}) => (
+const BooksPage = ({data}) => (
 
       <Layout>
 
@@ -144,4 +144,4 @@ const IndexPage = ({data}) => (
         </Layout>
     )
 
-export default IndexPage
+export default BooksPage
