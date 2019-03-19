@@ -60,25 +60,29 @@ const Layout = ({ children }) => (
       href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff2"
       as="font"
       type="font/woff2"
-      crossOrigin="anonymous" />
+      crossOrigin="anonymous"
+    />
     <link
       rel="preload"
       href="/mbpicturehouse_oneregular_macroman/MB_Picture_House_One_Regular-webfont.woff"
       as="font"
       type="font/woff"
-      crossOrigin="anonymous" />
+      crossOrigin="anonymous"
+    />
     <link
-      rel="preload" 
+      rel="preload"
       href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff2"
       as="font"
       type="font/woff2"
-      crossOrigin="anonymous" />
+      crossOrigin="anonymous"
+    />
     <link
       rel="preload"
       href="/mbpicturehouse_onebold_macroman/MB_Picture_House_One_Bold-webfont.woff"
       as="font"
       type="font/woff"
-      crossOrigin="anonymous" />
+      crossOrigin="anonymous"
+    />
 
     <ConfigContext.Consumer>
       {appConfig => (

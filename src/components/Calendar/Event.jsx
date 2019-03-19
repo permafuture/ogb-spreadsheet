@@ -1,24 +1,10 @@
 import PropTypes from 'prop-types'
 import { Box, Text } from 'grommet'
 import React from 'react'
-import format from 'date-fns/format'
 
-
-
-const Event = ({ name, host, start, end }) => (
-
-
+const Event = ( { name, host, start } ) => (
   <Box background="calendar-event-background" fill="horizontal" pad="2px">
-    <Text
-      size="large"
-      alignSelf="end"
-      textAlign="end"
-      color="calendar-event-text"
-      a11yTitle="Event name"
-      css={css`
-        font-style: italic;
-      `}
-    >
+    <Text size="large" alignSelf="end" textAlign="end" color="calendar-event-text" a11yTitle="Event name" css="font-style: italic;">
       {name}
     </Text>
     <Text
@@ -27,26 +13,24 @@ const Event = ({ name, host, start, end }) => (
       textAlign="end"
       color="calendar-event-text"
       a11yTitle="Event host"
-      css={css`
+      css="
         text-transform: uppercase;
         font-weight: bold;
-      `}
+      "
     >
       {host}
     </Text>
-    <Text
-      size="small"
-      alignSelf="end"
-      color="calendar-event-text"
-      a11yTitle="Event time"
-    >
-      {start.slice(0,1)}{start.slice(-2)}
+    <Text size="small" alignSelf="end" color="calendar-event-text" a11yTitle="Event time">
+      {start.slice( 0, 1 )}
+      {start.slice( -2 )}
     </Text>
   </Box>
-)
+ )
 
 Event.propTypes = {
   name: PropTypes.string.isRequired,
+  host: PropTypes.string.isRequired,
+  start: PropTypes.instanceOf(Date).isRequired
 }
 
 export default Event

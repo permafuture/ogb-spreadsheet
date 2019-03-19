@@ -1,18 +1,24 @@
-import React, { PureComponent } from 'react'
-import { Box, Grid, Markdown, Paragraph, Text, Image, Heading, Anchor} from 'grommet'
+import React from 'react'
+import {
+  Box,
+  Grid,
+  Markdown,
+  Paragraph,
+  Text,
+  Image,
+  Heading,
+  Anchor
+} from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
+import { ChatOption, Java } from 'grommet-icons'
 import Credits from '../components/Credits'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
-import ConfigContext from '../components/ConfigContext'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
-import styled from 'styled-components'
-import css from 'styled-components'
 import Slice from '../components/Slice'
-import { ChatOption, Java  } from 'grommet-icons'
 
-const HOMEPAGE_QUERY = graphql`
+const HOMEPAGE_QUERY = graphql `
   query credQuery {
     allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
       edges {
@@ -25,7 +31,7 @@ const HOMEPAGE_QUERY = graphql`
   }
 `
 
-const CONTENT=`
+const CONTENT = `
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
 
@@ -43,7 +49,7 @@ A gateway to other lands, a secret portal to the world of the book people.
 
 `
 
-const CREDITS=`
+const CREDITS = `
   ## Credits
 
   We couldn't have done this alone. Our community donated books, thoughts and labor through the whole process.
@@ -51,232 +57,250 @@ const CREDITS=`
   Some who helped:
 `
 
-const StyledP=styled.p`
-background-color: "black";
-`
-const ChatBanner = () => {
-  return [
-    <Box direction="row" alignSelf="center" alignContent="center" overflow="hidden" margin={{ "top": "-1em", "bottom": "1em"}}>
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-      <ChatOption size="small" color="accent-4" />
-    </Box>
-  ]
-}
+const ChatBanner = () => [
+  <Box
+    direction="row"
+    alignSelf="center"
+    alignContent="center"
+    overflow="hidden"
+    margin={{
+      "top" : "-1em",
+      "bottom" : "1em"
+    }}
+  >
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" />
+  </Box>
+    ]
 
-const ContactPage = ({data}) => (
+const ContactPage = () => (
+  <Layout>
+    <Box>
+      <Hero />
+      <Nav />
 
-      <Layout>
-       <Box>
-       <Hero />
-       <Nav />
-
-       <Slice
-            alignSelf="center"
-            alignContent="start"
-            margin={{ "bottom": "xlarge"}}
-            width="large"
-            pad="large"
-            background="accent-2"
-            border={{
-              "color": "accent-4",
-              "size": "medium"
-            }}>
+      <Slice
+        alignSelf="center"
+        alignContent="start"
+        margin={{
+        "bottom" : "xlarge"
+      }}
+        width="large"
+        pad="large"
+        background="accent-2"
+        border={{
+        "color" : "accent-4",
+        "size" : "medium"
+      }}
+      >
 
         <Heading level="1">Contact</Heading>
         <ChatBanner />
-        <Text textAlign="center" size="xxlarge" weight="800">We're the Brewer family.</Text>
+        <Text textAlign="center" size="xxlarge" weight="800">We&apos;re the Brewer family.</Text>
         <Box width="100%" height="auto" pad="none" margin="none">
-          <Image fit="cover" src="/animated.gif" alt=""/>
+          <Image fit="cover" src="/animated.gif" alt="" />
         </Box>
         <Grid
-            alignSelf="center"
-            fill="horizontal"
-            margin={{ "top": "large", "bottom": "small"}}            columns={{
-              count: 3,
-              size: "auto"
-            }}
-            rows={{
-              size: "213px"
-            }}
-            gap="small"
-          >
-            <Bio name="Steve" />
-            <Bio name="Kelly" />
-            <Bio name="Max" />
-            <Bio name="Seth" />
-            <Bio name="Jalila" />
-            <Bio name="Molly" />
+          alignSelf="center"
+          fill="horizontal"
+          margin={{
+          "top" : "large",
+          "bottom" : "small"
+        }}
+          columns={{
+          count: 3,
+          size: "auto"
+        }}
+          rows={{
+          size: "213px"
+        }}
+          gap="small"
+        >
+          <Bio name="Steve" />
+          <Bio name="Kelly" />
+          <Bio name="Max" />
+          <Bio name="Seth" />
+          <Bio name="Jalila" />
+          <Bio name="Molly" />
         </Grid>
 
-        <Markdown
-          components={{
-            p: {
-              component: Paragraph,
-              props: {
-                size: 'xlarge',
-                alignSelf: 'center',
-              }
-            },
-            strong: {
-              component: Text,
-              props: {
-                size: 'xxlarge',
-                weight: 800,
-              }
-            },
-            img: {
-              component: Image,
-              props: {
-                fit: 'contain',
-              }
-            },
-            a: {
-              component: Anchor,
-            },
+        <Markdown components={{
+          p: {
+            component: Paragraph,
+            props: {
+              size: 'xlarge',
+              alignSelf: 'center'
+            }
+          },
+          strong: {
+            component: Text,
+            props: {
+              size: 'xxlarge',
+              weight: 800
+            }
+          },
+          img: {
+            component: Image,
+            props: {
+              fit: 'contain'
+            }
+          },
+          a: {
+            component: Anchor
+          }
+        }}
+        >
+          {CONTENT}
+        </Markdown>
 
-          }}
-        >{CONTENT}</Markdown>
-
-       </Slice>
-       <Slice
-            alignSelf="center"
-            alignContent="start"
-            margin={{ "bottom": "xlarge"}}
-            width="large"
-            pad="large"
-            background="accent-2"
-            border={{
-              "color": "accent-4",
-              "size": "medium"
-            }}>
-       <Markdown
-         components={{
-           p: {
-             component: Paragraph,
-             props: {
-               size: 'xlarge',
-               alignSelf: 'center',
-             }
-           },
-           strong: {
-             component: Text,
-             props: {
-               size: 'xxlarge',
-               weight: 800,
-             }
-           },
-           img: {
-             component: Image,
-             props: {
-               fit: 'contain',
-             }
-           },
-           a: {
-             component: Anchor,
-           },
-           ul: {
-             component: Text,
-             props: {
-               size: "large"
-               }
-             }
-           }}
-       >{CREDITS}</Markdown>
-
-       <StaticQuery
-           query={HOMEPAGE_QUERY}
-           render={data => (
-             <Credits data={data}  />
-           )}
-         />
-     </Slice>
-
-      <Slice alignSelf="center"
-      alignContent="start"
-      margin={{ "bottom": "xlarge"}}
-      width="large"
-      pad="large"
-      background="accent-2"
-      border={{
-        "color": "accent-4",
-        "size": "medium"
-      }}>
-      <Text textAlign="center">This website made with <Java color="brand"/> by <Anchor href="http://permafuture.net">Max</Anchor></Text>
       </Slice>
-        </Box>
-        </Layout>
-    )
+      <Slice
+        alignSelf="center"
+        alignContent="start"
+        margin={{
+        "bottom" : "xlarge"
+      }}
+        width="large"
+        pad="large"
+        background="accent-2"
+        border={{
+        "color" : "accent-4",
+        "size" : "medium"
+      }}
+      >
+        <Markdown components={{
+          p: {
+            component: Paragraph,
+            props: {
+              size: 'xlarge',
+              alignSelf: 'center'
+            }
+          },
+          strong: {
+            component: Text,
+            props: {
+              size: 'xxlarge',
+              weight: 800
+            }
+          },
+          img: {
+            component: Image,
+            props: {
+              fit: 'contain'
+            }
+          },
+          a: {
+            component: Anchor
+          },
+          ul: {
+            component: Text,
+            props: {
+              size: "large"
+            }
+          }
+        }}
+        >
+          {CREDITS}
+        </Markdown>
+
+        <StaticQuery query={HOMEPAGE_QUERY} render={data => ( <Credits data={data} /> )} />
+      </Slice>
+
+      <Slice
+        alignSelf="center"
+        alignContent="start"
+        margin={{
+        "bottom" : "xlarge"
+      }}
+        width="large"
+        pad="large"
+        background="accent-2"
+        border={{
+        "color" : "accent-4",
+        "size" : "medium"
+      }}
+      >
+        <Text textAlign="center">
+This website made with
+          <Java color="brand" />
+        by
+          <Anchor href="http://permafuture.net">Max</Anchor>
+        </Text>
+      </Slice>
+    </Box>
+  </Layout>
+ )
 
 export default ContactPage

@@ -1,6 +1,5 @@
 import { css } from 'styled-components';
-import Grommet from 'grommet';
-import { deepFreeze, deepMerge } from 'grommet/utils/object';
+import {  deepMerge } from 'grommet/utils/object';
 
 export const grog = deepMerge({
   global: {

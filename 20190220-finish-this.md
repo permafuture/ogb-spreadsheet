@@ -17,14 +17,18 @@ still got to:
 [x] polish contact images
 [x] make everythign accessible`
 
-
+*/
 [] (later) make ink bleed to page texture
 [] easter eggs?
 [] style mailchimp transform
 [] polish Video
+/*
 
 [] cleanup codebase (incl remove console logging)
 [] simplify icon borders
 [] fix pricing in copy
+[] style 404 page
+[] style nojs page
+[] edit readme
 
-* Can I make the credits list go to a spreadsheet query? It would make it easier to keep track of, and add to. I could also make it so the list is alphabetical automatically!
+* extract logic for icon borders

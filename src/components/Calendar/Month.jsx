@@ -1,11 +1,10 @@
 import React from 'react'
-import { getDaysInMonth, getISODay, format } from 'date-fns'
+import { getDaysInMonth, format } from 'date-fns'
 import { Heading, Box } from 'grommet'
 import PropTypes from 'prop-types'
 import Days from './Days'
 import Events from './Events'
-import Weekdays from './Weekdays'
-import Query from '../Query'
+
 
 const Month = ({ monthlyCalendar, showModal }) => {
   const [currentMonthNumber, currentYear] = monthlyCalendar.date.split('-')
@@ -15,9 +14,7 @@ const Month = ({ monthlyCalendar, showModal }) => {
     parseInt(currentMonthNumber, 10) - 1,
     1,
   )
-  const currentMonthIsoDay = getISODay(currentMonth)
   const currentMonthDays = getDaysInMonth(currentMonth)
-  const emptyDaysAtEnd = 7 - ((currentMonthIsoDay + currentMonthDays) % 7)
 
   return (
     <Box margin={{ bottom: 'medium' }}>

@@ -1,9 +1,6 @@
 import { format } from 'date-fns'
-import isFuture from 'date-fns/is_future'
-import closestTo from 'date-fns/closest_to'
 
 const groupEvents = (data) => {
-  const today = new Date()
 
   const eventsByDateKey = data.allGoogleSheetEventsRow.edges.reduce(
     (acc, { node }) => {
@@ -27,8 +24,6 @@ const groupEvents = (data) => {
     events: eventsByDateKey[dateKey],
     date: dateKey,
   }))
-  console.log("groupEvents day out = " )
-  console.log( result)
   return result
 }
 
