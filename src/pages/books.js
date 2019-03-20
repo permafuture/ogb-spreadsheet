@@ -12,7 +12,6 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
-import Banner from '../components/Banner'
 
 const CONTENT = `
 
