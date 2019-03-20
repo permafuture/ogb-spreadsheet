@@ -298,6 +298,9 @@ This website made with
         by
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
+        <Text textAlign="center">
+          Video by Gus Pedrotty
+        </Text>
       </Slice>
     </Box>
   </Layout>
