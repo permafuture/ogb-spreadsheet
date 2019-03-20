@@ -8,8 +8,8 @@ const Bio = ( { name } ) => (
   <Box align="center" justify="center">
     <Image
       src={`/${  name  }.png`}
-      width="148px"
-      height="auto"
+      width="auto"
+      height="148px"
       fit="contain"
       alt=""
       css="-webkit-clip-path: circle(50% at 50% 50%);
