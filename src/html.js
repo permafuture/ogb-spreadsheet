@@ -16,7 +16,17 @@ export default function HTML(props) {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
-          This app works best with JavaScript enabled.
+
+          <h1>Organic Books</h1>
+
+          <p>Our website wants Javascript and you don't seem to have it enabled.</p>
+
+          <p>On the other hand, the website mostly just tells you to come to our store.</p>
+
+          <p>It's at 111 Carlisle Blvd SE, Albuquerque NM, 87110</p>
+
+          <p>See you there!</p>
+
         </noscript>
         <div
           key={`body`}
