@@ -5,7 +5,8 @@ import React from 'react'
 const Event = ( { name, host, start } ) => (
   <Box background="calendar-event-background" fill="horizontal" pad="2px">
     <Text size="large" alignSelf="end" textAlign="end" color="calendar-event-text" a11yTitle="Event name" css="font-style: italic;">
-      {name}&nbsp;
+      {name}
+      &nbsp;
     </Text>
     <Text
       size="xxlarge"

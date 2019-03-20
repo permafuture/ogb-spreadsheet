@@ -16,19 +16,21 @@ still got to:
 [x] footer with madeBy
 [x] polish contact images
 [x] make everythign accessible`
+[x] cleanup codebase (incl remove console logging)
+[x] fix pricing in copy
+[x] style nojs page
+[X] style 404 page
+[x] transparent bgs on contact images
 
 */
 [] (later) make ink bleed to page texture
 [] easter eggs?
 [] style mailchimp transform
 [] polish Video
+[] simplify icon borders
 /*
 
-[] cleanup codebase (incl remove console logging)
-[] simplify icon borders
-[] fix pricing in copy
-[] style 404 page
-[] style nojs page
 [] edit readme
+[] write a blog post about it
 
 * extract logic for icon borders

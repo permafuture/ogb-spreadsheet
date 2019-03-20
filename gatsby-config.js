@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-event-calendar',
-        short_name: 'starter-calendar',
+        name: 'organic-books',
+        short_name: 'organic-books',
         start_url: '/',
         background_color: '#4c934c',
         theme_color: appConfig.theme.brand,
