@@ -68,80 +68,80 @@ const ChatBanner = () => [
       "bottom" : "1em"
     }}
   >
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
-    <ChatOption size="small" color="accent-4" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
+    <ChatOption size="small" color="accent-4" alt="" />
   </Box>
     ]
 

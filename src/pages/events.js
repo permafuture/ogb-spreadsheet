@@ -37,67 +37,67 @@ const ScheduleNewBanner = () => [
       "bottom" : "1em"
     }}
   >
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
-    <ScheduleNew size="small" color="accent-4" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
+    <ScheduleNew size="small" color="accent-4" alt="" />
   </Box>
     ]
 

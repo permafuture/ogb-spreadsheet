@@ -12,6 +12,7 @@ import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
+import Banner from '../components/Banner'
 
 const CONTENT = `
 
@@ -43,67 +44,67 @@ const CatalogBanner = () => [<Box
       "bottom" : "1em"
     }}
 >
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
-  <Catalog color="accent-4" size="small" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
+  <Catalog color="accent-4" size="small" alt="" />
 </Box>
     ]
 
@@ -129,7 +130,6 @@ const BooksPage = () => (
 
       <Heading level="1">Books</Heading>
       <CatalogBanner />
-
       <Markdown components={{
         p: {
           component: Paragraph,
