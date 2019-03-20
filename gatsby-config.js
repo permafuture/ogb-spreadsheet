@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'organic-books',
-        short_name: 'organic-books',
+        name: 'Organic Books in Nob Hill',
+        short_name: 'Organic Books',
         start_url: '/',
         background_color: '#4c934c',
         theme_color: appConfig.theme.brand,
