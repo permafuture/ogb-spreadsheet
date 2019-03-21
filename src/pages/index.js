@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Video } from 'grommet'
+import { Box, Heading, Video, Image } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
@@ -24,7 +24,7 @@ const SPREADSHEET_QUERY = graphql `
   }
 `
 
-const IndexPage = () => ( 
+const IndexPage = () => (
   <Layout>
     {/*
         FIRST PAGE
@@ -32,7 +32,7 @@ const IndexPage = () => (
 */
   }
     <Hero />
-    <Nav /> 
+    <Nav />
     {' '}
     {/*
   SECOND PAGE
@@ -82,12 +82,15 @@ our story
 nav again? */
     }
       <Box
-        background={{
-        image: "url(/us-canvas.webp)",
-        position: "top left"
-      }}
         height="70vh"
+      >
+      <Image
+        a11yTitle="a cute family reading books in the store"
+      src="/us-canvas.png"
+      src="/us-canvas.webp"
+      fit="cover"
       />
+  </Box>
     </Box>
     <Box
       height="105vh"
