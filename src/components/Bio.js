@@ -7,7 +7,7 @@ const mailTo = ( name ) => `mailto:organicbooksellers+${  name  }@gmail.com`
 const Bio = ( { name } ) => (
   <Box align="center" justify="center">
     <Image
-      src={`/${  name  }.png`}
+      fallback={`/${  name  }.png`}
       src={`/${  name  }.webp`}
       width="auto"
       height="148px"

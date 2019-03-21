@@ -86,7 +86,7 @@ nav again? */
       >
       <Image
         a11yTitle="a cute family reading books in the store"
-      src="/us-canvas.png"
+      fallback="/us-canvas.png"
       src="/us-canvas.webp"
       fit="cover"
       />
