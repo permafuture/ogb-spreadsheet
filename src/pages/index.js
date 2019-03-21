@@ -85,8 +85,8 @@ nav again? */
         height="70vh"
       >
       <picture>
-        <source type="image/webp" srcset="/us-canvas.webp">
-        <img src="/us-canvas.png" style={{ objectFit: "cover" }} >
+        <source type="image/webp" srcset="/us-canvas.webp" />
+        <img src="/us-canvas.png" style={{ objectFit: "cover" }} />
       </picture>
 
   </Box>
