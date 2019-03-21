@@ -84,12 +84,11 @@ nav again? */
       <Box
         height="70vh"
       >
-      <Image
-        a11yTitle="a cute family reading books in the store"
-      fallback="/us-canvas.png"
-      src="/us-canvas.webp"
-      fit="cover"
-      />
+      <picture>
+        <source type="image/webp" srcset="/us-canvas.webp">
+        <img src="us-canvas.png" style={{ objectFit: "cover" }} >
+      </picture>
+
   </Box>
     </Box>
     <Box
