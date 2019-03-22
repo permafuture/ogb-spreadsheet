@@ -87,8 +87,8 @@ nav again? */
         align="center"
       >
       <picture>
-        <source type="image/webp" srcset="/us-canvas.webp" />
-        <img src="/us-canvas.png" style={{ objectFit: "cover" }} />
+        <source type="image/webp" srcSt="/us-canvas.webp" />
+        <Image src="/us-canvas.png" fit="cover" />
       </picture>
 
   </Box>
