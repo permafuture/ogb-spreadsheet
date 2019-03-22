@@ -83,6 +83,8 @@ nav again? */
     }
       <Box
         height="70vh"
+        overflow="hidden"
+        align="center"
       >
       <picture>
         <source type="image/webp" srcset="/us-canvas.webp" />
