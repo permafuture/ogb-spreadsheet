@@ -83,13 +83,10 @@ nav again? */
     }
       <Box
         height="70vh"
-        overflow="hidden"
-        align="center"
       >
-      <picture>
-        <source type="image/webp" srcSt="/us-canvas.webp" />
+
+      {/* TODO: Use gatsby-image to deliver optimized images*/}
         <Image src="/us-canvas.png" fit="cover" />
-      </picture>
 
   </Box>
     </Box>
