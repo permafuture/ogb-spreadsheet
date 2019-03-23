@@ -18,19 +18,6 @@ import Bio from '../components/Bio'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 
-const HOMEPAGE_QUERY = graphql `
-  query credQuery {
-    allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
-      edges {
-        node {
-          firstname
-          lastname
-        }
-      }
-    }
-  }
-`
-
 const CONTENT = `
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
@@ -145,7 +132,7 @@ const ChatBanner = () => [
   </Box>
     ]
 
-const ContactPage = () => (
+const ContactPage = ({data}) => (
   <Layout>
     <Box>
       <Hero />
@@ -275,7 +262,7 @@ const ContactPage = () => (
           {CREDITS}
         </Markdown>
 
-        <StaticQuery query={HOMEPAGE_QUERY} render={data => ( <Credits data={data} /> )} />
+        <Credits creditsRows={data.allGoogleSheetCreditsRow} />
       </Slice>
 
       <Slice
@@ -298,9 +285,37 @@ This website made with
         by
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
+        <Text textAlign="center">Video by Gus Pedrotty</Text>
       </Slice>
     </Box>
   </Layout>
  )
 
 export default ContactPage
+
+
+export const query = graphql `
+  query credQuery {
+    allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
+      edges {
+        node {
+          firstname
+          lastname
+        }
+      }
+    }
+
+  allFile(filter:{relativeDirectory: {eq: "bios"}}) {
+    edges {
+      node {
+        name
+        childImageSharp {
+          fixed(height: 140) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+        }
+      }
+    }
+  }
+  }
+`

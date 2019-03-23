@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Heading, Video, Image } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
@@ -8,23 +9,8 @@ import groupEvents from '../utils/groupEvents'
 import DayOfToday from '../components/Calendar/DayOfToday'
 import Slice from '../components/Slice'
 
-const SPREADSHEET_QUERY = graphql `
-  query todayQuery {
-    allGoogleSheetEventsRow {
-      edges {
-        node {
-          id
-          eventName: eventorbooktitle
-          date: day
-          host: authorhost
-          start
-        }
-      }
-    }
-  }
-`
 
-const IndexPage = () => (
+const IndexPage = ( {data} ) => (
   <Layout>
     {/*
         FIRST PAGE
@@ -57,7 +43,7 @@ picture or video of store
     }}
     >
       <Heading alignSelf="center" level="3">Next Event</Heading>
-      <StaticQuery query={SPREADSHEET_QUERY} render={data => ( <DayOfToday events={groupEvents( data )} /> )} />
+      <DayOfToday events={groupEvents( data.allGoogleSheetEventsRow )} />
     </Slice>
 
     <Box
@@ -81,14 +67,9 @@ picture or video of store
 our story
 nav again? */
     }
-      <Box
-        height="70vh"
-      >
+          {/* TODO: Use gatsby-image to deliver optimized images*/}
+        <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
 
-      {/* TODO: Use gatsby-image to deliver optimized images*/}
-        <Image src="/us-canvas.png" fit="cover" />
-
-  </Box>
     </Box>
     <Box
       height="105vh"
@@ -110,3 +91,27 @@ nav again? */
  )
 
 export default IndexPage
+
+
+export const query = graphql `
+  query todayQuery {
+    allGoogleSheetEventsRow {
+      edges {
+        node {
+          id
+          eventName: eventorbooktitle
+          date: day
+          host: authorhost
+          start
+        }
+      }
+    }
+    file(relativePath: { eq: "not-a-painting.png" }) {
+      childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

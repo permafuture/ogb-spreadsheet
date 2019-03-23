@@ -26,20 +26,20 @@ const Nav = () => (
   >
     <Box direction="row-responsive">
       <Button
-        a11yTitle="Books"
-        icon=<Catalog color="accent-2" size="large" />
-        margin="small"
-        align="center"
-        href="/books"
-        label="Books"
-      />
-      <Button
         a11yTitle="Events"
         icon=<ScheduleNew color="accent-2" size="large" />
         margin="small"
         align="center"
         href="/events"
         label="Events"
+      />
+      <Button
+        a11yTitle="Books"
+        icon=<Catalog color="accent-2" size="large" />
+        margin="small"
+        align="center"
+        href="/books"
+        label="Books"
       />
       <Button
         a11yTitle="Contact"

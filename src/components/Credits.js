@@ -8,7 +8,7 @@ const isEven = ( num ) => {
   return false;
   }
 
-const Credits = ( { data } ) => (
+const Credits = ( {creditsRows} ) => (
   <Grid
     columns={{
       count: 2,
@@ -18,8 +18,7 @@ const Credits = ( { data } ) => (
     alignSelf="center"
     gap="small"
   >
-    {
-      data.allGoogleSheetCreditsRow.edges.map( ( {
+    { creditsRows.edges.map( ( {
         node
       }, index ) => ( isEven( index ) && (
       <Text size="large" weight="600" textAlign="end" truncate="truncate">
@@ -42,5 +41,5 @@ const Credits = ( { data } ) => (
 export default Credits
 
 Credits.propTypes = {
-  data: PropTypes.array.isRequired,
+  creditsRows: PropTypes.array.isRequired,
 };

@@ -1,8 +1,8 @@
 import { format } from 'date-fns'
 
-const groupEvents = (data) => {
+const groupEvents = (eventsRows) => {
 
-  const eventsByDateKey = data.allGoogleSheetEventsRow.edges.reduce(
+  const eventsByDateKey = eventsRows.edges.reduce(
     (acc, { node }) => {
       const eventDate = format(new Date(node.date))
 
