@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Box,
   Grid,
@@ -9,7 +10,7 @@ import {
   Heading,
   Anchor
 } from 'grommet'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { ChatOption, Java } from 'grommet-icons'
 import Credits from '../components/Credits'
 import Hero from '../components/Hero'
@@ -156,9 +157,10 @@ const ContactPage = ({data}) => (
         <Heading level="1">Contact</Heading>
         <ChatBanner />
         <Text textAlign="center" size="xxlarge" weight="800">We&apos;re the Brewer family.</Text>
-        <Box width="100%" height="auto" pad="none" margin="none">
-          <Image fit="cover" src="/animated.gif" alt="" />
-        </Box>
+
+
+
+
         <Grid
           alignSelf="center"
           fill="horizontal"
@@ -175,12 +177,9 @@ const ContactPage = ({data}) => (
         }}
           gap="small"
         >
-          <Bio name="Steve" />
-          <Bio name="Kelly" />
-          <Bio name="Max" />
-          <Bio name="Seth" />
-          <Bio name="Jalila" />
-          <Bio name="Molly" />
+          {data.allFile.edges.map( ({ node } ) => (
+            <Bio name={node.name} pic={node.childImageSharp.fixed} />
+        ) )}
         </Grid>
 
         <Markdown components={{
@@ -294,6 +293,10 @@ This website made with
 export default ContactPage
 
 
+ContactPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  };
+
 export const query = graphql `
   query credQuery {
     allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
@@ -305,13 +308,18 @@ export const query = graphql `
       }
     }
 
-  allFile(filter:{relativeDirectory: {eq: "bios"}}) {
+  allFile(filter:{relativeDirectory: {eq: "bios"}}, sort:{fields:name, order: ASC}) {
     edges {
       node {
         name
         childImageSharp {
-          fixed(height: 140) {
-          ...GatsbyImageSharpFixed_withWebp
+          fixed(
+            height: 140,
+            duotone: {
+    highlight: "#ffffee",
+    shadow: "#770000",
+    opacity: 20  }) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
         }
       }

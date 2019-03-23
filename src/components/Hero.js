@@ -5,13 +5,13 @@ import { graphql, StaticQuery } from 'gatsby'
 import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 
-const Hero = () => ( 
+const Hero = () => (
   <ConfigContext.Consumer>
     {
-    appConfig => ( 
+    appConfig => (
       <ResponsiveContext.Consumer>
         {
-        size => ( 
+        size => (
           <Box a11yTitle="Calendar events title" pad="small" elevation="none" height="100vh">
             <Slice
               height="90vh"
@@ -39,7 +39,7 @@ const Hero = () => (
               `}
                 render={data => {
                 const { src } = data.imageSharp.original
-                return ( 
+                return (
                   <Box
                     width={size === 'small'
                     ? 'small'

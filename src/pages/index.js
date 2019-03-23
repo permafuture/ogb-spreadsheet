@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Heading, Video, Image } from 'grommet'
-import { StaticQuery, graphql } from 'gatsby'
+import { Box, Heading, Video } from 'grommet'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Hero from '../components/Hero'
 import Layout from '../components/PageLayout'
@@ -67,8 +68,8 @@ picture or video of store
 our story
 nav again? */
     }
-          {/* TODO: Use gatsby-image to deliver optimized images*/}
-        <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
+      {/* TODO: Use gatsby-image to deliver optimized images */}
+      <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
 
     </Box>
     <Box
@@ -93,6 +94,12 @@ nav again? */
 export default IndexPage
 
 
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  };
+
+
+
 export const query = graphql `
   query todayQuery {
     allGoogleSheetEventsRow {
@@ -108,7 +115,10 @@ export const query = graphql `
     }
     file(relativePath: { eq: "not-a-painting.png" }) {
       childImageSharp {
-          fluid {
+          fluid(maxWidth: 1280, duotone: {
+  highlight: "#ffffee",
+  shadow: "#770000",
+  opacity: 20  }) {
             ...GatsbyImageSharpFluid_withWebp
         }
       }
