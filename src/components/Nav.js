@@ -22,7 +22,7 @@ const Nav = () => (
     "color" : "accent-2",
     "size" : "medium"
   }}
-    css="background-image: url('https://www.transparenttextures.com/patterns/exclusive-paper.png');"
+    css="background-image: url('/exclusive-paper.png');"
   >
     <Box direction="row-responsive">
       <Button

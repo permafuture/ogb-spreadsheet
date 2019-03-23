@@ -10,7 +10,7 @@ const Slice = ( {
     {...sliceProps}
     background="accent-2"
     css={css `
-      background-image: url('https://www.transparenttextures.com/patterns/exclusive-paper.png');
+      background-image: url('/exclusive-paper.png');
       `}
   >
     {children}
