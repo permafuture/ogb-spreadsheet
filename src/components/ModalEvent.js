@@ -23,7 +23,7 @@ const ModalEvent = ( { hideModal, currentDay, events } ) => (
           color="black"
           a11yTitle="Selected day"
         >
-          <b>{format( new Date( currentDay ), 'dddd D, MMMM' )}</b>
+          <b>{format( new Date( currentDay ), 'dddd, MMMM D' )}</b>
         </Text>
         <Button icon={<FormClose />} a11yTitle="Close popup button" onClick={hideModal} />
       </Box>
