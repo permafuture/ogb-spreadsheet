@@ -61,7 +61,8 @@ picture or video of store
           <Heading level="3" margin="none">closed Mondays</Heading>
         </Box>
         <Box align="end" justify="end" margin="small">
-          <Heading level="2" size="medium" textAlign="end" margin="small">111 Carlisle Blvd SE Albuquerque, NM</Heading>
+          <Heading level="2" size="medium" textAlign="end" margin="small">111 Carlisle Blvd SE Albuquerque, NM 505-553-3823</Heading>
+
         </Box>
       </Box>
       {/* THIRD PAGE
