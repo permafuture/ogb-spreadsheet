@@ -261,7 +261,7 @@ const ContactPage = ({data}) => (
           {CREDITS}
         </Markdown>
 
-        <Credits creditsRows={data.allGoogleSheetCreditsRow} />
+        <Credits creditsRows={data.allGoogleSheetAngelCreditsRow} />
       </Slice>
 
       <Slice
@@ -299,7 +299,7 @@ ContactPage.propTypes = {
 
 export const query = graphql `
   query credQuery {
-    allGoogleSheetCreditsRow(sort:{fields:[lastname], order:ASC}) {
+    allGoogleSheetAngelCreditsRow(sort:{fields:[lastname], order:ASC}) {
       edges {
         node {
           firstname
