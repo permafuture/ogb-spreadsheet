@@ -13,23 +13,10 @@ import Slice from '../components/Slice'
 
 const IndexPage = ( {data} ) => (
   <Layout>
-    {/*
-        FIRST PAGE
- nav probably here
-*/
-  }
+
     <Hero />
     <Nav />
     {' '}
-    {/*
-  SECOND PAGE
-
-    upcoming event card
-
-picture or video of store
-
- location and hours */
-  }
 
     <Slice
       width="large"
@@ -64,11 +51,7 @@ picture or video of store
           <Heading level="2" size="medium" textAlign="end" margin="small">111 Carlisle Blvd SE Albuquerque, NM</Heading>
         </Box>
       </Box>
-      {/* THIRD PAGE
-our story
-nav again? */
-    }
-      {/* TODO: Use gatsby-image to deliver optimized images */}
+
       <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
 
     </Box>
