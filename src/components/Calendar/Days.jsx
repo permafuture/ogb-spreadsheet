@@ -35,7 +35,7 @@ const Day = ( { day, events, onClick } ) => {
       }}
       pad="small"
       {...events.length && { onClick }}
-      square="square"
+      square="true"
     >
       <Box direction="row-responsive" fill="vertical">
         <Box
