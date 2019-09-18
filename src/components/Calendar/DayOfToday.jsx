@@ -1,9 +1,10 @@
-import isBefore from 'date-fns/is_before'
+import isBefore from 'date-fns/isBefore'
 import PropTypes from 'prop-types'
-import isSameDay from 'date-fns/is_same_day'
-import isFuture from 'date-fns/is_future'
-import closestTo from 'date-fns/closest_to'
+import isSameDay from 'date-fns/isSameDay'
+import isFuture from 'date-fns/isFuture'
+import closestTo from 'date-fns/closestTo'
 import format from 'date-fns/format'
+import parse from 'date-fns/parse'
 import React from 'react'
 import { Text, Box, Heading, Anchor } from 'grommet'
 import { css } from 'styled-components'
@@ -30,7 +31,7 @@ const Day = ( { day, events } ) => {
         font-weight: normal;
         `}
       >
-        <Events events={events[ 0 ].events} />
+        <Events events={events[0].events} />
       </Anchor>
 
     </Box>
@@ -64,7 +65,7 @@ const Day = ( { day, events } ) => {
                   `}
             a11yTitle="Day number"
           >
-            {format( day, 'DD' )}
+            {format( day, 'dd' )}
           </Heading>
 
           <Text color={`calendar-${ dayType }-text`} size="small" a11yTitle="Day" truncate="truncate">
@@ -81,23 +82,27 @@ const Day = ( { day, events } ) => {
 
 const DayOfToday = ( { events } ) => {
   // figure out what day it is (when built, i guess)
+
   const currentDay = new Date()
 
+
   // find all the events that are in the future */}
-  const futureEvents = events.filter( event => isFuture( event.date, currentDay ) || isSameDay( event.date, currentDay ), )
+  const futureEvents = events.filter( event => isFuture( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()), currentDay ) || isSameDay( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()), currentDay ) )
 
   // make an array of dates to compare, instead of event day objects
   const futureEventDates = []
-  futureEvents.filter( event => futureEventDates.push( event.date ), )
+  futureEvents.filter( event => futureEventDates.push( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()) ))
+
 
   // figure out which day of futureEvents is the closest to today */}
   const nextEventDay = closestTo( currentDay, futureEventDates )
 
+
   // find all the events happening on nextEventDay */}
-  const eventsOfTheDay = futureEvents.filter( event => isSameDay( event.date, nextEventDay ), )
+  const eventsOfTheDay = futureEvents.filter( event => isSameDay( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()), nextEventDay ) )
 
   // return a Day object with the eventsOfTheDay */}
-  return ( <Day key={format( nextEventDay, 'DD-MM-YYYY' )} day={nextEventDay} events={eventsOfTheDay} /> )
+  return ( <Day key={format( nextEventDay, 'dd-MM-yyyy' )} day={nextEventDay} events={eventsOfTheDay} /> )
 }
 
 export default DayOfToday

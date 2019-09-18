@@ -1,5 +1,5 @@
-import isBefore from 'date-fns/is_before'
-import isSameDay from 'date-fns/is_same_day'
+import isBefore from 'date-fns/isBefore'
+import isSameDay from 'date-fns/isSameDay'
 import format from 'date-fns/format'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -55,7 +55,7 @@ const Day = ({ day, events, onClick }) => {
                 text-decoration: ${hasPast && !isToday && 'line-through'};
               `}
             >
-              {format(day, 'DD')}
+              {format(day, 'dd')}
             </Heading>
           </Box>
         </Box>
@@ -88,7 +88,7 @@ const Day = ({ day, events, onClick }) => {
                 `}
                 a11yTitle="Day number"
               >
-                {format(day, 'DD')}
+                {format(day, 'dd')}
               </Heading>
 
               <Text
@@ -132,7 +132,7 @@ const Days = ({ days, events, month, showModal }) =>
       return (
         (hasEvents &&
         <Day
-          key={format(currentDay, 'DD-MM-YYYY')}
+          key={format(currentDay, 'dd-MM-yyyy')}
           day={currentDay}
           events={eventsOfTheDay}
           onClick={onClick}

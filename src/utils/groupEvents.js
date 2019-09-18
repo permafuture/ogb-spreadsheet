@@ -1,11 +1,14 @@
-import { format } from 'date-fns'
+import format from 'date-fns/format'
+import parse from 'date-fns/parse'
 
 const groupEvents = (eventsRows) => {
 
   const eventsByDateKey = eventsRows.edges.reduce(
     (acc, { node }) => {
-      const eventDate = format(new Date(node.date))
-
+      const nodeDate = parse(node.date, 'MM/dd/yyyy', new Date())
+      
+      const eventDate = format(nodeDate, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx")
+      
       if (!acc[eventDate]) {
         return {
           ...acc,
@@ -24,6 +27,7 @@ const groupEvents = (eventsRows) => {
     events: eventsByDateKey[dateKey],
     date: dateKey,
   }))
+  
   return result
 }
 

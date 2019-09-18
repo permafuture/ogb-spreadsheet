@@ -43,7 +43,7 @@ const IndexPage = ( {data} ) => (
     }}
     >
       <Box direction="row-responsive" background="brand" pad="small">
-        <Box basis="1/2" alignContent="center " align="start" justify="start">
+        <Box basis="1/2" alignContent="center" align="start" justify="start">
           <Heading level="2" size="large" margin="none">OPEN 10AM TO 7PM</Heading>
           <Heading level="3" margin="none">closed Mondays</Heading>
         </Box>

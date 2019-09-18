@@ -1,6 +1,7 @@
-import isBefore from 'date-fns/is_before'
-import isSameDay from 'date-fns/is_same_day'
+import isBefore from 'date-fns/isBefore'
+import isSameDay from 'date-fns/isSameDay'
 import format from 'date-fns/format'
+import parse from 'date-fns/parse'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, Box, Heading } from 'grommet'
@@ -56,11 +57,11 @@ const Day = ( { day, events, onClick } ) => {
               `}
             a11yTitle="Day number"
           >
-            {format( day, 'DD' )}
+            {format( day, 'dd' )}
           </Heading>
 
           <Text color={`calendar-${ dayType }-text`} size="small" a11yTitle="Day" truncate="truncate">
-            {format( day, 'dddd' )}
+            {format( day, 'eeee' )}
           </Text>
         </Box>
         {eventsSection}
@@ -72,10 +73,10 @@ const Day = ( { day, events, onClick } ) => {
 
 const Days = ( { days, events, month, showModal } ) => Array( days ).fill( null ).map( ( x, i ) => {
   const currentDay = new Date( month.getFullYear(), month.getMonth(), i + 1 )
-  const eventsOfTheDay = events.filter( event => isSameDay( event.date, currentDay ), )
+  const eventsOfTheDay = events.filter( event => isSameDay( parse(event.date, "MM/dd/yyyy", new Date()), currentDay ),)
   const onClick = () => showModal( eventsOfTheDay, currentDay )
 
-  return ( ( Object.keys( eventsOfTheDay ).length !== 0 && ( <Day key={format( currentDay, 'DD-MM-YYYY' )} day={currentDay} events={eventsOfTheDay} onClick={onClick} /> ) ) )
+  return ( ( Object.keys( eventsOfTheDay ).length !== 0 && ( <Day key={format( currentDay, 'dd-MM-yyyy' )} day={currentDay} events={eventsOfTheDay} onClick={onClick} /> ) ) )
 } )
 
 Days.propTypes = {

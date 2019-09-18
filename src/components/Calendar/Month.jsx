@@ -18,9 +18,9 @@ const Month = ({ monthlyCalendar, showModal }) => {
 
   return (
     <Box margin={{ bottom: 'medium' }}>
-      <Heading a11yTitle={`Month of ${format(currentMonth, 'MMMM YYYY')}`}>
+      <Heading a11yTitle={`Month of ${format(currentMonth, 'MMMM yyyy')}`}>
         <b>{`${format(currentMonth, 'MMMM')} `}</b>
-        {format(currentMonth, 'YYYY')}
+        {format(currentMonth, 'yyyy')}
       </Heading>
 
       <Box direction="row-responsive" wrap>
