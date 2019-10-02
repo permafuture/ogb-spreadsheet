@@ -69,7 +69,7 @@ const Day = ( { day, events } ) => {
           </Heading>
 
           <Text color={`calendar-${ dayType }-text`} size="small" a11yTitle="Day" truncate="truncate">
-            {format( day, 'dddd' )}
+            {format( day, 'eeee' )}
           </Text>
         </Box>
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import parse from 'date-fns/parse'
 
 import Month from './Month'
+
 const Calendar = ({ showModal, events }) =>
   events.map(monthlyCalendar => (
     <Month
