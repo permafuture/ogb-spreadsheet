@@ -13,11 +13,11 @@
 
 # Source directory. Can be set here or as the first argument of the `sigal
 # build` command
-source = 'resized'
+source = 'pictures'
 
 # Destination directory. Can be set here or as the second argument of the
 # `sigal build` command (default: '_build')
-# destination = '_build'
+destination = 'resized'
 
 # Theme :
 # - colorbox (default), galleria, photoswipe, or the path to a custom theme
@@ -31,7 +31,7 @@ theme = 'photoswipe'
 # processing steps (resize, auto-orient, recompress, and any plugin-specific
 # step).
 # Originals will be symlinked if orig_link = True, else they will be copied.
-use_orig = True
+use_orig = False
 
 # ----------------
 # Image processing (ignored if use_orig = True)
@@ -56,7 +56,7 @@ img_size = (800, 600)
 # - ResizeToFill: crop THE IMAGE it to the exact specified width and height
 # - SmartResize: identical to ResizeToFill, but uses entropy to crop the image
 # - None: don't resize
-img_processor = 'None'
+img_processor = 'SmartResize'
 
 # Autorotate images
 # Warning: this setting is not compatible with `copy_exif_data` (see below),
