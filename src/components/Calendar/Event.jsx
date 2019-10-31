@@ -31,7 +31,7 @@ const Event = ( { name, host, start } ) => (
 Event.propTypes = {
   name: PropTypes.string.isRequired,
   host: PropTypes.string.isRequired,
-  start: PropTypes.instanceOf(Date).isRequired
+  start: PropTypes.string.isRequired
 }
 
 export default Event
