@@ -11,7 +11,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ScheduleNew } from 'grommet-icons'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
-import Hero from '../components/Hero'
+import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
@@ -138,7 +138,7 @@ class CalendarPage extends PureComponent {
 
     return (
       <Layout>
-        <Hero />
+        <Sidekick />
         <Nav />
         <Slice
           alignSelf="center"

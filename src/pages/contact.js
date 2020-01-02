@@ -13,7 +13,7 @@ import {
 import { graphql } from 'gatsby'
 import { ChatOption, Java } from 'grommet-icons'
 import Credits from '../components/Credits'
-import Hero from '../components/Hero'
+import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
@@ -34,6 +34,8 @@ A place away from the distractions of home and work.
 A gateway to other lands, a secret portal to the world of the book people.
 
 **We're on a journey. Come with us.**
+
+[organicbooksellers@gmail.com](organicbooksellers@gmail.com)
 
 `
 
@@ -136,7 +138,7 @@ const ChatBanner = () => [
 const ContactPage = ({data}) => (
   <Layout>
     <Box>
-      <Hero />
+      <Sidekick />
       <Nav />
 
       <Slice

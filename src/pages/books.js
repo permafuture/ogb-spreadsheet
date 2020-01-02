@@ -8,7 +8,7 @@ import {
   Anchor
 } from 'grommet'
 import { Catalog } from 'grommet-icons'
-import Hero from '../components/Hero'
+import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
@@ -108,7 +108,7 @@ const CatalogBanner = () => [<Box
 const BooksPage = () => (
   <Layout>
 
-    <Hero />
+    <Sidekick />
     <Nav />
     <Slice
       alignSelf="center"

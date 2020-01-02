@@ -101,8 +101,8 @@ const Layout = ({ children }) => (
             <Box
               animation={{
                 "type": "fadeIn",
-                "delay": 100,
-                "duration": 2000,
+                "delay": 10,
+                "duration": 300,
                 "size": "xsmall"
                 }}
               css={css`
