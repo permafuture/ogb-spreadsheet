@@ -54,15 +54,15 @@ const Nav = () => (
     <Box direction="row" alignSelf="center" align="center">
       <Anchor
         href="https://facebook.com/OrganicBooks"
-        icon=<FacebookOption color="accent-2" />
+        icon=<FacebookOption size="large" color="accent-2" />
       />
       <Anchor
         href="https://twitter.com/OrganicBooksABQ"
-        icon=<Twitter color="accent-2" />
+        icon=<Twitter size="large" color="accent-2" />
       />
       <Anchor
         href="https://instagram.com/OrganicBooks"
-        icon=<Instagram color="accent-2" />
+        icon=<Instagram size="large" color="accent-2" />
       />
     </Box>
 

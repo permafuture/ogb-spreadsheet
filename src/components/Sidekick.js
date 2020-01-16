@@ -12,7 +12,13 @@ const Sidekick = () => (
       <ResponsiveContext.Consumer>
         {
         size => (
-          <Box a11yTitle="Calendar events title" pad="small" margin="medium" elevation="none" height="30vh">
+          <Box
+            a11yTitle="Calendar events title"
+            pad="small"
+            margin="medium"
+            elevation="none"
+            height="30vh"
+            >
             <Slice
               height="100%"
               pad="small"
@@ -52,7 +58,12 @@ const Sidekick = () => (
                     ? 'small'
                     : 'medium'}
                   >
-                    <Image fit="contain" src={src} alt="" a11yTitle="logo" />
+                    <Image
+                      fit="contain"
+                      src={src}
+                      alt=""
+                      a11yTitle="logo"
+                      />
                   </Box>
  )
               }}
@@ -64,15 +75,19 @@ const Sidekick = () => (
                 width="60vw"
                 flex="grow"
                 justify="center"
+              >
+                <Heading
+                  color="brand"
+                  level="1"
+                  textAlign="center"
+                  a11yTitle="Application title"
+                  margin="small"
+                  size="large"
                 >
-                <Heading color="brand" level="1" textAlign="center" a11yTitle="Application title" margin="small" size="large">
                   <Anchor href="/">{appConfig.title}</Anchor>
                 </Heading>
 
-                <Heading color="secondary" textAlign="center" a11yTitle="Application sub title" level="2" size="small" margin="small">
-                The new used bookstore
-                in Nob Hill
-                </Heading>
+
               </Box>
             </Slice>
           </Box>
