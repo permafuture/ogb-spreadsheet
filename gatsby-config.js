@@ -21,9 +21,9 @@ module.exports = {
     siteUrl: `https://organicbooks.net`,
     description: `Nob Hill's home-grown family-owned bookstore.
     We sell used books, new books, books by local authors, cards, journals, pens and more!
-    Come shop with us at the Nob Hill Shopping Center in Albuquerque.
+    Find us at the Nob Hill Shopping Center in Albuquerque.
     Free events every weekend!
-    We're open 10 to 7 every day except Mondays.  Or, give us a call at (505)-340-6698.`,
+    We're open 10 to 7, every day except Mondays.  Or call (505)-553-3823 and let us know how we can help.`,
     image: './cover_photo.jpg',
     twitterUsername: "@OrganicBooksABQ",
   },
