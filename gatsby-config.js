@@ -17,7 +17,15 @@ const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
 module.exports = {
   siteMetadata: {
     title: 'Organic Books',
+    titleTemplate: "%s - Albuquerque new and used bookstore",
     siteUrl: `https://organicbooks.net`,
+    description: `Nob Hill's home-grown family-owned bookstore.
+    We sell used books, new books, books by local authors, cards, journals, pens and more!
+    Come shop with us at the Nob Hill Shopping Center in Albuquerque.
+    Free events every weekend!
+    We're open 10 to 7 every day except Mondays.  Or, give us a call at (505)-340-6698.`,
+    image: './cover_photo.jpg',
+    twitterUsername: "@OrganicBooksABQ",
   },
   plugins: [
     'gatsby-plugin-react-helmet',

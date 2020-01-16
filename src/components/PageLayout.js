@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
 import { Grommet, Box } from 'grommet'
 import { grog } from './Grog'
-import Helmet from './Helmet'
+import SEO from './SEO'
 import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
@@ -93,7 +93,7 @@ const Layout = ({ children }) => (
             scroll-behavior: smooth;
           `}
         >
-          <Helmet />
+          <SEO />
           <Slice css={css`
            background-attachment: fixed;
            `}
