@@ -17,6 +17,7 @@ const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
 module.exports = {
   siteMetadata: {
     title: 'Organic Books',
+    siteUrl: `https://organicbooks.net`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -67,5 +68,6 @@ module.exports = {
 
      },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
   ],
 }
