@@ -24,7 +24,7 @@ module.exports = {
     Find us at the Nob Hill Shopping Center in Albuquerque.
     Free events every weekend!
     We're open 10 to 7, every day except Mondays.  Or call (505)-553-3823 and let us know how we can help.`,
-    image: './cover_photo.jpg',
+    image: '/cover_photo.jpg',
     twitterUsername: "@OrganicBooksABQ",
   },
   plugins: [
