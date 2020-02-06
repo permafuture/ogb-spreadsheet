@@ -4,6 +4,7 @@
   "description": "Starter for Gatsby to display information about events in a nice and clean way",
   "author": "Ema Suriano <emanuel.suriano@gmail.com>",
   "dependencies": {
+    "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.6",
     "date-fns": "^2.2.1",
     "dotenv": "^8.1.0",

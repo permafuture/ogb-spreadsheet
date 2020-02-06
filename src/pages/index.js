@@ -53,7 +53,7 @@ const IndexPage = ( {data} ) => (
         </Box>
       </Box>
 
-      <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} /> 
+      <Img fluid={data.file.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
 
     </Box>
 
