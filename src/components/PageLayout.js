@@ -99,12 +99,6 @@ const Layout = ({ children }) => (
            `}
           >
             <Box
-              animation={{
-                "type": "fadeIn",
-                "delay": 10,
-                "duration": 300,
-                "size": "xsmall"
-                }}
               css={css`
                 background-image: url(/lots-of-flowers.svg);
                 background-size: cover;

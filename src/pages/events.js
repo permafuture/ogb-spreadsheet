@@ -182,7 +182,7 @@ class CalendarPage extends PureComponent {
               <SimpleForm />
             </Box>
           </Box>
-          <Box id="calendars" animation="fadeIn">
+          <Box id="calendars">
             <ConfigContext.Consumer>
               {( { limitMonthInTheFuture } ) => ( <StaticQuery query={SPREADSHEET_QUERY} render={data => ( <Calendar showModal={this.showModal} events={groupEventsByMonth( data, limitMonthInTheFuture )} /> )} /> )}
             </ConfigContext.Consumer>
