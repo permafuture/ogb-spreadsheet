@@ -1,10 +1,22 @@
 import PropTypes from 'prop-types'
-import { Box, Text } from 'grommet'
+import { Anchor, Box, Text } from 'grommet'
 import React from 'react'
 
+const slugify = (text) => {
+    return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+}
+
 const Event = ( { name, host, start } ) => (
+  // <Anchor href={slugify(host + '-' + name)}>
   <Box background="calendar-event-background" fill="horizontal" pad="2px">
-    <Text size="large" alignSelf="end" textAlign="end" color="calendar-event-text" a11yTitle="Event name" css="font-style: italic;">
+    <Text
+      size="large"
+      alignSelf="end"
+      textAlign="end"
+      color="calendar-event-text"
+      a11yTitle="Event name"
+      css="font-style: italic;"
+    >
       {name}
       &nbsp;
     </Text>
@@ -26,6 +38,7 @@ const Event = ( { name, host, start } ) => (
       {start.slice( -2 )}
     </Text>
   </Box>
+// </Anchor>
  )
 
 Event.propTypes = {

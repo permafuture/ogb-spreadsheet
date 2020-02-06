@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 
+// Calculate whether a certain month is between today and monthsDifference months away
 const isGreaterInMonth = monthsDifference => (date, dateToCompare) => {
   const totalMonth = dateProp =>
     parseInt(format(dateProp, 'MM'), 10) +
@@ -12,6 +13,7 @@ const isGreaterInMonth = monthsDifference => (date, dateToCompare) => {
   return difference >= 0 && difference <= monthsDifference
 }
 
+// Iterate through the dates
 const groupEventsByMonth = (data, monthsDifference) => {
   const today = new Date()
   const isEventValid = isGreaterInMonth(monthsDifference)

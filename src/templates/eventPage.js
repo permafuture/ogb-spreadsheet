@@ -9,7 +9,6 @@ import {
   Anchor,
   Button
 } from 'grommet'
-import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
@@ -22,8 +21,6 @@ import { LinkPrevious } from 'grommet-icons'
 const EventPage = ({ data }) => (
 
   <Layout>
-    <Sidekick />
-    <Nav />
     <Slice
       alignSelf="center"
       alignContent="stretch"
@@ -39,7 +36,7 @@ const EventPage = ({ data }) => (
     }}
     >
       <Box margin={{"top": "large", "bottom": "large"}} direction="row" justify="around">
-        <Button icon={<LinkPrevious />} a11yTitle="Back to events page button" margin={{"right":"large"}} />
+        <Button href="/events" icon={<LinkPrevious />} a11yTitle="Back to events page button" margin={{"right":"large"}} />
         <Heading level="1">{format( new Date( data.allGoogleSheetEventsRow.edges[0].node.date ), 'eeee MMM d, yyyy' )}</Heading>
       </Box>
       <Box direction="row" fill="horizontal" border={{ "color": "border",
@@ -47,7 +44,7 @@ const EventPage = ({ data }) => (
         "side": "bottom"
       }}
       >
-        <Text a11yTitle="Event time" margin="small" size="xxlarge" weight="bold">
+        <Text a11yTitle="Event time" margin="small" size="xlarge" weight="bold">
           {data.allGoogleSheetEventsRow.edges[0].node.start.slice( 0, 4 )}
           {data.allGoogleSheetEventsRow.edges[0].node.start.slice( -2 )}
         </Text>
@@ -62,7 +59,7 @@ const EventPage = ({ data }) => (
             {data.allGoogleSheetEventsRow.edges[0].node.host}
           </Text>
 
-          <Text a11yTitle="Event description" size="xlarge" margin={{"vertical": "large"}}>
+          <Text a11yTitle="Event description" size="large" margin={{"vertical": "large"}}>
             {data.allGoogleSheetEventsRow.edges[0].node.eventDesc}
           </Text>
 
@@ -87,6 +84,7 @@ const EventPage = ({ data }) => (
       <Paragraph>Organic Books is Nob Hill&apos;s home-grown family-owned bookstore. We sell used books, new books, books by local authors, cards, journals, pens and more.
       <br /><br /> Open 10 to 7, every day except Mondays. Find us at 111 Carlisle Blvd SE, in the Nob Hill Shopping Center in Albuquerque. Or call 505-553-3823 to learn more.</Paragraph>
     </Slice>
+    <Nav />
   </Layout>
  )
 

@@ -1,8 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Text, Box, css, ResponsiveContext } from 'grommet'
+import { Anchor, Text, Box, css, ResponsiveContext } from 'grommet'
 import Event from './Event'
 import ConfigContext from '../ConfigContext'
+
+const slugify = (text) => {
+    return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+}
 
 const Events = ({ events }) =>
   events.length > 0 && (
@@ -20,14 +24,16 @@ const Events = ({ events }) =>
               `}
             >
               {events.slice(0, maxAmountEvents + 1).map((event, i) => (
-                <Box tag="li" key={event.id}>
-                  {i < maxAmountEvents && <Event name={event.eventName} host={event.host} start={event.start} end={event.end} />}
+                <Anchor color="black" href={'/events/' + slugify(event.host + '-' + event.eventName)}>
+                <Box tag="li" key={event.id} fill="true">
+                  {i < maxAmountEvents && <Event name={event.eventName} host={event.host} start={event.start} />}
                   {i === maxAmountEvents && (
                     <Text alignSelf="start" size="small" weight="bold" truncate>
                       {`And ${events.length - maxAmountEvents} more ...`}
                     </Text>
                   )}
                 </Box>
+              </Anchor>
               ))}
             </Box>
           )}

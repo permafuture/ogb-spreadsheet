@@ -16,8 +16,9 @@ exports.createPages = async function({ actions, graphql }) {
     }
   `)
   data.allGoogleSheetEventsRow.edges.forEach(edge => {
+
     const pagename = edge.node.host + '-' + edge.node.eventName
-    const slug = slugify(pagename)
+    const slug = '/events/' + slugify(pagename)
     actions.createPage({
       path: slug,
       component: require.resolve(`./src/templates/eventPage.js`),

@@ -27,10 +27,10 @@ export const grog = deepMerge({
 
   anchor: {
     extend: css`
-      ${props => !props.plain && 'text-transform: uppercase; text-decoration-skip-ink: none'};
+      ${props => !props.plain && 'text-decoration-skip-ink: none'};
     `,
     textDecoration: 'none',
-    fontWeight: 600,
+    fontWeight: 400,
     color: {
       dark: 'accent-1',
       light: 'brand',

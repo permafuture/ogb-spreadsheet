@@ -35,7 +35,7 @@ const Day = ( { day, events, onClick } ) => {
         color: `calendar-${ dayType }-border`
       }}
       pad="small"
-      {...events.length && { onClick }}
+      {...events.length}
       square="true"
     >
       <Box direction="row-responsive" fill="vertical">
@@ -70,6 +70,20 @@ const Day = ( { day, events, onClick } ) => {
 
     ]
 }
+
+
+// const slugify = (text) => {
+//     return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+// }
+// const Days = ( { days, events, month, showModal } ) => Array( days ).fill( null ).map( ( x, i ) => {
+//   const currentDay = new Date( month.getFullYear(), month.getMonth(), i + 1 )
+//   const eventsOfTheDay = events.filter( event => isSameDay( parse(event.date, "MM/dd/yyyy", new Date()), currentDay ),)
+//   const pagename = eventsOfTheDay.host + '-' + eventsOfTheDay.eventName
+//   const slug = slugify(pagename)
+//   const onClick = () => navigate(slug)
+//
+//   return ( ( Object.keys( eventsOfTheDay ).length !== 0 && ( <Day key={format( currentDay, 'dd-MM-yyyy' )} day={currentDay} events={eventsOfTheDay} onClick={onClick} /> ) ) )
+// } )
 
 const Days = ( { days, events, month, showModal } ) => Array( days ).fill( null ).map( ( x, i ) => {
   const currentDay = new Date( month.getFullYear(), month.getMonth(), i + 1 )

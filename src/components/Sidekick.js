@@ -48,7 +48,7 @@ const Sidekick = () => (
                 return (
                   <Box
                     margin="small"
-                    pad="medium"
+                    pad="large"
                     align="right"
                     justify="center"
                     width={size === 'small'

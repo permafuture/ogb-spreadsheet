@@ -99,7 +99,7 @@ const DayOfToday = ( { events } ) => {
 
   // find all the events happening on nextEventDay */}
   const eventsOfTheDay = futureEvents.filter( event => isSameDay( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()), nextEventDay ) )
-  debugger;
+  // debugger;
 
   // return a Day object with the eventsOfTheDay */}
   return ( <Day key={format( nextEventDay, 'dd-MM-yyyy' )} day={nextEventDay} events={eventsOfTheDay} /> )
