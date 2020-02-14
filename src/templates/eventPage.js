@@ -6,14 +6,13 @@ import {
   Markdown,
   Paragraph,
   Text,
-  Anchor,
   Button
 } from 'grommet'
+import format from 'date-fns/format'
+import { LinkPrevious } from 'grommet-icons'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
-import format from 'date-fns/format'
-import { LinkPrevious } from 'grommet-icons'
 
 
 
@@ -59,9 +58,26 @@ const EventPage = ({ data }) => (
             {data.allGoogleSheetEventsRow.edges[0].node.host}
           </Text>
 
-          <Text a11yTitle="Event description" size="large" margin={{"vertical": "large"}}>
+          <Markdown a11yTitle="Event description" size="large"components={{
+            p: {
+              component: Paragraph,
+              props: {
+                size: 'large',
+                alignSelf: 'stretch'
+              }
+            },
+            strong: {
+              component: Text,
+              props: {
+                size: 'xlarge',
+                weight: 800,
+                alignSelf: 'stretch'
+              }
+            },
+          }}
+          >
             {data.allGoogleSheetEventsRow.edges[0].node.eventDesc}
-          </Text>
+          </Markdown>
 
 
           {
