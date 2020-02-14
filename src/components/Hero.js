@@ -60,7 +60,7 @@ const Hero = () => (
               </Heading>
 
               <Heading color="secondary" textAlign="center" a11yTitle="Application sub title" level="2" size="large">
-              The new used bookstore
+              The new & used bookstore
                 <br />
               in Nob Hill
               </Heading>
