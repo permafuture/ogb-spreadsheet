@@ -12,6 +12,8 @@ import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
+import SEO from '../components/SEO'
+
 
 const CONTENT = `
 
@@ -23,7 +25,7 @@ We take books for trade or donation, and buy books directly from local authors. 
 
 Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $3 for select hardbacks. Or, donate your books and we'll put your credit toward our 20% **Educator Discount**!
 
-**That's right: teachers, faculty, adjuncts, bring ID and get 20% off any book in the store. We appreciate you!**
+**Teachers, faculty, adjuncts, bring ID and get 20% off any book in the store. We appreciate you!**
 
 ## We buy local!
 
@@ -107,7 +109,10 @@ const CatalogBanner = () => [<Box
 
 const BooksPage = () => (
   <Layout>
-
+    <SEO
+      title="We buy, sell and trade books and more"
+      description="We sell new and used books, with a focus on local authors. We also showcase local art and wares."
+    />
     <Sidekick />
     <Nav />
     <Slice

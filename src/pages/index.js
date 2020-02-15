@@ -9,11 +9,12 @@ import Nav from '../components/Nav'
 import groupEvents from '../utils/groupEvents'
 import DayOfToday from '../components/Calendar/DayOfToday'
 import Slice from '../components/Slice'
+import SEO from '../components/SEO'
 
 
 const IndexPage = ( {data} ) => (
   <Layout>
-
+    <SEO />
     <Hero />
     <Nav />
     {' '}

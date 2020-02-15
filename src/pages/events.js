@@ -18,6 +18,7 @@ import ConfigContext from '../components/ConfigContext'
 import Nav from '../components/Nav'
 import SimpleForm from '../components/Subscribe'
 import Slice from '../components/Slice'
+import SEO from '../components/SEO'
 
 const CONTENT = `
 We host readings, signings, book clubs and other events. Contact [Steve](mailto:organicbooksellers+steve@gmail.com) to learn more.
@@ -138,6 +139,10 @@ class CalendarPage extends PureComponent {
 
     return (
       <Layout>
+        <SEO
+          title="Events at Organic Books"
+          description="Signings, readings, poetry and more at Nob Hill's neighborhood bookstore!"
+        />
         <Sidekick />
         <Nav />
         <Slice

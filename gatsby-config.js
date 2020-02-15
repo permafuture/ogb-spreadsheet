@@ -1,4 +1,4 @@
-const appConfig = require('./appConfig')
+  const appConfig = require('./appConfig')
 require('dotenv').config()
 
 const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({

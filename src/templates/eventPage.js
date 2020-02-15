@@ -13,13 +13,20 @@ import { LinkPrevious } from 'grommet-icons'
 import Layout from '../components/PageLayout'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
+import SEO from '../components/SEO'
 
 
-
+const slugify = (text) => {
+    return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
+}
 
 const EventPage = ({ data }) => (
 
   <Layout>
+    <SEO
+      title={data.allGoogleSheetEventsRow.edges[0].node.host + ' - ' + data.allGoogleSheetEventsRow.edges[0].node.eventName + ' event at Organic Books'}
+      description={data.allGoogleSheetEventsRow.edges[0].node.eventName}
+    />
     <Slice
       alignSelf="center"
       alignContent="stretch"
@@ -97,8 +104,11 @@ const EventPage = ({ data }) => (
 
         </Box>
       </Box>
-      <Paragraph>Organic Books is Nob Hill&apos;s home-grown family-owned bookstore. We sell used books, new books, books by local authors, cards, journals, pens and more.
-      <br /><br /> Open 10 to 7, every day except Mondays. Find us at 111 Carlisle Blvd SE, in the Nob Hill Shopping Center in Albuquerque. Or call 505-553-3823 to learn more.</Paragraph>
+      <Paragraph>
+        Organic Books is Nob Hill&apos;s home-grown family-owned bookstore. We sell used books, new books, books by local authors, cards, journals, pens and more.
+        <br />
+        <br />
+        Open 10 to 7, every day except Mondays. Find us at 111 Carlisle Blvd SE, in the Nob Hill Shopping Center in Albuquerque. Or call 505-553-3823 to learn more.</Paragraph>
     </Slice>
     <Nav />
   </Layout>

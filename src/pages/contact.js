@@ -19,6 +19,7 @@ import Layout from '../components/PageLayout'
 import Bio from '../components/Bio'
 import Nav from '../components/Nav'
 import Slice from '../components/Slice'
+import SEO from '../components/SEO'
 
 const CONTENT = `
 [](mailto://organicbooksellers@gmail.com)
@@ -140,6 +141,10 @@ const ChatBanner = () => [
 const ContactPage = ({data}) => (
   <Layout>
     <Box>
+      <SEO
+        title="Contact and community at Organic Books"
+        description="We're your neighborhood booksellers. Get in touch if you need anything."
+      />
       <Sidekick />
       <Nav />
 
