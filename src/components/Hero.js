@@ -53,7 +53,7 @@ const Hero = () => (
                   </Box>
  )
               }}
-              />
+              />rtyi]
 
               <Heading color="brand" size="xlarge" level="1" textAlign="center" a11yTitle="Application title" margin="small">
                 <Anchor href="/">{appConfig.title}</Anchor>

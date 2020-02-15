@@ -8,10 +8,11 @@ import {
   Text,
   Image,
   Heading,
-  Anchor
+  Anchor,
+  Button
 } from 'grommet'
 import { graphql } from 'gatsby'
-import { ChatOption, Java } from 'grommet-icons'
+import { ChatOption, Java, MailOption } from 'grommet-icons'
 import Credits from '../components/Credits'
 import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
@@ -20,6 +21,8 @@ import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 
 const CONTENT = `
+[organicbooksellers@gmail.com](mailto://organicbooksellers@gmail.com)
+
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
 
@@ -35,7 +38,6 @@ A gateway to other lands, a secret portal to the world of the book people.
 
 **We're on a journey. Come with us.**
 
-[organicbooksellers@gmail.com](organicbooksellers@gmail.com)
 
 `
 
@@ -206,7 +208,15 @@ const ContactPage = ({data}) => (
             }
           },
           a: {
-            component: Anchor
+            component: Button,
+            props: {
+              align: 'center',
+              fill: 'horizontal',
+              plain: 'false',
+              color: 'accent-3',
+              icon:<MailOption color='accent-3' />,
+              label:"organicbooksellers@gmail.com"
+            }
           }
         }}
         >
@@ -281,9 +291,9 @@ const ContactPage = ({data}) => (
       }}
       >
         <Text textAlign="center">
-This website made with
+This website made with&nbsp;&nbsp;
           <Java color="brand" />
-        by
+        &nbsp;&nbsp;by&nbsp;&nbsp;
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
       </Slice>

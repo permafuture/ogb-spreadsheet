@@ -7,12 +7,12 @@ const mailTo = ( name ) => `mailto:organicbooksellers+${  name  }@gmail.com`
 const rmNum = ( name ) => name.slice(2)
 const Bio = ( { name, pic } ) => (
 
-  <Box align="center" justify="center">
-    <Img fixed={pic} imgStyle={{ maxWidth: "100%", objectFit: 'scale-down', borderRadius: '50%' }} />
-    <Anchor href={mailTo( rmNum( name ) )}>
+  <Anchor href={mailTo( rmNum( name ) )}>
+    <Box align="center" justify="center">
+      <Img fixed={pic} imgStyle={{ maxWidth: "100%", objectFit: 'scale-down', borderRadius: '50%' }} />
       <Heading size="small">{rmNum(name)}</Heading>
-    </Anchor>
-  </Box>
+    </Box>
+  </Anchor>
  )
 
 export default Bio
