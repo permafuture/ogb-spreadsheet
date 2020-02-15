@@ -25,7 +25,7 @@ const EventPage = ({ data }) => (
   <Layout>
     <SEO
       title={data.allGoogleSheetEventsRow.edges[0].node.host + ' - ' + data.allGoogleSheetEventsRow.edges[0].node.eventName + ' event at Organic Books'}
-      description={data.allGoogleSheetEventsRow.edges[0].node.eventName}
+      description={data.allGoogleSheetEventsRow.edges[0].node.eventDesc}
     />
     <Slice
       alignSelf="center"
