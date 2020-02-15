@@ -21,7 +21,7 @@ import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 
 const CONTENT = `
-[organicbooksellers@gmail.com](mailto://organicbooksellers@gmail.com)
+[](mailto://organicbooksellers@gmail.com)
 
 
 **We love books. We've been writing, reading, designing and editing for over a hundred years.**
