@@ -144,6 +144,7 @@ const ContactPage = ({data}) => (
       <SEO
         title="Contact and community at Organic Books"
         description="We're your neighborhood booksellers. Get in touch if you need anything."
+        pathname="/contact"
       />
       <Sidekick />
       <Nav />

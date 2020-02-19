@@ -112,6 +112,7 @@ const BooksPage = () => (
     <SEO
       title="We buy, sell and trade books and more"
       description="We sell new and used books, with a focus on local authors. We also showcase local art and wares."
+      pathname="/books"
     />
     <Sidekick />
     <Nav />

@@ -142,6 +142,7 @@ class CalendarPage extends PureComponent {
         <SEO
           title="Events at Organic Books"
           description="Signings, readings, poetry and more at Nob Hill's neighborhood bookstore!"
+          pathname="/events"
         />
         <Sidekick />
         <Nav />

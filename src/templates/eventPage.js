@@ -1,4 +1,5 @@
 import React from 'react'
+import slugify from 'slugify'
 import { graphql } from 'gatsby'
 import {
   Box,
@@ -16,16 +17,13 @@ import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 
 
-const slugify = (text) => {
-    return text.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
-}
-
-const EventPage = ({ data }) => (
+const EventPage = ({ data, pageContext }) => (
 
   <Layout>
     <SEO
       title={data.allGoogleSheetEventsRow.edges[0].node.host + ' - ' + data.allGoogleSheetEventsRow.edges[0].node.eventName + ' event at Organic Books'}
       description={data.allGoogleSheetEventsRow.edges[0].node.eventDesc}
+      pathname={pageContext.pathname}
     />
     <Slice
       alignSelf="center"
