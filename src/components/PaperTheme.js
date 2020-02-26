@@ -74,7 +74,7 @@ export const paperTheme = deepMerge({
         text-transform: uppercase;
         font-size: 24px;
         div {
-          flex-direction: column;
+          flex-direction: row;
           justify-content: space-evenly;
         }
         `};

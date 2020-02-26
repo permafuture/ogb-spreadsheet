@@ -10,6 +10,7 @@ import Bio from '../components/Bio'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 
+
 const CONTENT = `
 [](mailto://organicbooksellers@gmail.com)
 
@@ -168,7 +169,7 @@ const ContactPage = ({ data }) => (
 
         <Credits creditsRows={data.allGoogleSheetAngelCreditsRow} />
       </Slice>
-
+{/*
       <Slice
         alignSelf="center"
         alignContent="start"
@@ -190,6 +191,7 @@ const ContactPage = ({ data }) => (
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
       </Slice>
+      */}
     </Box>
   </Layout>
 )

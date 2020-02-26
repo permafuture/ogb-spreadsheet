@@ -7,6 +7,7 @@ import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
 import Nav from './Nav'
+import ContactCard from './ContactCard'
 
 require('typeface-alegreya')
 
@@ -106,6 +107,8 @@ const Layout = ({ children }) => (
               >
                 <Nav />
                 {children}
+                <ContactCard />
+
               </Box>
             </Slice>
           </Grid>

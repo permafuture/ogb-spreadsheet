@@ -8,7 +8,6 @@ import groupEvents from '../utils/groupEvents'
 import DayOfToday from '../components/Calendar/DayOfToday'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
-import ContactCard from '../components/ContactCard'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -25,7 +24,6 @@ const IndexPage = ({ data }) => (
       </Heading>
       <DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} />
     </Slice>
-    <ContactCard />
   </Layout>
 )
 
