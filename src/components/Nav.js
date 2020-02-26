@@ -1,68 +1,78 @@
 import React from 'react'
-import { Box, Anchor, Button } from 'grommet'
+import { Box, Anchor, Button, Image, Heading } from 'grommet'
+import { graphql, StaticQuery } from 'gatsby'
 import {
   FacebookOption,
   Instagram,
   Twitter,
   Catalog,
   ScheduleNew,
-  ChatOption
+  ChatOption,
+  Article
 } from 'grommet-icons'
 
 const Nav = () => (
   <Box
-    direction="column"
+    direction="row-responsive"
     elevation="small"
     background="brand"
-    width="auto"
-    align="center"
-    alignSelf="center"
-    margin="medium"
+    width="full"
+    alignContent="stretch"
+    alignSelf="stretch"
+    align="stretch"
+    margin="none"
     border={{
     "color" : "accent-2",
-    "size" : "medium"
+    "size" : "medium",ol
+    "side": "bottom"
   }}
-    css="background-image: url('/exclusive-paper.png');"
+    css="position: fixed"
   >
-    <Box direction="row-responsive">
+    <Box direction="row" pad="none">
+      <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo" />
+      <Heading color="white" size="small" level="1" textAlign="start" align="center" pad="none" margin="none">
+        <Anchor href="/" color="white">Organic Books</Anchor>
+      </Heading>
+    </Box>
+    <Box direction="row" pad="none">
+      <Button
+        a11yTitle="Buy"
+        icon=<Catalog color="accent-2" />
+        href="/books"
+        label="Buy"
+      />
       <Button
         a11yTitle="Events"
-        icon=<ScheduleNew color="accent-2" size="large" />
-        margin="small"
-        align="center"
+        icon=<ScheduleNew color="accent-2" />
         href="/events"
         label="Events"
       />
       <Button
-        a11yTitle="Books"
-        icon=<Catalog color="accent-2" size="large" />
-        margin="small"
-        align="center"
-        href="/books"
-        label="Books"
+        a11yTitle="News"
+        icon=<Article color="accent-2" />
+        href="/contact"
+        label="News"
       />
       <Button
         a11yTitle="Contact"
-        icon=<ChatOption color="accent-2" size="large" />
-        margin="small"
-        align="center"
+        icon=<ChatOption color="accent-2" />
         href="/contact"
         label="Contact"
       />
     </Box>
 
-    <Box direction="row" alignSelf="center" align="center">
+    <Box direction="row" pad="none" align="center">
       <Anchor
         href="https://facebook.com/OrganicBooks"
-        icon=<FacebookOption size="large" color="accent-2" />
+        icon=<FacebookOption size="small" color="accent-2" />
       />
       <Anchor
         href="https://twitter.com/OrganicBooksABQ"
-        icon=<Twitter size="large" color="accent-2" />
+        icon=<Twitter size="small" color="accent-2" />
       />
       <Anchor
         href="https://instagram.com/OrganicBooks"
-        icon=<Instagram size="large" color="accent-2" />
+        icon=<Instagram size="small" color="accent-2" />
       />
     </Box>
 

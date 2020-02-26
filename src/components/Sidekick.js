@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Box, Heading, Image, ResponsiveContext, Anchor } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
@@ -7,18 +6,16 @@ import ConfigContext from './ConfigContext'
 
 const Sidekick = () => (
   <ConfigContext.Consumer>
-    {
-    appConfig => (
+    {appConfig => (
       <ResponsiveContext.Consumer>
-        {
-        size => (
+        {size => (
           <Box
             a11yTitle="Calendar events title"
             pad="small"
             margin="medium"
             elevation="none"
             height="30vh"
-            >
+          >
             <Slice
               height="100%"
               pad="small"
@@ -28,45 +25,35 @@ const Sidekick = () => (
               direction="row"
               justify="center"
               border={{
-              "color" : "accent-3",
-              "size" : "medium"
-            }}
+                color: 'accent-3',
+                size: 'medium',
+              }}
             >
-
               <StaticQuery
-                query={graphql `
-                {
-                  imageSharp {
-                    original {
-                      src
+                query={graphql`
+                  {
+                    imageSharp {
+                      original {
+                        src
+                      }
                     }
                   }
-                }
-              `}
+                `}
                 render={data => {
-                const { src } = data.imageSharp.original
-                return (
-                  <Box
-                    margin="small"
-                    pad="large"
-                    align="right"
-                    justify="center"
-                    width={size === 'small'
-                    ? 'small'
-                    : 'medium'}
-                    height={size === 'small'
-                    ? 'small'
-                    : 'medium'}
-                  >
-                    <Image
-                      fit="contain"
-                      src={src}
-                      alt=""
-                      a11yTitle="logo"
-                      />
-                  </Box>
- )
-              }}
+                  const { src } = data.imageSharp.original
+                  return (
+                    <Box
+                      margin="small"
+                      pad="large"
+                      align="right"
+                      justify="center"
+                      width={size === 'small' ? 'small' : 'medium'}
+                      height={size === 'small' ? 'small' : 'medium'}
+                    >
+                      <Image fit="contain" src={src} alt="" a11yTitle="logo" />
+                    </Box>
+                  )
+                }}
               />
               <Box
                 height="100%"
@@ -86,18 +73,13 @@ const Sidekick = () => (
                 >
                   <Anchor href="/">{appConfig.title}</Anchor>
                 </Heading>
-
-
               </Box>
             </Slice>
           </Box>
- )
-      }
-
+        )}
       </ResponsiveContext.Consumer>
- )
-  }
+    )}
   </ConfigContext.Consumer>
- )
+)
 
 export default Sidekick

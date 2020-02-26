@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import ReactHelmet from 'react-helmet'
 
-
 const Helmet = () => (
   <StaticQuery
     query={graphql`
@@ -23,8 +22,6 @@ const Helmet = () => (
         ]}
       >
         <html lang="en" />
-
-
       </ReactHelmet>
     )}
   />

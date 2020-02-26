@@ -1,12 +1,5 @@
 import React, { PureComponent } from 'react'
-import {
-  Box,
-  Markdown,
-  Paragraph,
-  Text,
-  Anchor,
-  Heading
-} from 'grommet'
+import { Box, Markdown, Paragraph, Text, Anchor, Heading } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ScheduleNew } from 'grommet-icons'
 import Calendar from '../components/Calendar'
@@ -15,7 +8,6 @@ import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
-import Nav from '../components/Nav'
 import SimpleForm from '../components/Subscribe'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
@@ -34,8 +26,8 @@ const ScheduleNewBanner = () => [
     alignContent="center"
     overflow="hidden"
     margin={{
-      "top" : "-1em",
-      "bottom" : "1em"
+      top: '-1em',
+      bottom: '1em',
     }}
   >
     <ScheduleNew size="small" color="accent-4" alt="" />
@@ -99,11 +91,11 @@ const ScheduleNewBanner = () => [
     <ScheduleNew size="small" color="accent-4" alt="" />
     <ScheduleNew size="small" color="accent-4" alt="" />
     <ScheduleNew size="small" color="accent-4" alt="" />
-  </Box>
-    ]
+  </Box>,
+]
 
 // override this query with your own questions!
-const SPREADSHEET_QUERY = graphql `
+const SPREADSHEET_QUERY = graphql`
   query eventsQuery {
     allGoogleSheetEventsRow {
       edges {
@@ -125,14 +117,15 @@ class CalendarPage extends PureComponent {
   initialState = {
     currentDay: new Date(),
     eventsOfTheDay: [],
-    showModal: false
+    showModal: false,
   }
 
   state = this.initialState
 
-  hideModal = () => this.setState( this.initialState )
+  hideModal = () => this.setState(this.initialState)
 
-  showModal = ( eventsOfTheDay, currentDay ) => this.setState( { currentDay, eventsOfTheDay, showModal: true } )
+  showModal = (eventsOfTheDay, currentDay) =>
+    this.setState({ currentDay, eventsOfTheDay, showModal: true })
 
   render() {
     const { currentDay, eventsOfTheDay, showModal } = this.state
@@ -145,42 +138,42 @@ class CalendarPage extends PureComponent {
           pathname="/events"
         />
         <Sidekick />
-        <Nav />
         <Slice
           alignSelf="center"
           alignContent="stretch"
           width="large"
           pad="large"
           margin={{
-          "bottom" : "xlarge"
-        }}
+            bottom: 'xlarge',
+          }}
           background="accent-2"
           border={{
-          "color" : "accent-4",
-          "size" : "medium"
-        }}
+            color: 'accent-4',
+            size: 'medium',
+          }}
         >
           <Box>
             <Heading level="1">Events</Heading>
             <ScheduleNewBanner />
-            <Markdown components={{
-              p: {
-                component: Paragraph,
-                props: {
-                  size: 'xlarge'
-                }
-              },
-              strong: {
-                component: Text,
-                props: {
-                  size: 'xxlarge',
-                  weight: 800
-                }
-              },
-              a: {
-                component: Anchor
-              }
-            }}
+            <Markdown
+              components={{
+                p: {
+                  component: Paragraph,
+                  props: {
+                    size: 'xlarge',
+                  },
+                },
+                strong: {
+                  component: Text,
+                  props: {
+                    size: 'xxlarge',
+                    weight: 800,
+                  },
+                },
+                a: {
+                  component: Anchor,
+                },
+              }}
             >
               {CONTENT}
             </Markdown>
@@ -190,16 +183,30 @@ class CalendarPage extends PureComponent {
           </Box>
           <Box id="calendars">
             <ConfigContext.Consumer>
-              {( { limitMonthInTheFuture } ) => ( <StaticQuery query={SPREADSHEET_QUERY} render={data => ( <Calendar showModal={this.showModal} events={groupEventsByMonth( data, limitMonthInTheFuture )} /> )} /> )}
+              {({ limitMonthInTheFuture }) => (
+                <StaticQuery
+                  query={SPREADSHEET_QUERY}
+                  render={data => (
+                    <Calendar
+                      showModal={this.showModal}
+                      events={groupEventsByMonth(data, limitMonthInTheFuture)}
+                    />
+                  )}
+                />
+              )}
             </ConfigContext.Consumer>
           </Box>
-
         </Slice>
 
-        {showModal && ( <ModalEvent hideModal={this.hideModal} currentDay={currentDay} events={eventsOfTheDay} /> )}
-
+        {showModal && (
+          <ModalEvent
+            hideModal={this.hideModal}
+            currentDay={currentDay}
+            events={eventsOfTheDay}
+          />
+        )}
       </Layout>
- )
+    )
   }
 }
 

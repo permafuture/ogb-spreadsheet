@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
-import { Grommet, Box } from 'grommet'
-import { grog } from './Grog'
+import { Grommet, Box, Grid } from 'grommet'
+import { paperTheme } from './PaperTheme'
 import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
+import Nav from './Nav'
 
-require("typeface-alegreya")
+require('typeface-alegreya')
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   }
 `
-const FONT=`
+const FONT = `
 
 @font-face {
 font-family: 'Picture House One Bold';
@@ -36,7 +37,7 @@ font-display: swap;
 const enhancedTheme = (baseTheme, customTheme) => {
   const flatTheme = flatObject(customTheme)
   const colors = {
-    ...grog.global.colors,
+    ...paperTheme.global.colors,
     ...flatTheme,
   }
 
@@ -45,7 +46,6 @@ const enhancedTheme = (baseTheme, customTheme) => {
     global: {
       ...baseTheme.global,
       colors,
-
     },
   }
 }
@@ -86,26 +86,28 @@ const Layout = ({ children }) => (
     <ConfigContext.Consumer>
       {appConfig => (
         <Grommet
-          theme={enhancedTheme(grog, appConfig.theme)}
+          theme={enhancedTheme(paperTheme, appConfig.theme)}
           full="True"
           css={css`
             scroll-behavior: smooth;
           `}
         >
-          <Slice css={css`
-           background-attachment: fixed;
-           `}
-          >
-            <Box
-              css={css`
+          <Grid>
+            <Slice>
+              <Box
+                css={css`
+                background-color: rgba(255, 255, 238, 0.1);
                 background-image: url(/lots-of-flowers.svg);
-                background-size: cover;
-                background-attachment: fixed;
+                background-size: contain cover;
+                background-attachment: scroll;
+                background-blend-mode: screenshot;
               `}
-            >
-              {children}
-            </Box>
-          </Slice>
+              >
+                <Nav />
+                {children}
+              </Box>
+            </Slice>
+          </Grid>
         </Grommet>
       )}
     </ConfigContext.Consumer>

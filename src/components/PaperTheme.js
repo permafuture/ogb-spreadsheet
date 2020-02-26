@@ -1,13 +1,13 @@
-import { css } from 'styled-components';
-import {  deepMerge } from 'grommet/utils/object';
+import { css } from 'styled-components'
+import { deepMerge } from 'grommet/utils/object'
 
-export const grog = deepMerge({
+export const paperTheme = deepMerge({
   global: {
     animation: {
-    duration: '0.5s',
-    jiggle: {
-      duration: '0.1s',
-    },
+      duration: '0.5s',
+      jiggle: {
+        duration: '0.1s',
+      },
     },
     colors: {
       background: 'accent-2',
@@ -16,14 +16,13 @@ export const grog = deepMerge({
     font: {
       family: '"Alegreya","serif"',
       fontWeight: 800,
-      size: "large",
+      size: 'large',
     },
     selected: {
       background: 'accent-3',
       color: 'white',
     },
   },
-
 
   anchor: {
     extend: css`
@@ -32,7 +31,7 @@ export const grog = deepMerge({
     textDecoration: 'none',
     fontWeight: 400,
     color: {
-      dark: 'accent-1',
+      dark: 'accent-3',
       light: 'brand',
     },
     hover: {
@@ -43,38 +42,37 @@ export const grog = deepMerge({
       // fontWeight: undefined,
       // extend: undefined,
     },
-      // extend: undefined,
+    // extend: undefined,
   },
 
   button: {
     border: {
       // color: { dark: undefined, light: undefined }
-      width: "4px",
+      width: '4px',
       radius: 0,
       color: {
         dark: 'accent-2',
         light: 'accent-2',
       },
     },
-    padding: {
-      horizontal: '2rem',
-      vertical: '.5rem'
-    },
+    margin: 'large',
+    padding: 'medium',
     fontWeight: 600,
     color: {
       dark: 'accent-2',
       light: 'accent-2',
     },
-
     extend: css`
-      ${props => !props.plain && `
+      ${props =>
+        !props.plain &&
+        `
+        margin: 10px;
         font-weight: bold;
         text-transform: uppercase;
         font-size: 24px;
-        font-height: 30px;
         div {
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
         }
         `};
     `,
@@ -84,11 +82,12 @@ export const grog = deepMerge({
     alignSelf: 'center',
     font: {
       family: '"Picture House One Bold", "sans-serif"',
-      size: "200px",
-
+      size: '200px',
     },
     extend: css`
-      ${props => !props.plain && `
+      ${props =>
+        !props.plain &&
+        `
       text-transform: uppercase;
       text-shadow: 1px 1px 1px rGBA(255, 255, 255, .4), -1px -1px 1px rGBA(0, 0, 0, .1);
       text-align: center;
@@ -98,8 +97,8 @@ export const grog = deepMerge({
       1: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
-          size: " 200px",
-          weight: "600",
+          size: ' 200px',
+          weight: '600',
         },
         extend: css`
           ${props => !props.plain && 'text-transform: uppercase;'};
@@ -108,7 +107,7 @@ export const grog = deepMerge({
       2: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
-          size: "200px",
+          size: '200px',
         },
         extend: css`
           ${props => !props.plain && 'text-transform: uppercase;'};
@@ -118,8 +117,8 @@ export const grog = deepMerge({
         font: {
           family: '"Alegreya", "serif"',
         },
-        extend: "text-transform: uppercase"
-        },
+        extend: 'text-transform: uppercase',
+      },
       4: {
         font: {
           family: '"Picture House One Bold", "sans-serif"',
@@ -140,10 +139,10 @@ export const grog = deepMerge({
         font: {
           family: '"Picture House One Bold", "sans-serif"',
         },
-        extend: "text-transform: uppercase"
-      }
-    }
+        extend: 'text-transform: uppercase',
+      },
     },
+  },
   paragraph: {
     extend: `
         text-align: justify;
@@ -151,8 +150,6 @@ export const grog = deepMerge({
         -moz-hyphens: auto;
         hyphens: auto;
         max-width: 100%;
-        `
-    },
-
-
-});
+        `,
+  },
+})
