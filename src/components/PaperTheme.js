@@ -57,8 +57,8 @@ export const paperTheme = deepMerge({
     },
     margin: 'large',
     padding: {
-      'vertical': '1rem',
-      'horizontal': '1rem',
+      vertical: '1rem',
+      horizontal: '1rem',
     },
     fontWeight: 600,
     color: {

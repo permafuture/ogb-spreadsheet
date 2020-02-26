@@ -1,6 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {  Box,  Grid,  Markdown,  Paragraph,  Text,  Image,  Heading,  Anchor,  Button,} from 'grommet'
+import {
+  Box,
+  Grid,
+  Markdown,
+  Paragraph,
+  Text,
+  Image,
+  Heading,
+  Anchor,
+  Button,
+} from 'grommet'
 import { graphql } from 'gatsby'
 import { Java, MailOption } from 'grommet-icons'
 import ChatBanner from '../components/ChatBanner'
@@ -9,7 +19,6 @@ import Layout from '../components/PageLayout'
 import Bio from '../components/Bio'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
-
 
 const CONTENT = `
 [](mailto://organicbooksellers@gmail.com)
@@ -169,7 +178,7 @@ const ContactPage = ({ data }) => (
 
         <Credits creditsRows={data.allGoogleSheetAngelCreditsRow} />
       </Slice>
-{/*
+      {/*
       <Slice
         alignSelf="center"
         alignContent="start"

@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react'
 import { Box, Markdown, Paragraph, Text, Anchor, Heading } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import ScheduleNewBanner from '../components/ScheduleNewBanner';
+import ScheduleNewBanner from '../components/ScheduleNewBanner'
 import Calendar from '../components/Calendar'
-import ModalEvent from '../components/ModalEvent'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
@@ -12,7 +11,6 @@ import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 import groupEvents from '../utils/groupEvents'
 import DayOfToday from '../components/Calendar/DayOfToday'
-
 
 const CONTENT = `
 We host readings, signings, book clubs and other events. Contact [Steve](mailto:organicbooksellers+steve@gmail.com) to learn more.
@@ -47,118 +45,101 @@ class CalendarPage extends PureComponent {
     showModal: false,
   }
 
-  state = this.initialState
-
-  hideModal = () => this.setState(this.initialState)
-
-  showModal = (eventsOfTheDay, currentDay) =>
-    this.setState({ currentDay, eventsOfTheDay, showModal: true })
-
   render() {
-    const { currentDay, eventsOfTheDay, showModal } = this.state
-
     return (
       <Layout>
-        <SEO
-          title="Events at Organic Books"
-          description="Signings, readings, poetry and more at Nob Hill's neighborhood bookstore!"
-          pathname="/events"
-        />
-        <Slice
-          alignSelf="center"
-          alignContent="stretch"
-          width="large"
-          pad="large"
-          margin={{
-            top: 'xlarge',
-          }}
-          background="accent-2"
-        >
-          <Box>
-            <Heading level="1">Events</Heading>
-            <ScheduleNewBanner />
-            <Markdown
-              components={{
-                p: {
-                  component: Paragraph,
-                  props: {
-                    size: 'xlarge',
-                  },
-                },
-                strong: {
-                  component: Text,
-                  props: {
-                    size: 'xxlarge',
-                    weight: 800,
-                  },
-                },
-                a: {
-                  component: Anchor,
-                },
-              }}
-            >
-              {CONTENT}
-            </Markdown>
-            <Box alignSelf="center">
-              <SimpleForm />
-            </Box>
-          </Box>
-        </Slice>
-        <StaticQuery
-          query={SPREADSHEET_QUERY}
-          render={data => (
-            <Slice
-              width="large"
-              alignSelf="center"
-              margin="large"
-              pad="large"
-              background="neutral-2"
-              border={{
-                color: 'accent-3',
-                size: 'medium',
-              }}
-            >
-              <Heading alignSelf="center" level="3">
-                  Next Event
-              </Heading>
-              <DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} />
-            </Slice>
-          )}
-        />
-        <Slice
-          alignSelf="center"
-          alignContent="stretch"
-          width="large"
-          pad="large"
-          margin={{
-            bottom: 'xlarge',
-          }}
-          background="accent-2"
-        >
-          <Box id="calendars">
-            <ConfigContext.Consumer>
-              {({ limitMonthInTheFuture }) => (
-                <StaticQuery
-                  query={SPREADSHEET_QUERY}
-                  render={data => (
-                    <Calendar
-                      showModal={this.showModal}
-                      events={groupEventsByMonth(data, limitMonthInTheFuture)}
-                    />
-                  )}
-                />
-              )}
-            </ConfigContext.Consumer>
-          </Box>
-        </Slice>
-
-        {showModal && (
-          <ModalEvent
-            hideModal={this.hideModal}
-            currentDay={currentDay}
-            events={eventsOfTheDay}
+        <Box>
+          <SEO
+            title="Events at Organic Books"
+            description="Signings, readings, poetry and more at Nob Hill's neighborhood bookstore!"
+            pathname="/events"
           />
-        )}
+          <ConfigContext.Consumer>
+            {({ limitMonthInTheFuture }) => (
+              <StaticQuery
+                query={SPREADSHEET_QUERY}
+                render={data => (
+                  <Slice
+                    alignSelf="center"
+                    alignContent="stretch"
+                    width="large"
+                    pad="large"
+                    margin={{
+                      top: 'xlarge',
+                    }}
+                    background="accent-2"
+                  >
+                    <Heading level="1">Events</Heading>
+                    <ScheduleNewBanner />
+                    <Markdown
+                      components={{
+                        p: {
+                          component: Paragraph,
+                          props: {
+                            size: 'xlarge',
+                          },
+                        },
+                        strong: {
+                          component: Text,
+                          props: {
+                            size: 'xxlarge',
+                            weight: 800,
+                          },
+                        },
+                        a: {
+                          component: Anchor,
+                        },
+                      }}
+                    >
+                      {CONTENT}
+                    </Markdown>
+                    <Box alignSelf="center">
+                      <SimpleForm />
+                    </Box>
+                    <Slice
+                      width="large"
+                      alignSelf="center"
+                      margin="large"
+                      pad="large"
+                      background="neutral-2"
+                      border={{
+                        color: 'accent-3',
+                        size: 'medium',
+                      }}
+                    >
+                      <Heading alignSelf="center" level="3">
+                        Next Event
+                      </Heading>
+                      <DayOfToday
+                        events={groupEvents(data.allGoogleSheetEventsRow)}
+                      />
+                    </Slice>
+                    <Slice
+                      alignSelf="center"
+                      alignContent="stretch"
+                      width="large"
+                      pad="large"
+                      margin={{
+                        bottom: 'xlarge',
+                      }}
+                      background="accent-2"
+                    >
+                      <Box id="calendars">
+                        <Calendar
+                          showModal={this.showModal}
+                          events={groupEventsByMonth(
+                            data,
+                            limitMonthInTheFuture,
+                          )}
+                        />
+                      </Box>
+                    </Slice>
+                  </Slice>
+                )}
+              />
+            )}
+          </ConfigContext.Consumer>
+        </Box>
       </Layout>
     )
   }

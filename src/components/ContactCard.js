@@ -8,17 +8,24 @@ const opening = new Date().setHours(10)
 const closing = new Date().setHours(19)
 console.log(today)
 
-const isOpen = isWithinInterval(
-  today,
-  { start: opening, end: closing }
-)
+const isOpen = isWithinInterval(today, { start: opening, end: closing })
 console.log(isOpen)
 
 const Hours = () => {
   if (isOpen) {
-    return <Text size="xxlarge" color="neutral-2"> OPEN</Text>;
+    return (
+      <Text size="xxlarge" color="neutral-2">
+        {' '}
+        OPEN
+      </Text>
+    )
   }
-  return <Text size="xxlarge" color="light-3"> CLOSED</Text>;
+  return (
+    <Text size="xxlarge" color="light-3">
+      {' '}
+      CLOSED
+    </Text>
+  )
 }
 
 const CallUs = () => {
@@ -34,7 +41,7 @@ const CallUs = () => {
         icon=<Phone color="accent-2" size="large" />
         reverse="true"
       />
-  );
+    )
   }
   return (
     <Button
@@ -47,7 +54,7 @@ const CallUs = () => {
       icon=<Phone color="accent-2" size="large" />
       reverse="true"
     />
-);
+  )
 }
 
 const ContactCard = () => (
@@ -55,28 +62,41 @@ const ContactCard = () => (
     width="large"
     alignSelf="center"
     pad="medium"
-    margin={{"bottom": "xlarge"}}
+    margin={{ bottom: 'xlarge' }}
     background="brand"
     direction="row"
     justify="evenly"
     border={{
-    "color" : "accent-2",
-    "size" : "medium",
-  }}
+      color: 'accent-2',
+      size: 'medium',
+    }}
   >
     <Box direction="column" align="end">
-      <Heading size="medium" level="3" color="white" margin="none" alignSelf="start">
-The store is
+      <Heading
+        size="medium"
+        level="3"
+        color="white"
+        margin="none"
+        alignSelf="start"
+      >
+        The store is
         <Hours />
       </Heading>
-      <Text size="large" color="white">Hours 10am-7pm, Tues-Sun</Text>
-      <Text size="large" color="white">111 Carlisle Blvd SE</Text>
-      <Text size="large" color="white">Albuquerque, NM 87110</Text>
+      <Text size="large" color="white">
+        Hours 10am-7pm, Tues-Sun
+      </Text>
+      <Text size="large" color="white">
+        111 Carlisle Blvd SE
+      </Text>
+      <Text size="large" color="white">
+        Albuquerque, NM 87110
+      </Text>
     </Box>
-    <Box animation={{
-  "type": "pulse",
-  "size": "small",
-}}
+    <Box
+      animation={{
+        type: 'pulse',
+        size: 'small',
+      }}
     >
       <CallUs />
     </Box>

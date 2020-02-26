@@ -7,7 +7,7 @@ import {
   Catalog,
   ScheduleNew,
   ChatOption,
-  Article
+  Article,
 } from 'grommet-icons'
 
 const Nav = () => (
@@ -20,19 +20,27 @@ const Nav = () => (
     align="center"
     margin="none"
     border={{
-    "color" : "accent-2",
-    "size" : "medium",
-    "side": "bottom"
-  }}
+      color: 'accent-2',
+      size: 'medium',
+      side: 'bottom',
+    }}
     css="position: sticky; top: 0;"
   >
     <Box direction="row-responsive" pad="none" justify="center" align="center">
       <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo" />
-      <Heading color="white" size="small" level="1" pad="none" margin={{"horizontal": "2rem", "vertical":"none"}}>
-        <Anchor href="/" color="white">Organic Books</Anchor>
+      <Heading
+        color="white"
+        size="small"
+        level="1"
+        pad="none"
+        margin={{ horizontal: '2rem', vertical: 'none' }}
+      >
+        <Anchor href="/" color="white">
+          Organic Books
+        </Anchor>
       </Heading>
     </Box>
-    <Box direction="row-responsive" pad={{"right":"1rem"}} align="start">
+    <Box direction="row-responsive" pad={{ right: '1rem' }} align="start">
       <Box direction="row" pad="none" justify="end">
         <Button
           a11yTitle="Buy"
@@ -55,7 +63,13 @@ const Nav = () => (
           href="/contact"
         />
       </Box>
-      <Box direction="row" pad={{"left":"2rem"}} margin="none" align="end" justify="end">
+      <Box
+        direction="row"
+        pad={{ left: '2rem' }}
+        margin="none"
+        align="end"
+        justify="end"
+      >
         <Anchor
           href="https://facebook.com/OrganicBooks"
           icon=<FacebookOption size="small" color="accent-2" />
@@ -70,8 +84,7 @@ const Nav = () => (
         />
       </Box>
     </Box>
-
   </Box>
- )
+)
 
 export default Nav
