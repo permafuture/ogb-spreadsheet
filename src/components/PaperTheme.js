@@ -91,7 +91,7 @@ export const paperTheme = deepMerge({
       text-transform: uppercase;
       text-shadow: 1px 1px 1px rGBA(255, 255, 255, .4), -1px -1px 1px rGBA(0, 0, 0, .1);
       text-align: center;
-      padding-top: 1rem; `};
+`};
     `,
     level: {
       1: {
