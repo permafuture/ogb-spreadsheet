@@ -14,17 +14,11 @@ console.log(isOpen)
 const Hours = () => {
   if (isOpen) {
     return (
-      <Text size="xxlarge" color="neutral-2">
-        {' '}
-        OPEN
-      </Text>
+      <Text size="xxlarge" color="neutral-2"> OPEN</Text>
     )
   }
   return (
-    <Text size="xxlarge" color="light-3">
-      {' '}
-      CLOSED
-    </Text>
+    <Text size="xxlarge" color="light-3"> CLOSED</Text>
   )
 }
 
@@ -38,20 +32,20 @@ const CallUs = () => {
         label="Call us"
         size="large"
         gap="medium"
-        icon=<Phone color="accent-2" size="large" />
         reverse="true"
+        icon=<Phone color="accent-2" size="large" />
       />
     )
   }
   return (
     <Button
+      icon=<Phone color="accent-2" size="large" />
       color="light-3"
       a11yTitle="Call us"
       href="tel://5055533823"
       label="Leave a message"
       size="large"
       gap="medium"
-      icon=<Phone color="accent-2" size="large" />
       reverse="true"
     />
   )
