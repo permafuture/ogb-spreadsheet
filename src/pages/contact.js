@@ -1,23 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  Box,
-  Grid,
-  Markdown,
-  Paragraph,
-  Text,
-  Image,
-  Heading,
-  Anchor,
-  Button,
-} from 'grommet'
+import {  Box,  Grid,  Markdown,  Paragraph,  Text,  Image,  Heading,  Anchor,  Button,} from 'grommet'
 import { graphql } from 'gatsby'
-import { ChatOption, Java, MailOption } from 'grommet-icons'
+import { Java, MailOption } from 'grommet-icons'
+import ChatBanner from '../components/ChatBanner'
 import Credits from '../components/Credits'
-import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Bio from '../components/Bio'
-import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 
@@ -50,94 +39,6 @@ const CREDITS = `
   Some who helped:
 `
 
-const ChatBanner = () => [
-  <Box
-    direction="row"
-    alignSelf="center"
-    alignContent="center"
-    overflow="hidden"
-    margin={{
-      top: '-1em',
-      bottom: '1em',
-    }}
-  >
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-  </Box>,
-]
-
 const ContactPage = ({ data }) => (
   <Layout>
     <Box>
@@ -146,9 +47,6 @@ const ContactPage = ({ data }) => (
         description="We're your neighborhood booksellers. Get in touch if you need anything."
         pathname="/contact"
       />
-      <Sidekick />
-      <Nav />
-
       <Slice
         alignSelf="center"
         alignContent="start"
@@ -157,11 +55,6 @@ const ContactPage = ({ data }) => (
         }}
         width="large"
         pad="large"
-        background="accent-2"
-        border={{
-          color: 'accent-4',
-          size: 'medium',
-        }}
       >
         <Heading level="1">Contact</Heading>
         <ChatBanner />
@@ -236,11 +129,6 @@ const ContactPage = ({ data }) => (
         }}
         width="large"
         pad="large"
-        background="accent-2"
-        border={{
-          color: 'accent-4',
-          size: 'medium',
-        }}
       >
         <Markdown
           components={{

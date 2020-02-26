@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, Heading, Markdown, Paragraph, Text, Anchor } from 'grommet'
 import { Catalog } from 'grommet-icons'
-import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
-import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
+import CatalogBanner from '../components/CatalogBanner'
 
 const CONTENT = `
 
@@ -25,81 +24,6 @@ Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $3 for select
 
 **If you're a local artisan, bring us things that bookstores might sell!** We want to carry your gift cards, calendars, stickers, and other crafts. Talk to [Kelly](mailto:organicbooksellers+kelly@gmail.com), or drop a sample by the store any day.`
 
-const CatalogBanner = () => [
-  <Box
-    direction="row"
-    alignSelf="center"
-    alignContent="center"
-    overflow="hidden"
-    margin={{
-      top: '-1em',
-      bottom: '1em',
-    }}
-  >
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-    <Catalog color="accent-4" size="small" alt="" />
-  </Box>,
-]
-
 const BooksPage = () => (
   <Layout>
     <SEO
@@ -107,8 +31,6 @@ const BooksPage = () => (
       description="We sell new and used books, with a focus on local authors. We also showcase local art and wares."
       pathname="/books"
     />
-    <Sidekick />
-    <Nav />
     <Slice
       alignSelf="center"
       alignContent="stretch"
@@ -117,11 +39,6 @@ const BooksPage = () => (
       }}
       width="large"
       pad="large"
-      background="accent-2"
-      border={{
-        color: 'accent-4',
-        size: 'medium',
-      }}
     >
       <Heading level="1">Books</Heading>
       <CatalogBanner />

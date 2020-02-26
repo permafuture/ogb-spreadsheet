@@ -96,11 +96,12 @@ const Layout = ({ children }) => (
             <Slice>
               <Box
                 css={css`
-                background-color: rgba(255, 255, 238, 0.1);
+                background-color: rgba(255, 255, 238, 0.2);
                 background-image: url(/lots-of-flowers.svg);
-                background-size: contain cover;
+                background-size: contain, cover;
                 background-attachment: scroll;
-                background-blend-mode: screenshot;
+                background-blend-mode: screen;
+                background-repeat: repeat;
               `}
               >
                 <Nav />

@@ -5,7 +5,6 @@ import { Box, Heading, Markdown, Paragraph, Text, Button } from 'grommet'
 import format from 'date-fns/format'
 import { LinkPrevious } from 'grommet-icons'
 import Layout from '../components/PageLayout'
-import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 
@@ -29,11 +28,6 @@ const EventPage = ({ data, pageContext }) => (
       }}
       width="large"
       pad={{ horizontal: 'large', bottom: 'large' }}
-      background="accent-2"
-      border={{
-        color: 'accent-4',
-        size: 'medium',
-      }}
     >
       <Box
         margin={{ top: 'large', bottom: 'large' }}
@@ -136,7 +130,6 @@ const EventPage = ({ data, pageContext }) => (
         learn more.
       </Paragraph>
     </Slice>
-    <Nav />
   </Layout>
 )
 

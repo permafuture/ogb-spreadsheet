@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Anchor, Button, Image, Heading } from 'grommet'
-import { graphql, StaticQuery } from 'gatsby'
 import {
   FacebookOption,
   Instagram,
@@ -17,8 +16,7 @@ const Nav = () => (
     elevation="small"
     background="brand"
     width="full"
-    justify="evenly"
-    alignSelf="stretch"
+    justify="center"
     align="center"
     margin="none"
     border={{
@@ -26,16 +24,16 @@ const Nav = () => (
     "size" : "medium",
     "side": "bottom"
   }}
-    css="position: fixed"
+    css="position: sticky; top: 0;"
   >
-    <Box direction="row" pad="none" justify="center" align="center">
-      <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo"/>
+    <Box direction="row-responsive" pad="none" justify="center" align="center">
+      <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo" />
       <Heading color="white" size="small" level="1" pad="none" margin={{"horizontal": "2rem", "vertical":"none"}}>
         <Anchor href="/" color="white">Organic Books</Anchor>
       </Heading>
     </Box>
-    <Box direction="row-responsive" pad="none" justify="evenly">
-      <Box direction="row" pad="none">
+    <Box direction="row-responsive" pad={{"right":"1rem"}} align="start">
+      <Box direction="row" pad="none" justify="end">
         <Button
           a11yTitle="Buy"
           icon=<Catalog color="accent-2" />
@@ -57,7 +55,7 @@ const Nav = () => (
           href="/contact"
         />
       </Box>
-      <Box direction="row" pad="none" margin="none" align="end" justify="end">
+      <Box direction="row" pad={{"left":"2rem"}} margin="none" align="end" justify="end">
         <Anchor
           href="https://facebook.com/OrganicBooks"
           icon=<FacebookOption size="small" color="accent-2" />

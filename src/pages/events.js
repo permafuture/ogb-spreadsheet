@@ -1,16 +1,18 @@
 import React, { PureComponent } from 'react'
 import { Box, Markdown, Paragraph, Text, Anchor, Heading } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import { ScheduleNew } from 'grommet-icons'
+import ScheduleNewBanner from '../components/ScheduleNewBanner';
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
-import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
 import SimpleForm from '../components/Subscribe'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
+import groupEvents from '../utils/groupEvents'
+import DayOfToday from '../components/Calendar/DayOfToday'
+
 
 const CONTENT = `
 We host readings, signings, book clubs and other events. Contact [Steve](mailto:organicbooksellers+steve@gmail.com) to learn more.
@@ -19,81 +21,6 @@ Sign up for our newsletter! We'll send you info on upcoming sales and events, pl
 
 
 `
-const ScheduleNewBanner = () => [
-  <Box
-    direction="row"
-    alignSelf="center"
-    alignContent="center"
-    overflow="hidden"
-    margin={{
-      top: '-1em',
-      bottom: '1em',
-    }}
-  >
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-    <ScheduleNew size="small" color="accent-4" alt="" />
-  </Box>,
-]
-
 // override this query with your own questions!
 const SPREADSHEET_QUERY = graphql`
   query eventsQuery {
@@ -137,20 +64,15 @@ class CalendarPage extends PureComponent {
           description="Signings, readings, poetry and more at Nob Hill's neighborhood bookstore!"
           pathname="/events"
         />
-        <Sidekick />
         <Slice
           alignSelf="center"
           alignContent="stretch"
           width="large"
           pad="large"
           margin={{
-            bottom: 'xlarge',
+            top: 'xlarge',
           }}
           background="accent-2"
-          border={{
-            color: 'accent-4',
-            size: 'medium',
-          }}
         >
           <Box>
             <Heading level="1">Events</Heading>
@@ -181,6 +103,38 @@ class CalendarPage extends PureComponent {
               <SimpleForm />
             </Box>
           </Box>
+        </Slice>
+        <StaticQuery
+          query={SPREADSHEET_QUERY}
+          render={data => (
+            <Slice
+              width="large"
+              alignSelf="center"
+              margin="large"
+              pad="large"
+              background="neutral-2"
+              border={{
+                color: 'accent-3',
+                size: 'medium',
+              }}
+            >
+              <Heading alignSelf="center" level="3">
+                  Next Event
+              </Heading>
+              <DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} />
+            </Slice>
+          )}
+        />
+        <Slice
+          alignSelf="center"
+          alignContent="stretch"
+          width="large"
+          pad="large"
+          margin={{
+            bottom: 'xlarge',
+          }}
+          background="accent-2"
+        >
           <Box id="calendars">
             <ConfigContext.Consumer>
               {({ limitMonthInTheFuture }) => (
