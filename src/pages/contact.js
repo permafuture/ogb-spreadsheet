@@ -177,30 +177,13 @@ const ContactPage = ({ data }) => (
         </Markdown>
 
         <Credits creditsRows={data.allGoogleSheetAngelCreditsRow} />
-      </Slice>
-      {/*
-      <Slice
-        alignSelf="center"
-        alignContent="start"
-        margin={{
-          bottom: 'xlarge',
-        }}
-        width="large"
-        pad="large"
-        background="accent-2"
-        border={{
-          color: 'accent-4',
-          size: 'medium',
-        }}
-      >
-        <Text textAlign="center">
+        <Text textAlign="center" margin="large">
           This website made with&nbsp;&nbsp;
           <Java color="brand" />
           &nbsp;&nbsp;by&nbsp;&nbsp;
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
       </Slice>
-      */}
     </Box>
   </Layout>
 )

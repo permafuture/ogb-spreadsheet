@@ -29,7 +29,7 @@ const CallUs = () => {
         color="neutral-2"
         a11yTitle="Call us"
         href="tel://5055533823"
-        label="Call us"
+        label="Call"
         size="large"
         gap="medium"
         reverse="true"
