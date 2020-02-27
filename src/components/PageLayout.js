@@ -83,7 +83,7 @@ const Layout = ({ children }) => (
       type="font/woff"
       crossOrigin="anonymous"
     />
-
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
     <ConfigContext.Consumer>
       {appConfig => (
         <Grommet

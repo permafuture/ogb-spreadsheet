@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Button, Heading } from 'grommet'
+import { Box, Text, Button, Heading, Anchor } from 'grommet'
 import { Phone } from 'grommet-icons'
 import { isWithinInterval } from 'date-fns'
 
@@ -71,7 +71,7 @@ const ContactCard = () => (
         level="3"
         color="white"
         margin="none"
-        alignSelf="start"
+        align="end"
       >
         The store is
         <Hours />
@@ -85,8 +85,10 @@ const ContactCard = () => (
       <Text size="large" color="white">
         Albuquerque, NM 87110
       </Text>
+      <Anchor size="large" color="white" href="mailto://organicbooksellers@gmail.com">organicbooksellers@gmail.com</Anchor>
     </Box>
     <Box
+      alignSelf="center"
       animation={{
         type: 'pulse',
         size: 'small',

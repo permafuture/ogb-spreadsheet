@@ -48,7 +48,7 @@ module.exports = {
         background_color: '#4c934c',
         theme_color: appConfig.theme.brand,
         display: 'minimal-ui',
-        icon: 'media/icon.svg',
+        icon: `media/icon.png`,
       },
     },
     {
