@@ -6,10 +6,8 @@ import { isWithinInterval } from 'date-fns'
 const today = new Date()
 const opening = new Date().setHours(10)
 const closing = new Date().setHours(19)
-console.log(today)
 
 const isOpen = isWithinInterval(today, { start: opening, end: closing })
-console.log(isOpen)
 
 const Hours = () => {
   if (isOpen) {

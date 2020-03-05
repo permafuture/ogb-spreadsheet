@@ -85,5 +85,11 @@ module.exports = {
      },
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://organicbooks.net`,
+    },
+  },
   ],
 }
