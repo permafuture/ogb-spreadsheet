@@ -27,6 +27,7 @@ const Hero = () => (
                   }
                 `}
                 render={data => {
+                  console.log(data)
                   const { src } = data.imageSharp.original
                   return (
                     <Box
