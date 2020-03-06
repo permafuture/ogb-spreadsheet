@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Heading, Image, ResponsiveContext, Anchor } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
-import Slice from './Slice'
 import ConfigContext from './ConfigContext'
 
 const Hero = () => (
@@ -9,29 +8,18 @@ const Hero = () => (
     {appConfig => (
       <ResponsiveContext.Consumer>
         {size => (
-          <Box
-            a11yTitle="Calendar events title"
-            pad="small"
-            elevation="none"
-            height="100vh"
-          >
-            <Slice
+            <Box
               height="90vh"
-              margin="large"
-              pad="small"
+              pad="xlarge"
               background="accent-2"
               align="center"
               flex="grow"
               justify="center"
-              border={{
-                color: 'accent-3',
-                size: 'medium',
-              }}
             >
               <StaticQuery
                 query={graphql`
                   {
-                    imageSharp {
+                    imageSharp(id: {eq: "ea3ca1d0-1433-5e6d-9671-509d37f63f8a"}) {
                       original {
                         src
                       }
@@ -70,12 +58,9 @@ const Hero = () => (
                 level="2"
                 size="large"
               >
-                The new & used bookstore
-                <br />
-                in Nob Hill
+                Nob Hill's home-grown family-owned bookstore
               </Heading>
-            </Slice>
-          </Box>
+            </Box>
         )}
       </ResponsiveContext.Consumer>
     )}

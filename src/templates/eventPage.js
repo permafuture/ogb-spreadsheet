@@ -51,6 +51,7 @@ const EventPage = ({ data, pageContext }) => (
         direction="row"
         fill="horizontal"
         border={{ color: 'border', size: 'medium', side: 'bottom' }}
+        pad="medium"
       >
         <Text a11yTitle="Event time" margin="small" size="xlarge" weight="bold">
           {data.allGoogleSheetEventsRow.edges[0].node.start.slice(0, 4)}

@@ -93,8 +93,7 @@ const Layout = ({ children }) => (
             scroll-behavior: smooth;
           `}
         >
-          <Grid>
-            <Slice>
+            <Box>
               <Box
                 css={css`
                   background-color: rgba(255, 255, 238, 0.2);
@@ -109,8 +108,7 @@ const Layout = ({ children }) => (
                 {children}
                 <ContactCard />
               </Box>
-            </Slice>
-          </Grid>
+            </Box>
         </Grommet>
       )}
     </ConfigContext.Consumer>

@@ -31,15 +31,7 @@ const BooksPage = () => (
       description="We sell new and used books, with a focus on local authors. We also showcase local art and wares."
       pathname="/books"
     />
-    <Slice
-      alignSelf="center"
-      alignContent="stretch"
-      margin={{
-        bottom: 'xlarge',
-      }}
-      width="large"
-      pad="large"
-    >
+    <Slice>
       <Heading level="1">Books</Heading>
       <CatalogBanner />
       <Markdown

@@ -51,12 +51,12 @@ const CallUs = () => {
 
 const ContactCard = () => (
   <Box
+    direction="row-responsive"
     width="large"
     alignSelf="center"
     pad="medium"
     margin={{ bottom: 'xlarge' }}
     background="brand"
-    direction="row"
     justify="evenly"
     border={{
       color: 'accent-2',

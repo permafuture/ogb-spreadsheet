@@ -59,16 +59,8 @@ class CalendarPage extends PureComponent {
               <StaticQuery
                 query={SPREADSHEET_QUERY}
                 render={data => (
-                  <Slice
-                    alignSelf="center"
-                    alignContent="stretch"
-                    width="large"
-                    pad="large"
-                    margin={{
-                      top: 'xlarge',
-                    }}
-                    background="accent-2"
-                  >
+                  <Box>
+                    <Slice>
                     <Heading level="1">Events</Heading>
                     <ScheduleNewBanner />
                     <Markdown
@@ -96,12 +88,8 @@ class CalendarPage extends PureComponent {
                     <Box alignSelf="center">
                       <SimpleForm />
                     </Box>
+                  </Slice>
                     <Slice
-                      width="large"
-                      alignSelf="center"
-                      margin="large"
-                      pad="large"
-                      background="neutral-2"
                       border={{
                         color: 'accent-3',
                         size: 'medium',
@@ -114,16 +102,7 @@ class CalendarPage extends PureComponent {
                         events={groupEvents(data.allGoogleSheetEventsRow)}
                       />
                     </Slice>
-                    <Slice
-                      alignSelf="center"
-                      alignContent="stretch"
-                      width="large"
-                      pad="large"
-                      margin={{
-                        bottom: 'xlarge',
-                      }}
-                      background="accent-2"
-                    >
+                    <Slice>
                       <Box id="calendars">
                         <Calendar
                           showModal={this.showModal}
@@ -134,7 +113,7 @@ class CalendarPage extends PureComponent {
                         />
                       </Box>
                     </Slice>
-                  </Slice>
+                  </Box>
                 )}
               />
             )}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading } from 'grommet'
+import { Box, Heading, Paragraph, Button } from 'grommet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Hero from '../components/Hero'
@@ -12,13 +12,17 @@ import SEO from '../components/SEO'
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
-    <Slice
-      width="large"
-      alignSelf="center"
-      margin="large"
-      pad="large"
-      background="neutral-2"
-    >
+    <Hero />
+    <Slice>
+      <Heading alignSelf="center" level="3">Know what book you want? </Heading>
+      <Button alignSelf="center" size="large">Get it now</Button>
+      <Paragraph size="large">
+We sell books new and used, with a special focus on local authors. We also carry cards, journals, pens and more.
+
+Open 10 to 7, every day except Mondays
+      </Paragraph>
+    </Slice>
+    <Slice>
       <Heading alignSelf="center" level="3">
         Next Event
       </Heading>
