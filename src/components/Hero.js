@@ -8,25 +8,25 @@ const Hero = () => (
     {appConfig => (
       <ResponsiveContext.Consumer>
         {size => (
-            <Box
-              height="90vh"
-              pad="xlarge"
-              background="accent-2"
-              align="center"
-              flex="grow"
-              justify="center"
-            >
-              <StaticQuery
-                query={graphql`
-                  {
-                    imageSharp(id: {eq: "ea3ca1d0-1433-5e6d-9671-509d37f63f8a"}) {
-                      original {
-                        src
+          <Box
+            height="90vh"
+            pad="xlarge"
+            background="accent-2"
+            align="center"
+            flex="grow"
+            justify="center"
+          >
+            <StaticQuery
+              query={graphql`
+                  { imageSharp(original: {src: {regex: "s/icon/g"}}) {
+                        id
+                        original {
+                          src
+                        }
                       }
                     }
-                  }
                 `}
-                render={data => {
+              render={data => {
                   console.log(data)
                   const { src } = data.imageSharp.original
                   return (
@@ -39,29 +39,29 @@ const Hero = () => (
                     </Box>
                   )
                 }}
-              />
+            />
 
-              <Heading
-                color="brand"
-                size="xlarge"
-                level="1"
-                textAlign="center"
-                a11yTitle="Application title"
-                margin="small"
-              >
-                <Anchor href="/">{appConfig.title}</Anchor>
-              </Heading>
+            <Heading
+              color="brand"
+              size="xlarge"
+              level="1"
+              textAlign="center"
+              a11yTitle="Application title"
+              margin="small"
+            >
+              <Anchor href="/">{appConfig.title}</Anchor>
+            </Heading>
 
-              <Heading
-                color="secondary"
-                textAlign="center"
-                a11yTitle="Application sub title"
-                level="2"
-                size="large"
-              >
+            <Heading
+              color="secondary"
+              textAlign="center"
+              a11yTitle="Application sub title"
+              level="2"
+              size="large"
+            >
                 Nob Hill's home-grown family-owned bookstore
-              </Heading>
-            </Box>
+            </Heading>
+          </Box>
         )}
       </ResponsiveContext.Consumer>
     )}
