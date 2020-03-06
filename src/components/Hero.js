@@ -16,7 +16,6 @@ const Hero = () => (
             flex="grow"
             justify="center"
           >
-<<<<<<< HEAD
             <StaticQuery
               query={graphql`
                   { imageSharp(original: {src: {regex: "s/icon/g"}}) {
@@ -41,16 +40,6 @@ const Hero = () => (
                   )
                 }}
             />
-=======
-
-            <Box
-              width={size === 'small' ? 'small' : 'medium'}
-              height={size === 'small' ? 'small' : 'medium'}
-              margin="small"
-            >
-              <Image fit="contain" src="/static/icon-74681f5c464fedee6e10813f9fd14965.png" alt="" a11yTitle="logo" />
-            </Box>
->>>>>>> 64eacbc2be119417610106ea2720184e9086a1ec
 
             <Heading
               color="brand"
