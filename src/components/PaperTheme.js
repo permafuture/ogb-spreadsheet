@@ -46,13 +46,14 @@ export const paperTheme = deepMerge({
   },
 
   button: {
+    size: 'large',
     border: {
       // color: { dark: undefined, light: undefined }
       width: '4px',
       radius: 0,
       color: {
         dark: 'accent-2',
-        light: 'accent-2',
+        light: 'black',
       },
     },
     margin: 'large',
@@ -63,7 +64,13 @@ export const paperTheme = deepMerge({
     fontWeight: 600,
     color: {
       dark: 'accent-2',
-      light: 'accent-2',
+      light: 'black',
+    },
+    primary: {
+      color: 'focus',
+    },
+    hover: {
+      background: 'brand',
     },
     extend: css`
       ${props =>
@@ -77,6 +84,7 @@ export const paperTheme = deepMerge({
           flex-direction: row;
           justify-content: space-evenly;
         }
+
         `};
     `,
   },

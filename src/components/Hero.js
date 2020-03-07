@@ -18,27 +18,28 @@ const Hero = () => (
           >
             <StaticQuery
               query={graphql`
-                  { imageSharp(original: {src: {regex: "s/icon/g"}}) {
-                        id
-                        original {
-                          src
-                        }
-                      }
+                {
+                  imageSharp(original: { src: { regex: "s/icon/g" } }) {
+                    id
+                    original {
+                      src
                     }
-                `}
+                  }
+                }
+              `}
               render={data => {
-                  console.log(data)
-                  const { src } = data.imageSharp.original
-                  return (
-                    <Box
-                      width={size === 'small' ? 'small' : 'medium'}
-                      height={size === 'small' ? 'small' : 'medium'}
-                      margin="small"
-                    >
-                      <Image fit="contain" src={src} alt="" a11yTitle="logo" />
-                    </Box>
-                  )
-                }}
+                console.log(data)
+                const { src } = data.imageSharp.original
+                return (
+                  <Box
+                    width={size === 'small' ? 'small' : 'medium'}
+                    height={size === 'small' ? 'small' : 'medium'}
+                    margin="small"
+                  >
+                    <Image fit="contain" src={src} alt="" a11yTitle="logo" />
+                  </Box>
+                )
+              }}
             />
 
             <Heading
@@ -59,7 +60,7 @@ const Hero = () => (
               level="2"
               size="large"
             >
-                Nob Hill's home-grown family-owned bookstore
+              Nob Hill's home-grown family-owned bookstore
             </Heading>
           </Box>
         )}

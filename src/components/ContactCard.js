@@ -12,11 +12,17 @@ const isOpen = isWithinInterval(today, { start: opening, end: closing })
 const Hours = () => {
   if (isOpen) {
     return (
-      <Text size="xxlarge" color="neutral-2"> OPEN</Text>
+      <Text size="xxlarge" color="neutral-2">
+        {' '}
+        OPEN
+      </Text>
     )
   }
   return (
-    <Text size="xxlarge" color="light-3"> CLOSED</Text>
+    <Text size="xxlarge" color="light-3">
+      {' '}
+      CLOSED
+    </Text>
   )
 }
 
@@ -62,15 +68,15 @@ const ContactCard = () => (
       color: 'accent-2',
       size: 'medium',
     }}
+    id="contact"
+    animation={{
+      type: 'slideUp',
+      size: 'large',
+      duration: '1000',
+    }}
   >
     <Box direction="column" align="end">
-      <Heading
-        size="medium"
-        level="3"
-        color="white"
-        margin="none"
-        align="end"
-      >
+      <Heading size="medium" level="3" color="white" margin="none" align="end">
         The store is
         <Hours />
       </Heading>
@@ -83,7 +89,13 @@ const ContactCard = () => (
       <Text size="large" color="white">
         Albuquerque, NM 87110
       </Text>
-      <Anchor size="large" color="white" href="mailto://organicbooksellers@gmail.com">organicbooksellers@gmail.com</Anchor>
+      <Anchor
+        size="large"
+        color="white"
+        href="mailto://organicbooksellers@gmail.com"
+      >
+        organicbooksellers@gmail.com
+      </Anchor>
     </Box>
     <Box
       alignSelf="center"

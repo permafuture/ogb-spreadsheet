@@ -61,34 +61,34 @@ class CalendarPage extends PureComponent {
                 render={data => (
                   <Box>
                     <Slice>
-                    <Heading level="1">Events</Heading>
-                    <ScheduleNewBanner />
-                    <Markdown
-                      components={{
-                        p: {
-                          component: Paragraph,
-                          props: {
-                            size: 'xlarge',
+                      <Heading level="1">Events</Heading>
+                      <ScheduleNewBanner />
+                      <Markdown
+                        components={{
+                          p: {
+                            component: Paragraph,
+                            props: {
+                              size: 'xlarge',
+                            },
                           },
-                        },
-                        strong: {
-                          component: Text,
-                          props: {
-                            size: 'xxlarge',
-                            weight: 800,
+                          strong: {
+                            component: Text,
+                            props: {
+                              size: 'xxlarge',
+                              weight: 800,
+                            },
                           },
-                        },
-                        a: {
-                          component: Anchor,
-                        },
-                      }}
-                    >
-                      {CONTENT}
-                    </Markdown>
-                    <Box alignSelf="center">
-                      <SimpleForm />
-                    </Box>
-                  </Slice>
+                          a: {
+                            component: Anchor,
+                          },
+                        }}
+                      >
+                        {CONTENT}
+                      </Markdown>
+                      <Box alignSelf="center">
+                        <SimpleForm />
+                      </Box>
+                    </Slice>
                     <Slice
                       border={{
                         color: 'accent-3',

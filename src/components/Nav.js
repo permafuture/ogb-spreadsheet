@@ -25,6 +25,10 @@ const Nav = () => (
       side: 'bottom',
     }}
     css="position: sticky; top: 0;"
+    animation={{
+      type: 'slideDown',
+      size: 'large',
+    }}
   >
     <Box direction="row-responsive" pad="none" justify="center" align="center">
       <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo" />

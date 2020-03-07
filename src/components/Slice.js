@@ -11,6 +11,10 @@ const Slice = ({ children, ...sliceProps }) => (
     background="accent-2"
     css={css``}
     margin="large"
+    border={{
+      color: 'light-2',
+      size: 'medium',
+    }}
   >
     {children}
   </Box>
