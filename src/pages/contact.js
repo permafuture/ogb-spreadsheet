@@ -9,15 +9,14 @@ import {
   Image,
   Heading,
   Anchor,
-  Button
+  Button,
 } from 'grommet'
 import { graphql } from 'gatsby'
-import { ChatOption, Java, MailOption } from 'grommet-icons'
+import { Java, MailOption } from 'grommet-icons'
+import ChatBanner from '../components/ChatBanner'
 import Credits from '../components/Credits'
-import Sidekick from '../components/Sidekick'
 import Layout from '../components/PageLayout'
 import Bio from '../components/Bio'
-import Nav from '../components/Nav'
 import Slice from '../components/Slice'
 import SEO from '../components/SEO'
 
@@ -50,95 +49,7 @@ const CREDITS = `
   Some who helped:
 `
 
-const ChatBanner = () => [
-  <Box
-    direction="row"
-    alignSelf="center"
-    alignContent="center"
-    overflow="hidden"
-    margin={{
-      "top" : "-1em",
-      "bottom" : "1em"
-    }}
-  >
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-    <ChatOption size="small" color="accent-4" alt="" />
-  </Box>
-    ]
-
-const ContactPage = ({data}) => (
+const ContactPage = ({ data }) => (
   <Layout>
     <Box>
       <SEO
@@ -146,177 +57,146 @@ const ContactPage = ({data}) => (
         description="We're your neighborhood booksellers. Get in touch if you need anything."
         pathname="/contact"
       />
-      <Sidekick />
-      <Nav />
-
       <Slice
         alignSelf="center"
         alignContent="start"
         margin={{
-        "bottom" : "xlarge"
-      }}
+          bottom: 'xlarge',
+        }}
         width="large"
         pad="large"
-        background="accent-2"
-        border={{
-        "color" : "accent-4",
-        "size" : "medium"
-      }}
       >
-
         <Heading level="1">Contact</Heading>
         <ChatBanner />
-        <Text textAlign="center" size="xxlarge" weight="800">We&apos;re the Brewer family.</Text>
-
-
-
+        <Text textAlign="center" size="xxlarge" weight="800">
+          We&apos;re the Brewer family.
+        </Text>
 
         <Grid
           alignSelf="center"
           fill="horizontal"
           margin={{
-          "top" : "large",
-          "bottom" : "small"
-        }}
+            top: 'large',
+            bottom: 'small',
+          }}
           columns={{
-          count: 3,
-          size: "auto"
-        }}
+            count: 3,
+            size: 'auto',
+          }}
           rows={{
-          size: "213px"
-        }}
+            size: '213px',
+          }}
           gap="small"
         >
-          {data.allFile.edges.map( ({ node } ) => (
+          {data.allFile.edges.map(({ node }) => (
             <Bio name={node.name} pic={node.childImageSharp.fixed} />
-        ) )}
+          ))}
         </Grid>
 
-        <Markdown components={{
-          p: {
-            component: Paragraph,
-            props: {
-              size: 'xlarge',
-              alignSelf: 'center'
-            }
-          },
-          strong: {
-            component: Text,
-            props: {
-              size: 'xxlarge',
-              weight: 800
-            }
-          },
-          img: {
-            component: Image,
-            props: {
-              fit: 'contain'
-            }
-          },
-          a: {
-            component: Button,
-            props: {
-              align: 'center',
-              fill: 'horizontal',
-              plain: 'false',
-              color: 'accent-3',
-              icon:<MailOption color='accent-3' />,
-              label:"organicbooksellers@gmail.com"
-            }
-          }
-        }}
+        <Markdown
+          components={{
+            p: {
+              component: Paragraph,
+              props: {
+                size: 'xlarge',
+                alignSelf: 'center',
+              },
+            },
+            strong: {
+              component: Text,
+              props: {
+                size: 'xxlarge',
+                weight: 800,
+              },
+            },
+            img: {
+              component: Image,
+              props: {
+                fit: 'contain',
+              },
+            },
+            a: {
+              component: Button,
+              props: {
+                align: 'center',
+                fill: 'horizontal',
+                plain: 'false',
+                color: 'accent-3',
+                icon: <MailOption color="accent-3" />,
+                label: 'organicbooksellers@gmail.com',
+              },
+            },
+          }}
         >
           {CONTENT}
         </Markdown>
-
       </Slice>
       <Slice
         alignSelf="center"
         alignContent="start"
         margin={{
-        "bottom" : "xlarge"
-      }}
+          bottom: 'xlarge',
+        }}
         width="large"
         pad="large"
-        background="accent-2"
-        border={{
-        "color" : "accent-4",
-        "size" : "medium"
-      }}
       >
-        <Markdown components={{
-          p: {
-            component: Paragraph,
-            props: {
-              size: 'xlarge',
-              alignSelf: 'center'
-            }
-          },
-          strong: {
-            component: Text,
-            props: {
-              size: 'xxlarge',
-              weight: 800
-            }
-          },
-          img: {
-            component: Image,
-            props: {
-              fit: 'contain'
-            }
-          },
-          a: {
-            component: Anchor
-          },
-          ul: {
-            component: Text,
-            props: {
-              size: "large"
-            }
-          }
-        }}
+        <Markdown
+          components={{
+            p: {
+              component: Paragraph,
+              props: {
+                size: 'xlarge',
+                alignSelf: 'center',
+              },
+            },
+            strong: {
+              component: Text,
+              props: {
+                size: 'xxlarge',
+                weight: 800,
+              },
+            },
+            img: {
+              component: Image,
+              props: {
+                fit: 'contain',
+              },
+            },
+            a: {
+              component: Anchor,
+            },
+            ul: {
+              component: Text,
+              props: {
+                size: 'large',
+              },
+            },
+          }}
         >
           {CREDITS}
         </Markdown>
 
         <Credits creditsRows={data.allGoogleSheetAngelCreditsRow} />
-      </Slice>
-
-      <Slice
-        alignSelf="center"
-        alignContent="start"
-        margin={{
-        "bottom" : "xlarge"
-      }}
-        width="large"
-        pad="large"
-        background="accent-2"
-        border={{
-        "color" : "accent-4",
-        "size" : "medium"
-      }}
-      >
-        <Text textAlign="center">
-This website made with&nbsp;&nbsp;
+        <Text textAlign="center" margin="large">
+          This website made with&nbsp;&nbsp;
           <Java color="brand" />
-        &nbsp;&nbsp;by&nbsp;&nbsp;
+          &nbsp;&nbsp;by&nbsp;&nbsp;
           <Anchor href="http://permafuture.net">Max</Anchor>
         </Text>
       </Slice>
     </Box>
   </Layout>
- )
+)
 
 export default ContactPage
 
-
 ContactPage.propTypes = {
   data: PropTypes.object.isRequired,
-  };
+}
 
-export const query = graphql `
+export const query = graphql`
   query credQuery {
-    allGoogleSheetAngelCreditsRow(sort:{fields:[lastname], order:ASC}) {
+    allGoogleSheetAngelCreditsRow(sort: { fields: [lastname], order: ASC }) {
       edges {
         node {
           firstname
@@ -325,22 +205,23 @@ export const query = graphql `
       }
     }
 
-  allFile(filter:{relativeDirectory: {eq: "bios"}}, sort:{fields:name, order: ASC}) {
-    edges {
-      node {
-        name
-        childImageSharp {
-          fixed(
-            height: 140,
-            duotone: {
-    highlight: "#ffffee",
-    shadow: "#770000",
-    opacity: 20  }) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+    allFile(
+      filter: { relativeDirectory: { eq: "bios" } }
+      sort: { fields: name, order: ASC }
+    ) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(
+              height: 140
+              duotone: { highlight: "#ffffee", shadow: "#770000", opacity: 20 }
+            ) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
+            }
+          }
         }
       }
     }
-  }
   }
 `

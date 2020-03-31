@@ -36,11 +36,9 @@ const groupEventsByMonth = (data, monthsDifference) => {
         ...acc,
         [monthYear]: acc[monthYear].concat(node),
       }
-
     },
     {},
   )
-
 
   const result = Object.keys(eventsByMonthKey).map(monthKey => ({
     events: eventsByMonthKey[monthKey],

@@ -1,5 +1,5 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function HTML(props) {
   return (
@@ -16,7 +16,9 @@ export default function HTML(props) {
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
-          <p>Our website wants Javascript and you don't seem to have it enabled.</p>
+          <p>
+            Our website wants Javascript and you don't seem to have it enabled.
+          </p>
         </noscript>
         <div
           key={`body`}

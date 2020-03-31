@@ -10,6 +10,7 @@
     "dotenv": "^8.1.0",
     "gatsby": "^2.15.15",
     "gatsby-image": "^2.2.19",
+    "gatsby-plugin-canonical-urls": "^2.1.20",
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-offline": "^3.0.6",
     "gatsby-plugin-react-helmet": "^3.1.7",
@@ -20,6 +21,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.22",
     "gatsby-source-google-sheets": "^1.1.1",
+    "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.2.14",
     "grommet": "^2.7.8",
     "grommet-icons": "^4.3.0",
@@ -57,7 +59,8 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",

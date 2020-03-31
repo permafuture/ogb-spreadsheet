@@ -37,6 +37,14 @@ module.exports = {
         path: `${__dirname}/media`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    `gatsby-transformer-remark`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -48,7 +56,7 @@ module.exports = {
         background_color: '#4c934c',
         theme_color: appConfig.theme.brand,
         display: 'minimal-ui',
-        icon: 'media/icon.svg',
+        icon: `media/icon.png`,
       },
     },
     {
@@ -77,5 +85,11 @@ module.exports = {
      },
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://organicbooks.net`,
+    },
+  },
   ],
 }
