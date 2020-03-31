@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
         label="Buy from our Bookshop page"
         href="https://bookshop.org/shop/organicbooks"
       />
-      <Paragraph>
+      <Paragraph size="large">
         {/* We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 10 to 7, every day
         except Mondays. */}
@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => (
         News
       </Heading>
       <Box>
-        <Paragraph>Latest update here</Paragraph>
+        <Paragraph size="large">Latest update here</Paragraph>
       </Box>
       <Button
         alignSelf="end"
@@ -69,16 +69,16 @@ const IndexPage = ({ data }) => (
         Policies
       </Heading>
       <Box>
-        <Paragraph>
+        <Paragraph size="large">
           We take books for trade or donation, and buy books directly from local
           authors. Bring used books any time we're open. Our trade policy is $1
           for paperbacks, $2 for tall paperbacks, and $3 for select hardbacks.{' '}
         </Paragraph>
-        <Paragraph>
+        <Paragraph size="large">
           Teachers, faculty, adjuncts and other educators get 20% off any book
           in the store. We appreciate you!
         </Paragraph>
-        <Paragraph>
+        <Paragraph size="large">
           If you're a local author, we want to carry your books! If you're a
           local artisan, we want to carry your gift cards, calendars, stickers,
           and other crafts. Bring a sample by the store any day.
@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => (
       <Heading alignSelf="center" level="3">
         Our Family
       </Heading>
-      <Paragraph>
+      <Paragraph size="large">
         We're the Brewer family. We live in Nob Hill and we love it here. We
         felt that the only thing missing was a bookstore -- so we built one.
       </Paragraph>
