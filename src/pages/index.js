@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Paragraph, Button } from 'grommet'
+import { Box, Heading, Paragraph, Button, Anchor } from 'grommet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { Catalog, ScheduleNew, ChatOption, Article, Phone } from 'grommet-icons'
@@ -21,19 +21,22 @@ const IndexPage = ({ data }) => (
       }}
       >
       <Heading alignSelf="center" level="3">
-        Know what book you want?
+        Need a book today?
       </Heading>
       <Button
         alignSelf="center"
         primary="true"
         icon=<Catalog />
-        label="Get it now"
-        href="books"
+        label="Buy from our Bookshop page"
+        href="https://bookshop.org/shop/organicbooks"
       />
       <Paragraph>
-        We sell books new and used, with a special focus on local authors. We
+        {/* We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 10 to 7, every day
-        except Mondays
+        except Mondays. */}
+        Our store is temporarily closed by government mandate, but you can still support us!
+        Buy books through our <Anchor href="https://bookshop.org/shop/organicbooks">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
+        Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
     </Slice>
     <Slice>
@@ -48,7 +51,7 @@ const IndexPage = ({ data }) => (
         href="events"
         />
     </Slice>
-    <Slice>
+    {/* <Slice>
       <Heading alignSelf="center" level="3">
         News
       </Heading>
@@ -60,7 +63,7 @@ const IndexPage = ({ data }) => (
         icon=<Article />
         label="More news"
         href="news" />
-    </Slice>
+    </Slice> */}
     <Slice>
       <Heading alignSelf="center" level="3">
         Policies

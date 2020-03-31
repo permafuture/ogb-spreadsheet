@@ -15,6 +15,7 @@ const Hero = () => (
             align="center"
             flex="grow"
             justify="center"
+            border={{"size": "medium", "side": "bottom", "color": "light-4"}}
           >
             <StaticQuery
               query={graphql`

@@ -56,11 +56,11 @@ const Nav = () => (
           icon=<ScheduleNew color="accent-2" />
           href="/events"
         />
-        <Button
+        {/*}<Button
           a11yTitle="News"
           icon=<Article color="accent-2" />
           href="/contact"
-        />
+        />*/}
         <Button
           a11yTitle="Contact"
           icon=<ChatOption color="accent-2" />

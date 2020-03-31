@@ -76,8 +76,11 @@ const ContactCard = () => (
     }}
   >
     <Box direction="column" align="end">
+      <Text size="large" color="white">
+        The store may be closed, but
+      </Text>
       <Heading size="medium" level="3" color="white" margin="none" align="end">
-        The store is
+        The phone is
         <Hours />
       </Heading>
       <Text size="large" color="white">
