@@ -4,7 +4,6 @@ import { css } from 'styled-components'
 
 const Slice = ({ children, ...sliceProps }) => (
   <Box
-    {...sliceProps}
     width="large"
     alignSelf="center"
     pad="large"
@@ -12,9 +11,10 @@ const Slice = ({ children, ...sliceProps }) => (
     css={css``}
     margin="large"
     border={{
-      color: 'light-2',
+      color: 'light-4',
       size: 'medium',
     }}
+    {...sliceProps}
   >
     {children}
   </Box>

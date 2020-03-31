@@ -14,7 +14,12 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
     <Hero />
-    <Slice>
+    <Slice
+      border={{
+        color: 'accent-3',
+        size: 'medium'
+      }}
+      >
       <Heading alignSelf="center" level="3">
         Know what book you want?
       </Heading>
@@ -36,7 +41,12 @@ const IndexPage = ({ data }) => (
         Next Event
       </Heading>
       <DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} />
-      <Button alignSelf="end" icon=<ScheduleNew /> label="All Events" />
+      <Button
+        alignSelf="end"
+        icon=<ScheduleNew />
+        label="All Events"
+        href="events"
+        />
     </Slice>
     <Slice>
       <Heading alignSelf="center" level="3">
@@ -49,7 +59,7 @@ const IndexPage = ({ data }) => (
         alignSelf="end"
         icon=<Article />
         label="More news"
-        />
+        href="news" />
     </Slice>
     <Slice>
       <Heading alignSelf="center" level="3">
@@ -88,10 +98,11 @@ const IndexPage = ({ data }) => (
       </Paragraph>
       <Button
         alignSelf="end"
-        href="#contact"
+        href="contact"
         icon=<ChatOption />
         label="About us"
-      />    </Slice>
+      />
+    </Slice>
   </Layout>
 )
 

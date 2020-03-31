@@ -67,7 +67,7 @@ export const paperTheme = deepMerge({
       light: 'black',
     },
     primary: {
-      color: 'focus',
+      color: 'light-2',
     },
     hover: {
       background: 'brand',
