@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => (
         primary="true"
         icon=<Catalog />
         label="Buy from our Bookshop page"
-        href="https://bookshop.org/shop/organicbooks"
+        href="https://bookshop.org/shop/organicbooks?site"
       />
       <Paragraph size="large">
         {/* We sell books new and used, with a special focus on local authors. We
