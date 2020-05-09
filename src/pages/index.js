@@ -43,7 +43,10 @@ const IndexPage = ({ data }) => (
       <Heading alignSelf="center" level="3">
         Next Event
       </Heading>
-      <DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} />
+    {/*<DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} /> */}
+      <Paragraph size="large">
+      All events are indefinitely postponed. We'll put the word out when that changes.
+      </Paragraph>
       <Button
         alignSelf="end"
         icon=<ScheduleNew />
@@ -96,8 +99,7 @@ const IndexPage = ({ data }) => (
         Our Family
       </Heading>
       <Paragraph size="large">
-        We're the Brewer family. We live in Nob Hill and we love it here. We
-        felt that the only thing missing was a bookstore -- so we built one.
+        We're the Brewer family. We live in Nob Hill and we love it here. The only thing missing was a bookstore. So we built one.
       </Paragraph>
       <Button
         alignSelf="end"

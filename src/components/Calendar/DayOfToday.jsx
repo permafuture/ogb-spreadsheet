@@ -91,6 +91,7 @@ const DayOfToday = ( { events } ) => {
   // make an array of dates to compare, instead of event day objects
   const futureEventDates = []
   futureEvents.filter( event => futureEventDates.push( parse(event.date, "yyyy-MM-dd'T'HH:mm:ss.SSSxxx", new Date()) ))
+  console.log("future events " + futureEventDates)
 
 
   // figure out which day of futureEvents is the closest to today */}
@@ -102,6 +103,7 @@ const DayOfToday = ( { events } ) => {
   // debugger;
 
   // return a Day object with the eventsOfTheDay */}
+  console.log("nextEventDay" + nextEventDay)
   return ( <Day key={format( nextEventDay, 'dd-MM-yyyy' )} day={nextEventDay} events={eventsOfTheDay} /> )
 }
 
