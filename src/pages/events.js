@@ -89,7 +89,7 @@ class CalendarPage extends PureComponent {
                         <SimpleForm />
                       </Box>
                     </Slice>
-                    <Slice
+    {/*             <Slice
                       border={{
                         color: 'accent-3',
                         size: 'medium',
@@ -101,9 +101,11 @@ class CalendarPage extends PureComponent {
                       <DayOfToday
                         events={groupEvents(data.allGoogleSheetEventsRow)}
                       />
-                    </Slice>
+                    </Slice> */}
                     <Slice>
                       <Box id="calendars">
+                      <Paragraph size="large">All events are indefinitely postponed. We'll put the word out when that changes.
+                      </Paragraph>
                         <Calendar
                           showModal={this.showModal}
                           events={groupEventsByMonth(

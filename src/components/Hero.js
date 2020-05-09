@@ -29,13 +29,12 @@ const Hero = () => (
                 }
               `}
               render={data => {
-                console.log(data)
                 const { src } = data.imageSharp.original
                 return (
                   <Box
                     width={size === 'small' ? 'small' : 'medium'}
                     height={size === 'small' ? 'small' : 'medium'}
-                    margin="small"
+                    margin="none"
                   >
                     <Image fit="contain" src={src} alt="" a11yTitle="logo" />
                   </Box>
