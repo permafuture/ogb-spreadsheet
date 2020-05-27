@@ -4,8 +4,8 @@ import { Phone } from 'grommet-icons'
 import { isWithinInterval } from 'date-fns'
 
 const today = new Date()
-const opening = new Date().setHours(10)
-const closing = new Date().setHours(19)
+const opening = new Date().setHours(12)
+const closing = new Date().setHours(16)
 
 const isOpen = isWithinInterval(today, { start: opening, end: closing })
 

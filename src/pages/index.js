@@ -28,14 +28,14 @@ const IndexPage = ({ data }) => (
         primary="true"
         icon=<Catalog />
         label="Buy from our Bookshop page"
-        href="https://bookshop.org/shop/organicbooks?site"
+        href="https://bookshop.org/shop/OrganicBooks?site"
       />
       <Paragraph size="large">
         {/* We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 10 to 7, every day
         except Mondays. */}
         Our store is temporarily closed by government mandate, but you can still support us!
-        Buy books through our <Anchor href="https://bookshop.org/shop/organicbooks">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
+        Buy books through our <Anchor href="https://bookshop.org/shop/OrganicBooks?site">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
         Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
     </Slice>
@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => (
       </Heading>
     {/*<DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} /> */}
       <Paragraph size="large">
-      All events are indefinitely postponed. We'll put the word out when that changes.
+      All events are indefinitely postponed. We'll put word out when that changes.
       </Paragraph>
       <Button
         alignSelf="end"
