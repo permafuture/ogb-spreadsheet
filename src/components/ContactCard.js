@@ -84,7 +84,7 @@ const ContactCard = () => (
         <Hours />
       </Heading>
       <Text size="large" color="white">
-        Hours 10am-7pm, Tues-Sun
+        Hours 12pm-4pm, Tues-Sun
       </Text>
       <Text size="large" color="white">
         111 Carlisle Blvd SE
