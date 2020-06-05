@@ -34,8 +34,8 @@ const IndexPage = ({ data }) => (
         {/* We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 10 to 7, every day
         except Mondays. */}
-        Our store is temporarily closed by government mandate, but you can still support us!
-        Buy books through our <Anchor href="https://bookshop.org/shop/OrganicBooks?site">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
+        We're almost ready to re-open our doors! Right now we offer sidewalk shopping and curbside pickup.
+        You can also buy new books through our <Anchor href="https://bookshop.org/shop/OrganicBooks?site">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
         Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
     </Slice>
