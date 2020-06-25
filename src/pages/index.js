@@ -27,8 +27,8 @@ const IndexPage = ({ data }) => (
         alignSelf="center"
         primary="true"
         icon=<Catalog />
-        label="Buy from our Bookshop page"
-        href="https://bookshop.org/shop/OrganicBooks?site"
+        label="Search what we have in stock"
+        href="https://www.biblio.com/bookseller_info.php?d=3451349"
       />
       <Paragraph size="large">
         {/* We sell books new and used, with a special focus on local authors. We
@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => (
       </Heading>
     {/*<DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} /> */}
       <Paragraph size="large">
-      All events are indefinitely postponed. We'll put word out when that changes.
+      All events are indefinitely postponed. We'll send word when that changes.
       </Paragraph>
       <Button
         alignSelf="end"
