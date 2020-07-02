@@ -76,15 +76,12 @@ const ContactCard = () => (
     }}
   >
     <Box direction="column" align="end">
-      <Text size="large" color="white">
-        The store may be closed, but
-      </Text>
       <Heading size="medium" level="3" color="white" margin="none" align="end">
-        The phone is
+        The store is
         <Hours />
       </Heading>
       <Text size="large" color="white">
-        Hours 12pm-4pm, Tues-Sun
+        Hours 11pm-6pm, Tues-Sun
       </Text>
       <Text size="large" color="white">
         111 Carlisle Blvd SE
