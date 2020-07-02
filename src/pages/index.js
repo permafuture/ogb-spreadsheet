@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
       }}
       >
       <Heading alignSelf="center" level="3">
-        Need a book today?
+        Now Open for Browsing
       </Heading>
       <Button
         alignSelf="center"
@@ -31,10 +31,8 @@ const IndexPage = ({ data }) => (
         href="https://www.biblio.com/bookseller_info.php?d=3451349"
       />
       <Paragraph size="large">
-        {/* We sell books new and used, with a special focus on local authors. We
-        also carry cards, journals, pens and more. Open 10 to 7, every day
-        except Mondays. */}
-        We're almost ready to re-open our doors! Right now we offer sidewalk shopping and curbside pickup.
+        We sell books new and used, with a special focus on local authors. We
+        also carry cards, journals, pens and more. Open 11 to 6 every day. We also offer sidewalk shopping and curbside pickup!
         You can also buy new books through our <Anchor href="https://bookshop.org/shop/OrganicBooks?site">Bookshop site</Anchor>, or audiobooks through <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and we'll get the proceeds.
         Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
