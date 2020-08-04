@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => (
       <Paragraph size="large">
         We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 11 to 6 every day. We also offer sidewalk shopping and curbside pickup!
-        You can also search our used books through <Anchor href="https://www.biblio.com/bookseller_info.php?d=3451349">Biblio</Anchor>. Or for audiobooks, use <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, select us as your store, and we'll get the proceeds.
+        You can also search our used books through <Anchor href="http://www.biblio.com/bookstore/organic-books-albuquerque?aid=BSCB3451349">Biblio</Anchor>. Or for audiobooks, use <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, select us as your store, and we'll get the proceeds.
         Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
     </Slice>
