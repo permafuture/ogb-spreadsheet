@@ -33,7 +33,7 @@ const CallUs = () => {
         color="neutral-2"
         a11yTitle="Call us"
         href="tel://5055533823"
-        label="Call"
+        label="Call 505-553-3823"
         size="large"
         gap="medium"
         reverse="true"
@@ -87,7 +87,7 @@ const ContactCard = () => (
         111 Carlisle Blvd SE
       </Text>
       <Text size="large" color="white">
-        Albuquerque, NM 87110
+        Albuquerque, NM 87106
       </Text>
       <Anchor
         size="large"
