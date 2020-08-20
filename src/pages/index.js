@@ -30,10 +30,14 @@ const IndexPage = ({ data }) => (
         label="Buy from our Bookshop page"
         href="https://bookshop.org/shop/OrganicBooks?site"
       />
+  <Paragraph size="large">
+         On Bookshop you can order any book, brand new and delivered to your door, and we get the proceeds!
+  To search our in-store inventory, you can use <Anchor href="http://www.biblio.com/bookstore/organic-books-albuquerque?aid=BSCB3451349">Biblio</Anchor>. 
+  Or for audiobooks, use <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and select Organic Books as your store.
+  </Paragraph>
       <Paragraph size="large">
         We sell books new and used, with a special focus on local authors. We
         also carry cards, journals, pens and more. Open 11 to 6 every day. We also offer sidewalk shopping and curbside pickup!
-        You can also search our used books through <Anchor href="http://www.biblio.com/bookstore/organic-books-albuquerque?aid=BSCB3451349">Biblio</Anchor>. Or for audiobooks, use <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, select us as your store, and we'll get the proceeds.
         Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
       </Paragraph>
     </Slice>
