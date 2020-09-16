@@ -14,7 +14,7 @@ const CONTENT = `
 
 We take books for trade or donation, and buy books directly from local authors. Bring used books any time we're open.
 
-Our trade policy is $1 for paperbacks, $2 for tall paperbacks, and $3 for select hardbacks. Or, donate your books and we'll put your credit toward our 20% **Educator Discount**!
+Our trade policy is $1 for paperbacks, $2 for hardbacks, and $3 for trade paperbacks. Or, donate your books and we'll put your credit toward our 20% **Educator Discount**!
 
 **Teachers, faculty, adjuncts, bring ID and get 20% off any book in the store. We appreciate you!**
 
