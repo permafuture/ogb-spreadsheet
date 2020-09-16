@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => (
         <Paragraph size="large">
           We take books for trade or donation, and buy books directly from local
           authors. Bring used books any time we're open. Our trade policy is $1
-          for paperbacks, $2 for tall paperbacks, and $3 for select hardbacks.{' '}
+          for paperbacks, $2 for hardbacks, and $3 for trade paperbacks.{' '}
         </Paragraph>
         <Paragraph size="large">
           Teachers, faculty, adjuncts and other educators get 20% off any book
