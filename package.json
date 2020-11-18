@@ -32,11 +32,15 @@
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-mailchimp-subscribe": "^2.1.0",
+    "sharp": "^0.26.3",
     "shortid": "^2.2.15",
     "slugify": "^1.3.6",
     "styled-components": "^4.3.2",
     "typeface-alegreya": "0.0.69",
     "uuid": "^3.3.3"
+  },
+  "resolutions": {
+    "sharp": "0.24.0"
   },
   "devDependencies": {
     "eslint": "^6.4.0",
