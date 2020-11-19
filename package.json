@@ -39,10 +39,7 @@
     "typeface-alegreya": "0.0.69",
     "uuid": "^3.3.3"
   },
-  "resolutions": {
-    "sharp": "0.24.0"
-  },
-  "devDependencies": {
+   "devDependencies": {
     "eslint": "^6.4.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
