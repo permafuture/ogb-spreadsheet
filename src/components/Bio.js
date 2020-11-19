@@ -6,8 +6,8 @@ import { Box, Heading, Anchor } from 'grommet'
 const mailTo = name => `mailto:organicbooksellers+${name}@gmail.com`
 const rmNum = name => name.slice(2)
 const Bio = ({ name, pic }) => (
+  <Box align="center" justify="center" style={{width: '200px'}}>
   <Anchor href={mailTo(rmNum(name))}>
-    <Box align="center" justify="center">
       <Img
         fixed={pic}
         imgStyle={{
@@ -17,8 +17,8 @@ const Bio = ({ name, pic }) => (
         }}
       />
       <Heading size="small">{rmNum(name)}</Heading>
-    </Box>
   </Anchor>
+  </Box>
 )
 
 export default Bio

@@ -80,13 +80,15 @@ const ContactPage = ({ data }) => (
             bottom: 'small',
           }}
           columns={{
-            count: 3,
-            size: 'auto',
+            count: "fit",
+            size: '200px',
           }}
           rows={{
             size: '213px',
           }}
+          justify="center"
           gap="small"
+          style={{zIndex: 0}}
         >
           {data.allFile.edges.map(({ node }) => (
             <Bio name={node.name} pic={node.childImageSharp.fixed} />

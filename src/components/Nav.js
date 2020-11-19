@@ -29,6 +29,7 @@ const Nav = () => (
       type: 'slideDown',
       size: 'large',
     }}
+    style={{zIndex:1}}
   >
     <Box direction="row-responsive" pad="none" justify="center" align="center">
       <Image height="50px" src="/icon.svg" alt="" a11yTitle="logo" />
