@@ -5,7 +5,7 @@ import { isWithinInterval } from 'date-fns'
 
 const today = new Date()
 const opening = new Date().setHours(11)
-const closing = new Date().setHours(18)
+const closing = new Date().setHours(15)
 
 const isOpen = isWithinInterval(today, { start: opening, end: closing })
 
@@ -81,7 +81,7 @@ const ContactCard = () => (
         <Hours />
       </Heading>
       <Text size="large" color="white">
-        Hours 11am-6pm every day
+        Hours 11am-3pm every day
       </Text>
       <Text size="large" color="white">
         111 Carlisle Blvd SE

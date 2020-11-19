@@ -17,11 +17,11 @@ const IndexPage = ({ data }) => (
     <Slice
       border={{
         color: 'accent-3',
-        size: 'medium'
+        size: 'medium',
       }}
-      >
+    >
       <Heading alignSelf="center" level="3">
-        Now Open for Browsing
+        Curbside Service only til Nov 30.
       </Heading>
       <Button
         alignSelf="center"
@@ -30,31 +30,42 @@ const IndexPage = ({ data }) => (
         label="Buy from our Bookshop page"
         href="https://bookshop.org/shop/OrganicBooks?site"
       />
-  <Paragraph size="large">
-         On Bookshop you can order any book, brand new and delivered to your door, and we get the proceeds!
-  To search our in-store inventory, you can use <Anchor href="http://www.biblio.com/bookstore/organic-books-albuquerque?aid=BSCB3451349">Biblio</Anchor>. 
-  Or for audiobooks, use <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">Libro.fm</Anchor>, and select Organic Books as your store.
-  </Paragraph>
+      <Paragraph size="large">
+        On Bookshop you can order any book, brand new and delivered to your
+        door, and we get the proceeds! To search our in-store inventory, you can
+        use{' '}
+        <Anchor href="http://www.biblio.com/bookstore/organic-books-albuquerque?aid=BSCB3451349">
+          Biblio
+        </Anchor>
+        . Or for audiobooks, use{' '}
+        <Anchor href="https://libro.fm/howitworks?bookstore=organicbooks">
+          Libro.fm
+        </Anchor>
+        , and select Organic Books as your store.
+      </Paragraph>
       <Paragraph size="large">
         We sell books new and used, with a special focus on local authors. We
-        also carry cards, journals, pens and more. Open 11 to 6 every day. We also offer sidewalk shopping and curbside pickup!
-        Or <Anchor href="#contact">contact us</Anchor> and we'll help you get what you need.
+        also carry cards, journals, pens and more. Open 11 to 6 every day. We
+        also offer sidewalk shopping and curbside pickup! Or{' '}
+        <Anchor href="#contact">contact us</Anchor> and we'll help you get what
+        you need.
       </Paragraph>
     </Slice>
     <Slice>
       <Heading alignSelf="center" level="3">
         Next Event
       </Heading>
-    {/*<DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} /> */}
+      {/*<DayOfToday events={groupEvents(data.allGoogleSheetEventsRow)} /> */}
       <Paragraph size="large">
-      All events are indefinitely postponed. We'll send word when that changes.
+        All events are indefinitely postponed. We'll send word when that
+        changes.
       </Paragraph>
       <Button
         alignSelf="end"
         icon=<ScheduleNew />
         label="All Events"
         href="events"
-        />
+      />
     </Slice>
     {/* <Slice>
       <Heading alignSelf="center" level="3">
@@ -101,7 +112,8 @@ const IndexPage = ({ data }) => (
         Our Family
       </Heading>
       <Paragraph size="large">
-        We're the Brewer family. We live in Nob Hill and we love it here. The only thing missing was a bookstore. So we built one.
+        We're the Brewer family. We live in Nob Hill and we love it here. The
+        only thing missing was a bookstore. So we built one.
       </Paragraph>
       <Button
         alignSelf="end"

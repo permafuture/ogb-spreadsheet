@@ -106,13 +106,13 @@ class CalendarPage extends PureComponent {
                       <Box id="calendars">
                       <Paragraph size="large">All events are indefinitely postponed. We'll put the word out when that changes.
                       </Paragraph>
-                        <Calendar
+{/*                        <Calendar
                           showModal={this.showModal}
                           events={groupEventsByMonth(
                             data,
                             limitMonthInTheFuture,
-                          )}
                         />
+                      )}     */}
                       </Box>
                     </Slice>
                   </Box>
