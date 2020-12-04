@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
       }}
     >
       <Heading alignSelf="center" level="3">
-        Curbside Service only til Nov 30.
+        Now Open for Browsing
       </Heading>
       <Button
         alignSelf="center"
